@@ -316,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../account_management/xias/guest_instructions/" class="md-nav__link">
+      <a href="../../account_management/xias/pi_site_management/" class="md-nav__link">
         For PIs - (1) Managing Projects & Sites
       </a>
     </li>
@@ -1433,22 +1433,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graphical-interface" class="md-nav__link">
-    Graphical Interface
+  <a href="#server-software" class="md-nav__link">
+    Server Software
   </a>
-  
-    <nav class="md-nav" aria-label="Graphical Interface">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mobaxterm" class="md-nav__link">
-    MobaXTerm
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1888,8 +1875,23 @@
   
   
     <li class="md-nav__item">
+      <a href="../../contributing/reporting_errors/" class="md-nav__link">
+        Reporting Errors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../contributing/contributor_guide/" class="md-nav__link">
-        Contributing To The Docs
+        Contributing Content
       </a>
     </li>
   
@@ -1906,7 +1908,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
       
       
       
@@ -1917,13 +1919,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_13">
+        <label class="md-nav__link" for="__nav_14">
           Help
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Help" data-md-level="1">
-        <label class="md-nav__title" for="__nav_13">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Help
         </label>
@@ -2140,22 +2142,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graphical-interface" class="md-nav__link">
-    Graphical Interface
+  <a href="#server-software" class="md-nav__link">
+    Server Software
   </a>
-  
-    <nav class="md-nav" aria-label="Graphical Interface">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mobaxterm" class="md-nav__link">
-    MobaXTerm
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2386,15 +2375,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh &lt;user&gt;@&lt;remote_ip&gt; -i &lt;private_key_file&gt;
 </code></pre></div>
 <p>Where <code>user</code> is the remote username, <code>remote_ip</code> is the IP address of the remote machine, and <code>&lt;private_key_file&gt;</code> is the private key file used for access the remote machine. See <a href="#generating-key-pairs">Generating Key Pairs</a> for general instructions on creating a key pair, or <a href="../security_setup_basic/#creating-a-key-pair">Creating a Key Pair</a> for cloud.rc specific instructions.</p>
-<h2 id="graphical-interface">Graphical Interface<a class="headerlink" href="#graphical-interface" title="Permanent link">&para;</a></h2>
-<h3 id="mobaxterm">MobaXTerm<a class="headerlink" href="#mobaxterm" title="Permanent link">&para;</a></h3>
-<!-- markdownlint-disable MD046 -->
-<div class="admonition construction">
-<p class="admonition-title">Construction</p>
-<p>Under construction.</p>
-</div>
-<!-- markdownlint-enable MD046 -->
-
+<h2 id="server-software">Server Software<a class="headerlink" href="#server-software" title="Permanent link">&para;</a></h2>
+<p>Remotely accessing server software requires configuration of <a href="../security_setup_basic/#creating-a-security-group">Security Groups</a> to open ports the server will communicate on. Please see our information on <a href="../installing_software/#installing-server-software">Installing Server Software</a> for details.</p>
 <h2 id="data-transfer">Data Transfer<a class="headerlink" href="#data-transfer" title="Permanent link">&para;</a></h2>
 <h3 id="scp">SCP<a class="headerlink" href="#scp" title="Permanent link">&para;</a></h3>
 <p>SCP stands for <strong>S</strong>ecure <strong>C</strong>o<strong>P</strong>y and works like the <code>cp</code> command, but allows transferring files and directories with remote machines. SCP is built on top of SSH and is installed with most SSH Clients. To install SCP, see <a href="#install-an-ssh-client">Install an SSH Client</a>.</p>
@@ -2474,7 +2456,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 15, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
       
     
   </small>

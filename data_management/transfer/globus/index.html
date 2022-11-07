@@ -316,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../account_management/xias/guest_instructions/" class="md-nav__link">
+      <a href="../../../account_management/xias/pi_site_management/" class="md-nav__link">
         For PIs - (1) Managing Projects & Sites
       </a>
     </li>
@@ -583,6 +583,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#managing-identities" class="md-nav__link">
+    Managing Identities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#moving-data-between-endpoints" class="md-nav__link">
     Moving Data Between Endpoints
   </a>
@@ -614,6 +621,33 @@
           <li class="md-nav__item">
   <a href="#more-information" class="md-nav__link">
     More Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectors" class="md-nav__link">
+    Connectors
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uab-box-connector" class="md-nav__link">
+    UAB Box Connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-term-storage-s3-lts-connector" class="md-nav__link">
+    Long-term Storage S3 (LTS) Connector
   </a>
   
 </li>
@@ -1775,8 +1809,23 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../contributing/reporting_errors/" class="md-nav__link">
+        Reporting Errors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../contributing/contributor_guide/" class="md-nav__link">
-        Contributing To The Docs
+        Contributing Content
       </a>
     </li>
   
@@ -1793,7 +1842,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
       
       
       
@@ -1804,13 +1853,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_13">
+        <label class="md-nav__link" for="__nav_14">
           Help
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Help" data-md-level="1">
-        <label class="md-nav__title" for="__nav_13">
+        <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           Help
         </label>
@@ -1884,6 +1933,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#managing-identities" class="md-nav__link">
+    Managing Identities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#moving-data-between-endpoints" class="md-nav__link">
     Moving Data Between Endpoints
   </a>
@@ -1915,6 +1971,33 @@
           <li class="md-nav__item">
   <a href="#more-information" class="md-nav__link">
     More Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectors" class="md-nav__link">
+    Connectors
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uab-box-connector" class="md-nav__link">
+    UAB Box Connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-term-storage-s3-lts-connector" class="md-nav__link">
+    Long-term Storage S3 (LTS) Connector
   </a>
   
 </li>
@@ -1987,6 +2070,17 @@
 <p><a href="https://www.globus.org/globus-connect-personal">Globus Connect Personal</a> is software meant to be installed on local machines such as laptops, desktops,
 workstations and self-owned, local-scale servers. Globus maintains excellent documentation for installation on <a href="https://docs.globus.org/how-to/globus-connect-personal-mac/">MacOS</a>, <a href="https://docs.globus.org/how-to/globus-connect-personal-linux">Linux</a> and <a href="https://docs.globus.org/how-to/globus-connect-personal-windows">Windows</a>.</p>
 <p>To verify your installation is complete, please visit <a href="https://app.globus.org">https://app.globus.org</a> and log in. Click "Endpoints" in the left-hand navigation pane and then click the "Administered By You" tab. Look in the table for the endpoint you just created.</p>
+<h2 id="managing-identities">Managing Identities<a class="headerlink" href="#managing-identities" title="Permanent link">&para;</a></h2>
+<p>Globus Identities is a concept helping to map Globus Accounts (one per person) to institutions (one or more per person).</p>
+<p>Most UAB researchers will have a single identity, their UAB identity, tied to their blazerid. Some researchers may have external collaborations or appointments that provide additional entities which need access to other endpoints on Globus.</p>
+<p>To manage your identities, navigate to <a href="https://app.globus.org/account/identities">https://app.globus.org/account/identities</a> and sign in.</p>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>To use UAB Research Computing endpoints and collections, you will need to ensure you are using you UAB identity.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
 <h2 id="moving-data-between-endpoints">Moving Data Between Endpoints<a class="headerlink" href="#moving-data-between-endpoints" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -2082,6 +2176,18 @@ workstations and self-owned, local-scale servers. Globus maintains excellent doc
 <p>Globus does not preserve permissions nor ownership when data is transferred, instead using whatever permissions are default at the target location, and making the owner the authenticated user who initiated the transfer. Typically this is not an issue, but may cause problems for project directories. Please see our <a href="../../storage/#project-directory-permissions">Project Directory Permissions Section</a> for more information.</p>
 <h3 id="more-information">More Information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h3>
 <p>A <a href="https://docs.globus.org/faq/globus-connect-endpoints/">Globus FAQ</a> is available for additional information on endpoints and transfers.</p>
+<h2 id="connectors">Connectors<a class="headerlink" href="#connectors" title="Permanent link">&para;</a></h2>
+<p>UAB Researcher Computing has subscriptions to connectors for cloud services and other types of filesystems.</p>
+<h3 id="uab-box-connector">UAB Box Connector<a class="headerlink" href="#uab-box-connector" title="Permanent link">&para;</a></h3>
+<p>To use the UAB Box Connector, <a href="#moving-data-between-endpoints">search for an endpoint</a> like usual and enter "UAB Box" into the search box. Select the endpoint labeled "UAB Box". You should see a list of files and folders that are available to you at <a href="https://uab.app.box.com">https://uab.app.box.com</a>. File transfers work as they would with any other endpoint or collection.</p>
+<h3 id="long-term-storage-s3-lts-connector">Long-term Storage S3 (LTS) Connector<a class="headerlink" href="#long-term-storage-s3-lts-connector" title="Permanent link">&para;</a></h3>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition construction">
+<p class="admonition-title">Construction</p>
+<p>This section is under construction.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
 <h2 id="using-bookmarks">Using Bookmarks<a class="headerlink" href="#using-bookmarks" title="Permanent link">&para;</a></h2>
 <p>To save a bookmark, use the File Manager interface to select an endpoint and navigate to a path on that endpoint. Then click the bookmark button as shown below.</p>
 <p><div class="lightgallery"><a data-sub-html="Globus File Manager interface with mouse pointer hovering over Bookmark icon." href="../images/globus_060_create_bookmark.png"><img alt="Globus File Manager interface with mouse pointer hovering over Bookmark icon." src="../images/globus_060_create_bookmark.png" /></a></div></p>
@@ -2196,7 +2302,7 @@ workstations and self-owned, local-scale servers. Globus maintains excellent doc
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 10, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 31, 2022</span>
       
     
   </small>
