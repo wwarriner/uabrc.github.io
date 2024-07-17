@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.4">
     
     
       
@@ -2434,16 +2434,51 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../education/research_computing_days/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../education/research_computing_days/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Research Computing Days
   </span>
   
 
-      </a>
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Research Computing Days
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2838,6 +2873,49 @@
     </a>
 
     <!-- Table of contents list -->
+    
+  </li>
+      
+        <li class="md-nav__item">
+    <a href="#cicd" class="md-nav__link">
+      <span class="md-ellipsis">
+        CI/CD
+      </span>
+    </a>
+
+    <!-- Table of contents list -->
+    
+      <nav class="md-nav" aria-label="CI/CD">
+        <ul class="md-nav__list">
+          
+          
+            <li class="md-nav__item">
+    <a href="#pre-commit-hooks" class="md-nav__link">
+      <span class="md-ellipsis">
+        Pre-commit Hooks
+      </span>
+    </a>
+
+    <!-- Table of contents list -->
+    
+  </li>
+          
+          
+          
+            <li class="md-nav__item">
+    <a href="#manual-validation" class="md-nav__link">
+      <span class="md-ellipsis">
+        Manual Validation
+      </span>
+    </a>
+
+    <!-- Table of contents list -->
+    
+  </li>
+          
+          
+        </ul>
+      </nav>
     
   </li>
       
@@ -3319,6 +3397,49 @@
   </li>
       
         <li class="md-nav__item">
+    <a href="#cicd" class="md-nav__link">
+      <span class="md-ellipsis">
+        CI/CD
+      </span>
+    </a>
+
+    <!-- Table of contents list -->
+    
+      <nav class="md-nav" aria-label="CI/CD">
+        <ul class="md-nav__list">
+          
+          
+            <li class="md-nav__item">
+    <a href="#pre-commit-hooks" class="md-nav__link">
+      <span class="md-ellipsis">
+        Pre-commit Hooks
+      </span>
+    </a>
+
+    <!-- Table of contents list -->
+    
+  </li>
+          
+          
+          
+            <li class="md-nav__item">
+    <a href="#manual-validation" class="md-nav__link">
+      <span class="md-ellipsis">
+        Manual Validation
+      </span>
+    </a>
+
+    <!-- Table of contents list -->
+    
+  </li>
+          
+          
+        </ul>
+      </nav>
+    
+  </li>
+      
+        <li class="md-nav__item">
     <a href="#linting-known-issues" class="md-nav__link">
       <span class="md-ellipsis">
         Linting Known Issues
@@ -3679,6 +3800,29 @@
 <p>When a site visitor clicks <code>Cheaha Guide</code> in the nav pane, the page <code>cheaha/index.md</code> will be loaded.</p>
 </li>
 </ol>
+<h2 id="cicd">CI/CD<a class="headerlink" href="#cicd" title="Permanent link">&para;</a></h2>
+<p>CI/CD is used to ensure consistency and formatting of markdown files via linting. URLs are also checked for validity.</p>
+<ul>
+<li>Linting: <code>markdownlint</code> runs via <a href="https://github.com/DavidAnson/markdownlint-cli2-action">markdownlint-cli2-action</a>.</li>
+<li>URL Validation:<ul>
+<li>Internal links are validated by the <code>mkdocs build</code> <a href="https://www.mkdocs.org/user-guide/configuration/#validation">validation configuration</a>.</li>
+<li>External links are validated by the <a href="https://github.com/manuzhang/mkdocs-htmlproofer-plugin">mkdocs-htmlproofer-plugin</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="pre-commit-hooks">Pre-commit Hooks<a class="headerlink" href="#pre-commit-hooks" title="Permanent link">&para;</a></h3>
+<p>We use <a href="https://pre-commit.com/">pre-commit hooks</a> to ensure contributions match our standards for consistency, formatting, and URL validity prior to pull requests.</p>
+<ul>
+<li>Pre-commit runs <a href="https://github.com/DavidAnson/markdownlint-cli2">markdownlint-cli2</a> on markdown files.</li>
+<li>Pre-commit runs <code>mkdocs build</code> to validate links.<ul>
+<li>Internal links are validated by the <code>mkdocs build</code> <a href="https://www.mkdocs.org/user-guide/configuration/#validation">validation configuration</a>.</li>
+<li>External links are validated by the <a href="https://github.com/manuzhang/mkdocs-htmlproofer-plugin">mkdocs-htmlproofer-plugin</a>.</li>
+</ul>
+</li>
+</ul>
+<p>The <code>mkdocs-htmlproofer-plugin</code> can take substantial time to run. To disable it modify the file <code>.htmlproofer.env</code> to read <code>ENABLED_HTMLPROOFER=False</code>. Be sure not to commit this change! It is recommended to discard this change and re-run validaitions before submitting a pull request.</p>
+<h3 id="manual-validation">Manual Validation<a class="headerlink" href="#manual-validation" title="Permanent link">&para;</a></h3>
+<p>Use the command <code>pre-commit run --all-files &gt; out.log 2&gt;&amp;1</code> to run all <a href="#pre-commit-hooks">pre-commit hooks</a> and store the results in the file <code>out.log</code> for simpler review within VSCode.</p>
 <h2 id="linting-known-issues">Linting Known Issues<a class="headerlink" href="#linting-known-issues" title="Permanent link">&para;</a></h2>
 <p>There are known issues with the markdown linter and some of our non-standard plugins, especially admonitions (specifically a conflict involving fenced vs indented code blocks). To fix these cases please use one of the following methods. The <code>&lt;lint warning code&gt;</code> can be found by hovering over the yellow squiggles in VSCode to bring up the warning lens.</p>
 <p>Please do not use these to silence all linter warnings, only for fixing known issues. Please read the warning lenses given by VSCode to identify the cause of the warning.</p>
@@ -3752,7 +3896,7 @@ Contrast checker: <a href="https://webaim.org/resources/contrastchecker/">https:
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 21, 2024</span>
   </span>
 
     
