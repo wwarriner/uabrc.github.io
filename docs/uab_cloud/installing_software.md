@@ -127,7 +127,7 @@ An example of the output is shown below. The most useful columns for us are `Loc
 
 ### Common Examples
 
-Below are a few examples of installing certain common softwares that may be useful to scientific applications. We are not able to provide diagnostic or troubleshooting support for installation of any software. If you believe these instructions are outdated or in error, please [reach out and let us know](../contributing/reporting_errors.md#how-do-i-report-inaccurate-information).
+Below are a few examples of installing certain common softwares that may be useful to scientific applications. We are not able to provide diagnostic or troubleshooting support for installation of any software. If you believe these instructions are outdated or in error, please [reach out and let us know](../contributing/reporting_issues.md#how-do-i-report-inaccurate-information).
 
 #### Installing NVidia Drivers
 

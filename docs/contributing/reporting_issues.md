@@ -1,4 +1,4 @@
-# Reporting Documentation Errors
+# Reporting Issues
 
 <!-- markdownlint-disable MD046 -->
 !!! important
@@ -18,7 +18,7 @@ Bug reports are intended to be issues with page appearance and feature functiona
 
 To report a bug please create a [Bug Report](https://github.com/uabrc/uabrc.github.io/issues/new?assignees=&labels=fix%3A+bug&template=bug_report.yml).
 
-## How Do I Request an Article or Section?
+## How Do I Request a New Article or Section?
 
 To request an article or section, please create an [Article Request](https://github.com/uabrc/uabrc.github.io/issues/new?assignees=&labels=req%3A+article&template=article_request.yml).
 
