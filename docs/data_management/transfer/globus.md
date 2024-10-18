@@ -14,6 +14,11 @@ For more detailed information on High Assurance please see the Globus official p
 - [High Assurance Security Overview](https://docs.globus.org/guides/overviews/security/high-assurance-overview/)
 - [High Assurance Collections](https://docs.globus.org/guides/overviews/high-assurance/)
 
+## Tutorials
+
+- [For Individuals](./tutorial/globus_individual_tutorial.md)
+- [For Groups](./tutorial/globus_group_tutorial.md)
+
 ## Setting up Globus Connect Personal
 
 [Globus Connect Personal](https://www.globus.org/globus-connect-personal) is software meant to be installed on local machines such as laptops, desktops,
