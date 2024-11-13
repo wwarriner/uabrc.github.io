@@ -1,12 +1,14 @@
 # Practical Examples of `sbatch` Usage With the `--array` Flag and Dynamic Indices
 
+<!-- TODO rename me to someting related to dnyamic array indices and the word "tutorial" -->
+
 Do you find yourself tediously creating many `sbatch` job scripts for the same type of data set? Or do you modify the same job script? Have you ever experienced frustrating errors or typos while doing this? Would you like to save time by using one script for many similar tasks? If so then please read on for how to use `sbatch` jobs with the `--array` flag.
 
-The `--array` flag transforms an `sbatch` job script for a single task into a collection of tasks that are all scheduled simultaneously. For programmers, the `--array` flag turns a job script into a parallel loop, or a loop where each iteration is run independently and in no particular order. Naturally, this means that your tasks must be independent and similar. The most common use case is running the same software with different inputs or on different data sets. To get the most out of this page, you'll want to be familiar with [Submitting Jobs](submitting_jobs.md).
+The `--array` flag transforms an `sbatch` job script for a single task into a collection of tasks that are all scheduled simultaneously. For programmers, the `--array` flag turns a job script into a parallel loop, or a loop where each iteration is run independently and in no particular order. Naturally, this means that your tasks must be independent and similar. The most common use case is running the same software with different inputs or on different data sets. To get the most out of this page, you'll want to be familiar with [Submitting Jobs](../submitting_jobs.md).
 
 We will show how to create and use `sbatch` jobs with the `--array` flag, or `sbatch --array` jobs. We will use a simplified, practical example that parallels the process of a computational scientific experiment. The practical task we will solve is simplified to enhance focus on the structure of the problem, rather than the content of the problem. The structure of the problem is what makes `sbatch --array` jobs more or less suitable for a particular need. Specifically, whether there are many independent subtasks that all have the same structure, with similar or the same parameters.
 
-For other examples of using Slurm and its other tools, please see [Submitting Jobs](submitting_jobs.md) and [Managing Jobs](job_management.md).
+For other examples of using Slurm and its other tools, please see [Submitting Jobs](../submitting_jobs.md) and [Managing Jobs](../job_management.md).
 
 ## The Task
 
@@ -46,7 +48,7 @@ The job shell script file will be very much like a typical `sbatch` job script. 
 
 #### Preamble
 
-The preamble of an `sbatch` job script instructs Slurm how to queue the job and what resources to allocate. Our preamble is relatively straightforward and should look familiar if you've written job scripts before. For more detailed information on what the flags mean please see [Slurm Flags](submitting_jobs.md#slurm-flags-and-environment-variables).
+The preamble of an `sbatch` job script instructs Slurm how to queue the job and what resources to allocate. Our preamble is relatively straightforward and should look familiar if you've written job scripts before. For more detailed information on what the flags mean please see [Slurm Flags](../submitting_jobs.md#slurm-flags-and-environment-variables).
 
 ```shell title="job script preamble"
 #! /bin/bash
@@ -71,7 +73,7 @@ For our example, the payload consists of multiple parts. We will need to extract
 
 ##### File Extraction
 
-The general idea for file extraction, and generally use of the `$SLURM_ARRAY_TASK_ID` variable, is for each task to pull one unique element out of a list of possibilities. The list of possibilities can take many forms. In our case, we can use a shell array of strings constructed from a [glob pattern](../../workflow_solutions/shell.md#glob-syntax).
+The general idea for file extraction, and generally use of the `$SLURM_ARRAY_TASK_ID` variable, is for each task to pull one unique element out of a list of possibilities. The list of possibilities can take many forms. In our case, we can use a shell array of strings constructed from a [glob pattern](../../../workflow_solutions/shell.md#glob-syntax).
 
 Other workflows may extract lines from a manifest file, or even have a computation that transforms the job array index provided by `$SLURM_ARRAY_TASK_ID` into some other number or collection of numbers.
 
@@ -118,7 +120,7 @@ OUTPUT_FILE=${OUTPUT_FILE/dice/rolls}
 
 ##### Running the Software
 
-Running the software requires setting up the random number generator seed (for repeatability), loading [module](../software/modules.md) dependencies, creating the output directory, and finally running the simulation.
+Running the software requires setting up the random number generator seed (for repeatability), loading [module](../../software/modules.md) dependencies, creating the output directory, and finally running the simulation.
 
 ```shell title="Job Script Payload: Running the Software"
 SEED=314159
@@ -199,7 +201,7 @@ To use the script, enter the command `bash main.sh` at the terminal.
 <!-- markdownlint-disable MD046 -->
 !!! Note
 
-    When writing `sbatch` scripts for job submission and managing modules, begin your script by resetting the module environment with `module reset` to ensure a clean environment for subsequent configurations. See [best practice for loading modules](../software/modules.md#best-practice-for-loading-modules) for more information.
+    When writing `sbatch` scripts for job submission and managing modules, begin your script by resetting the module environment with `module reset` to ensure a clean environment for subsequent configurations. See [best practice for loading modules](../../software/modules.md#best-practice-for-loading-modules) for more information.
 <!-- markdownlint-enable MD046 -->
 
 ## Putting it All Together

@@ -8,6 +8,13 @@ The main Slurm documentation can be found at [the Slurm site](https://slurm.sche
 
 ## Batch Job Workflow
 
+<!--
+    TODO Move this content into submitting_jobs.md
+    TODO Reference that page from this section, but call it "How can I submit jobs to Cheaha using Slurm?"
+    TODO also reference the tutorials directly from here
+    TODO also reference OOD
+-->
+
 1. Stage data to `$USER_DATA`, `$USER_SCRATCH`, or a `/data/project/...` directory.
 1. Research how to run your directives in 'batch' mode. In other words, how to run your analysis pipeline from the command line, with no GUIs or researcher input.
 1. Identify the appropriate resources necessary to run the jobs (CPUs, time, memory, etc)
@@ -21,7 +28,12 @@ For more details, please see [Submitting Jobs](submitting_jobs.md).
 
 For details on managing and reviewing jobs, please see [Job Management](job_management.md).
 
+<!-- TODO Section on GPUs -->
+<!-- TODO Section on job management -->
+
 ## The Slurm Queue
+
+<!-- TODO this is introductory definition material so it stays -->
 
 When working on Cheaha and with Research Computing, you will often hear references to the Slurm Queue. By its name, you might think that the Slurm Queue is a first-in-first-out (FIFO) queue like when waiting in line at an event or place of business. And, some institutions use a FIFO queue, as it is the default configuration for Slurm.
 

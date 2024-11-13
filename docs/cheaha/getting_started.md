@@ -132,7 +132,7 @@ bash-4.2$ source ~/.bashrc
 
 ##### Slurm and Slurm Jobs
 
-Slurm Workload Manager is a widely used open-source job scheduler that manages the queue of jobs submitted to the compute nodes. It ensures efficient use of the cluster by allocating resources to jobs, prioritizing tasks, and managing queues of pending jobs. Starting Slurm jobs can be done in two primary ways: using Open OnDemand (OOD) or through the terminal. For more details on how to use Slurm on cheaha, please see our [slurm docs](../cheaha/slurm/introduction.md).
+Slurm Workload Manager is a widely used open-source job scheduler that manages the queue of jobs submitted to the compute nodes. It ensures efficient use of the cluster by allocating resources to jobs, prioritizing tasks, and managing queues of pending jobs. Starting Slurm jobs can be done in two primary ways: using Open OnDemand (OOD) or through the terminal. For more details on how to use Slurm on cheaha, please see our [slurm docs](../cheaha/slurm/index.md).
 
 ##### What Should Run in Jobs?
 
@@ -153,12 +153,12 @@ For users comfortable with the command line, submitting jobs via scripts using `
 <!-- markdownlint-disable MD046 -->
 !!! important
 
-    If you are doing more than minor file management, you will need to use a compute node. Please request an interactive session at [https://rc.uab.edu](https://rc.uab.edu) or through a job submitted using [Slurm](./slurm/introduction.md).
+    If you are doing more than minor file management, you will need to use a compute node. Please request an interactive session at [https://rc.uab.edu](https://rc.uab.edu) or through a job submitted using [Slurm](./slurm/index.md).
 <!-- markdownlint-enable MD046 -->
 
 ## Slurm
 
-Slurm is our job queueing software used for submitting any number of job scripts to run on the cluster. We have documentation on how to set up job scripts and submit them [further in](./slurm/introduction.md). More complete documentation is available at <https://slurm.schedmd.com/>.
+Slurm is our job queueing software used for submitting any number of job scripts to run on the cluster. We have documentation on how to set up job scripts and submit them [further in](./slurm/index.md). More complete documentation is available at <https://slurm.schedmd.com/>.
 
 ## Software
 

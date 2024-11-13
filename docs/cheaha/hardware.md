@@ -14,7 +14,7 @@ The following hardware summaries may be useful for selecting partitions for work
 
 The table below contains a summary of the computational resources available on Cheaha and relevant Quality of Service (QoS) Limits. QoS limits allow us to balance usage and ensure fairness for all researchers using the cluster. QoS limits are not a guarantee of resource availability.
 
-In the table, [Slurm](./slurm/introduction.md) partitions are grouped by shared QoS limits on cores, memory, and GPUs. Node limits are applied to partitions independently. All limits are applied to researchers independently.
+In the table, [Slurm](./slurm/index.md) partitions are grouped by shared QoS limits on cores, memory, and GPUs. Node limits are applied to partitions independently. All limits are applied to researchers independently.
 
 Examples of how to make use of the table:
 

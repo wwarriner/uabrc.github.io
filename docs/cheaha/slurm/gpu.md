@@ -2,7 +2,7 @@
 
 ## Available Devices
 
-Cheaha has GPUs available with the following statistics, broken out by [Slurm Partition](../slurm/introduction.md). For more information on all available partitions, see our [Hardware Summary](../hardware.md#summary).
+Cheaha has GPUs available with the following statistics, broken out by [Slurm Partition](../slurm/index.md). For more information on all available partitions, see our [Hardware Summary](../hardware.md#summary).
 
 {{ read_csv('cheaha/slurm/res/gpu_devices.csv', keep_default_na=False) }}
 

@@ -1,5 +1,7 @@
 # Submitting Jobs with Slurm
 
+<!-- TODO add section and crosslinking to tutorials -->
+
 Processing computational tasks with Cheaha at the terminal requires submitting jobs to the Slurm scheduler. Slurm offers two commands to submit jobs: `sbatch` and `srun`. Always use `sbatch` to submit jobs to the scheduler, unless you need an [interactive terminal](#interactive-jobs-with-srun). Otherwise only use `srun` within `sbatch` for submitting job steps within an [`sbatch` script](#batch-jobs-with-sbatch) context.
 
 The command `sbatch` accepts script files as input. Scripts should be written in an available shell language on Cheaha, typically bash, and should include the appropriate Slurm directives at the top of the script telling the scheduler the requested resources. Read on to learn more about how to use Slurm effectively.
@@ -143,7 +145,7 @@ For more details on using `sbatch` please see the [official documentation](https
 
 ### Batch Array Jobs With Dynamic or Computed Indices
 
-For a practical example with dynamic indices, please visit our [Practical `sbatch` Examples](practical_sbatch.md)
+For a practical example with dynamic indices, please visit our [Practical `sbatch` Examples](./tutorial/practical_sbatch.md)
 
 ## Interactive Jobs with `srun`
 

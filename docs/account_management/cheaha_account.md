@@ -100,7 +100,7 @@ We're always happy to provide support for your Research Computing needs, you nee
     - [GPFS](../data_management/storage.md#what-shared-storage-solutions-are-available): Hot storage, compute adjacent, directly accessible from Cheaha
     - [LTS](../data_management/lts/index.md): Cool storage, large capacity
     - [Transfer data with Globus](../data_management/transfer/globus.md)
-- [Batch computing](../cheaha/slurm/introduction.md)
+- [Batch computing](../cheaha/slurm/index.md)
     - [Desktop](../cheaha/open_ondemand/hpc_desktop.md), [Jupyter](../cheaha/open_ondemand/ood_jupyter.md), [RStudio](../cheaha/open_ondemand/ood_rstudio.md), [Matlab](../cheaha/open_ondemand/ood_matlab.md), and more
     - [GPUs](../cheaha/slurm/gpu.md)
 - [On-prem cloud computing](../uab_cloud/index.md)
