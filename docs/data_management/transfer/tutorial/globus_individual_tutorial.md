@@ -410,3 +410,66 @@ To check the status of your transfers, please follow the instructions below.
     ![Overview page for unsuccessful transfer.](./images/gi-check-transfer-status/002-status.png)
 
 [Return to the top](#globus-tutorials-for-individual-researchers).
+
+## How Do I Configure Transfer Options?
+
+Globus provides options for Transfers and Timers. These options allow you to modify how transfers are performed, or allow you to schedule transfers for future times.
+
+Click "Transfer & Timer Options" button to unfold and view the menu.
+
+![Transfer and timer options button](./images/gi-transfer-options/001-transfer-options-button.png)
+
+Most of the options have a circled lower-case letter "i" icon `(i)` to the right of the description. Click the icon to get more information about that option. More information about each option is provided after the image below.
+
+![Transfer and Timer Options](./images/gi-transfer-options/002-transfer-options-menu.png)
+
+- **(1) Label This Transfer**: Provide a meaningful, specific label for the transfer. Especially useful for recurring transfers.
+- **(2) Transfer Settings**:
+    - **sync...**: Check this box to sync files. Only new and changed files are transferred. This can help speed up transfers where many of the files already exist. When checked, a drop-down box will appear. The drop-down box has conditions to select which files to replace.
+    - **delete...**: Delete files on the destination if they aren't part of the transfer. This will make the destination file and folder layout and content match the source. Deleted files cannot be recovered.
+
+        <!-- markdownlint-disable MD046 -->
+        !!! danger
+
+            Using the "delete" transfer setting for a data transfer is highly destructive and cannot be undone. Deleted files and folders cannot be recovered.
+        <!-- markdownlint-enable MD046 -->
+
+    - **preserve...**: Preserves modification times of files. If this option is not checked (the default), then modification times are set to whenever the file or folder has finished transferring.
+    - **do NOT verify...**: By default, Globus verifies the integrity of file contents by matching checksums. It is highly recommended to leave this box unchecked. Checking this box could lead to corruption of data without notice or warning.
+
+        <!-- markdownlint-disable MD046 -->
+        !!! important
+
+            Do not check the "do NOT verify..." box unless instructed to do so.
+        <!-- markdownlint-enable MD046 -->
+
+    - **encrypt transfer...**: If checked, the transfer will be end-to-end encrypted. You must always check this box when working with any Research Data or Protected Health Information (PHI) per [UAB Policy](https://www.uab.edu/it/home/policies/data-classification/classification-overview). This box is checked by default when working with High Assurance (HA) Collections, including Cheaha and LTS, and cannot be unchecked.
+    - **skip files...**: If checked, any missing or inaccessible files on the source will be skipped. If unchecked, missing and inaccessible files will cancel the transfer with an error.
+    - **Fail on quota errors**: If checked, transfers exceeding the storage quota will fail instead of retrying.
+    - **Apply filter rules...**: If checked, new controls will appear allowing you to add filter rules. Any filter rules added will be obeyed during the transfer. Read more about filter rules at the [Official Globus Documentation page](https://docs.globus.org/api/transfer/task_submit/#filter_rules).
+- **(3) Notification Settings**: Each of these checkboxes disables a particular notification email.
+- **(4) Schedule Start**: Choose a future date and time at which to start the transfer.
+- **(5) Repeat**: Select whether, and how often, to repeat the transfer. When a drop down menu item is selected, additional controls appear. These controls allow you to select the frequency, and when to stop the repetition. An example is shown below, where the repetition is every 7 days until a specified date.
+
+    ![Repeat option controls](./images/gi-transfer-options/003-repeat-controls.png)
+
+## How Do I Make the Destination Match the Source for a Transfer?
+
+1. Get to the [Transfer Options](#how-do-i-configure-transfer-options).
+1. Check the "delete...", and "preserve..." checkboxes.
+1. Initiate the transfer as usual.
+
+## How Do I Schedule a Periodic Transfer or Backup?
+
+1. Get to the [Transfer Options](#how-do-i-configure-transfer-options).
+1. Choose a meaningful name for "Label This Transfer". This will help identify the periodic transfer and its purpose later, if you need to cancel it.
+1. If the periodic transfer is for backup purposes, consider using the "sync..." settings to improve performance, and the "preserve..." option to ensure that modification times are saved for future restoration. Use the "delete..." option at your discretion.
+1. Choose a date and time in "Schedule Start".
+1. Choose a "Repeat" option.
+1. Initiate the transfer as usual.
+
+<!-- markdownlint-disable MD046 -->
+!!! warning
+
+    Cheaha, LTS and UAB Box are not intended as backup services. Cheaha storage is intended for data being used in active research. LTS is intended for the long-term storage of research data that is not being actively used in research.
+<!-- markdownlint-enable MD046 -->
