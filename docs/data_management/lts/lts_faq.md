@@ -126,3 +126,33 @@ The following policy file will give read permission to all LTS users for all obj
 ## Can I Change Permissions On A Bucket Via Globus?
 
 As of now, there is no way to change permissions on a bucket via [Globus](../transfer/globus.md). The only way to change permissions is via the command line.
+
+## Is LTS compatible with Amazon S3?
+
+Yes! LTS is compatible with Amazon S3 (Simple Storage Service). Most software solutions that work with Amazon AWS S3 will also work with LTS. Generally, you will need to instruct the software where the interface is located by supplying an Endpoint URL. Our Endpoint URL is `https://s3.lts.rc.uab.edu/`.
+
+We recommend the following software:
+
+- [Globus](../transfer/globus.md) for general-use data transfers. See our [Tutorials](../transfer/tutorial/index.md).
+- [s5cmd](../lts/interfaces.md#s5cmd) for high-throughput data transfers.
+- [s3cmd](../lts/interfaces.md#s3cmd) for managing bucket policies. Note that for some use cases, you may not need a bucket policy, and Globus will be enough to share data.
+
+If you are unsure of how to make the most of LTS, please [Contact Support](../../help/support.md)
+
+## How do Folders Work in LTS and S3?
+
+LTS is an S3-compatible storage. S3 does not have a concept of folders, only buckets and objects, with a flat hierarchy. All buckets are siblings, and objects go in buckets. All objects in a given bucket are siblings. Buckets never go in buckets.
+
+However, almost all software solutions that interact with S3 have a way to simulate hierarchical folder structures. Zero-byte objects with a trailing slash `/` character are treated as though they were folders, e.g., `folder/`. Any objects prefixed with `folder/` will be treated as though contained within a folder called `folder`. In the simulation, buckets are also treated as folders.
+
+### Example
+
+The following table gives an example of how software, like [Globus](../transfer/globus.md), simulates folders when looking at S3-compatible storage. The first row shows the bucket called `bucket`, which contains all of the objects in the example. The remaining rows in the table each describes one of the example objects.
+
+{{ read_csv('data_management/lts/res/s3-folder-example.csv', keep_default_na=False) }}
+
+- **Filesystem Equivalent**: The equivalent tree structure if these objects were in a hierarchical file system, like on your personal computer or Cheaha. This also shows the relative locations of objects when using, e.g., Globus.
+- **Internal S3 Name**: The name of the object as known to S3. Note the `folder/` prefix on the last object.
+- **Display Name**: The name displayed in software like Globus.
+- **Behaves Like**: What this object or bucket behaves like in the simulated tree structure.
+- **Is Actually**: Whether the entity in this row represents a bucket or object.
