@@ -6,21 +6,21 @@ If you are new to Globus, we recommend starting with our [Globus Tutorials for I
 
 Topics covered:
 
-1. [Why Globus?](#why-globus)
-1. [How Does Globus Work?](#how-does-globus-work)
-1. [Tutorial Prerequisites](#tutorial-prerequisites)
-1. [How Do I Get onto the Globus Web App?](#how-do-i-get-onto-the-globus-web-app)
-1. [How Do I Install Globus Connect Personal?](#how-do-i-install-globus-connect-personal)
+- [Why Globus?](#why-globus)
+- [How Does Globus Work?](#how-does-globus-work)
+- [Tutorial Prerequisites](#tutorial-prerequisites)
+- [How Do I Get onto the Globus Web App?](#how-do-i-get-onto-the-globus-web-app)
+- [How Do I Install Globus Connect Personal?](#how-do-i-install-globus-connect-personal)
     - [Windows](#installing-gcp-on-windows)
     - [MacOS](#installing-gcp-on-macos)
-1. [How Do I Choose Specific Folders to Share Using Globus Connect Personal?](#how-do-i-choose-specific-folders-to-share-using-globus-connect-personal)
+- [How Do I Choose Specific Folders to Share Using Globus Connect Personal?](#how-do-i-choose-specific-folders-to-share-using-globus-connect-personal)
     - [Windows](#choose-specific-folders-on-windows)
     - [MacOS](#choose-specific-folders-on-macos)
-1. [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
-1. [How Do I Enable Sharing for My Globus Account?](#how-do-i-enable-collection-sharing-for-my-globus-account)
-1. [How Do I Create a Collection?](#how-do-i-create-a-collection)
-1. [How Do I Share a Collection with Others?](#how-do-i-share-a-collection-with-others)
-1. [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
+- [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
+- [How Do I Enable Sharing for My Globus Account?](#how-do-i-enable-collection-sharing-for-my-globus-account)
+- [How Do I Create a Collection?](#how-do-i-create-a-collection)
+- [How Do I Share a Collection with Others?](#how-do-i-share-a-collection-with-others)
+- [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
 
 ## Why Globus?
 

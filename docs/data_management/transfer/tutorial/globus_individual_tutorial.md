@@ -11,17 +11,25 @@ The tutorials below will teach you how to effectively use Globus for managing an
 
 Topics covered:
 
-1. [Why Globus?](#why-globus)
-1. [How Does Globus Work?](#how-does-globus-work)
-1. [Tutorial Prerequisites](#tutorial-prerequisites)
-1. [How Do I Get Onto the Globus Web App?](#how-do-i-get-onto-the-globus-web-app)
-1. [How Do I Search for Collections by Name?](#how-do-i-search-for-collections-by-name)
-1. [How Do I Find UAB Storage Collections?](#how-do-i-find-uab-storage-collections)
-1. [How Do I Find Collections Shared with Me?](#how-do-i-find-collections-shared-with-me)
-1. [How Do I Transfer between a Collection and Cheaha?](#how-do-i-transfer-between-a-collection-and-cheaha)
-1. [How Do I Transfer between a Collection and LTS?](#how-do-i-transfer-between-a-collection-and-lts)
-1. [How Do I Transfer between LTS and Cheaha?](#how-do-i-transfer-between-lts-and-cheaha)
-1. [How Do I Check Transfer Status?](#how-do-i-check-transfer-status)
+- [Why Globus?](#why-globus)
+- [How Does Globus Work?](#how-does-globus-work)
+- [Tutorial Prerequisites](#tutorial-prerequisites)
+- Start Here
+    - [How Do I Get Onto the Globus Web App?](#how-do-i-get-onto-the-globus-web-app)
+    - [How Do I Use the File Manager Page?](#how-do-i-use-the-file-manager-page)
+    - [How Do I Modify Files and Folders?](#how-do-i-modify-files-and-folders)
+- Collections
+    - [How Do I Search for Collections by Name?](#how-do-i-search-for-collections-by-name)
+    - [How Do I Find UAB Storage Collections?](#how-do-i-find-uab-storage-collections)
+    - [How Do I Find Collections Shared with Me?](#how-do-i-find-collections-shared-with-me)
+- Transfers
+    - [How Do I Transfer between a Collection and Cheaha?](#how-do-i-transfer-between-a-collection-and-cheaha)
+    - [How Do I Transfer between a Collection and LTS?](#how-do-i-transfer-between-a-collection-and-lts)
+    - [How Do I Transfer between LTS and Cheaha?](#how-do-i-transfer-between-lts-and-cheaha)
+    - [How Do I Check Transfer Status?](#how-do-i-check-transfer-status)
+    - [How Do I Configure Transfer Options?](#how-do-i-configure-transfer-options)
+        - [How Do I Make the Destination Match the Source for a Transfer?](#how-do-i-make-the-destination-match-the-source-for-a-transfer)
+        - [How Do I Schedule a Periodic Transfer or Backup?](#how-do-i-schedule-a-periodic-transfer-or-backup)
 
 ## Why Globus?
 
