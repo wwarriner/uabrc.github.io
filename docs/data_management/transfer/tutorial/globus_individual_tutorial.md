@@ -100,11 +100,56 @@ For these tutorials, you will need your BlazerID or [XIAS ID](../../../account_m
 
     ![Globus Web App file manager two-panel view with Collection selected showing a file and folder.](./images/gi-web-app/008-file-manager-two-panel-example.png)
 
-The File Manager page will be your most frequently-visited page when using Globus for data transfers. It is central to usage of the Globus Web Application. Please take some time to familiarize yourself with its look and feel. As you progress in the tutorials, please take time to experiment with transferring data to better understand how the interface works. Feel free to return here for guidance.
+## How Do I Modify Files and Folders?
 
-From here you can proceed to [How Do I Search for Collections by Name?](#how-do-i-search-for-collections-by-name)
+Globus provides controls for working directly with files and folders in Collections. These controls are found between the two panels, as shown in the image below. Descriptions of each button are given below the image.
 
-[Return to the top](#globus-tutorials-for-individual-researchers).
+![File and folder controls between File Manager panels](./images/gi-modify-files-folders/001-file-folder-controls.png)
+
+- **(1) Share**: [Click to share the current folder as a Collection](./globus_organization_tutorial.md#how-do-i-share-a-collection-with-others).
+- **(2) Transfer or Sync to**: Click to switch to the other panel.
+- **(3) New Folder**: Click to creates a new folder in the current folder. The collection must have writing enabled and you must have write permissions to do this. At the top level of [LTS](../../lts/index.md), [special rules apply to names](../../lts/lts_faq.md#what-are-valid-bucket-names-in-lts).
+    1. After clicking, a set of controls will appear in the panel.
+
+        ![New folder controls](./images/gi-modify-files-folders/002-new-folder-controls.png)
+
+    1. Type the name of the new folder in the provided text box.
+    1. Click the circled green checkmark to create the folder, or the circled gray "x" to cancel.
+    1. If an error occurs, a red text box will appear in place of these controls. Because the text can be long and the text box area small, you may need to scroll right in the error reporting box to read the full text. Generally the last part of the text is the most helpful.
+        - Common LTS errors:
+            - Starting with `Remote Endpoint Failure: Path already exists...`. The full error text contains `Message: Path ... already exists`. This means the bucket name is already in use. You must either choose another name, or [append a UUID](../../lts/lts_faq.md#what-are-valid-bucket-names-in-lts)
+            - Starting with "Bad Gateway: Endpoint Error, Error (mkdir)...". The full error text contains `Error access "": ErrorInvalidBucketName: ErrorInvalidBucketName: \r\n`. This means the bucket name is not valid. You will need to change the name according to [the rules of bucket naming](../../lts/lts_faq.md#what-are-valid-bucket-names-in-lts).
+- **(4) Rename**: Only enabled when a file or folder is selected. Click to rename the selected file or folder.
+- **(5) Delete**: Only enabled when a file or folder is selected. Click to delete the selected file or folder. If a folder is deleted, everything it contains is deleted as well. This cannot be undone.
+
+    <!-- markdownlint-disable MD046 -->
+    !!! danger
+
+        Using the Delete control in Globus is highly destructive and cannot be undone. Deleted files and folders cannot be recovered.
+    <!-- markdownlint-enable MD046 -->
+
+- **(6) Download**: Only enabled when a single file is selected. Only enabled on endpoints that support HTTPS access. Click to download the selected file to your computer. Prefer to use Globus Data Transfers to transfer files to your computer, rather than downloading directly. Direct downloads are slower and less robust than data transfers. See [Globus Connect Personal](./globus_organization_tutorial.md#how-do-i-install-globus-connect-personal) for more information on enabling transfers with your computer.
+- **(7) Open**: Only enabled when a single file is selected. Only enabled on endpoints that support HTTPS access. Click to open the selected file using your browser. Opening files will only work if your browser knows how to handle the file type.
+- **(8) Upload**: Only enabled on endpoints that support HTTPS access. Click to upload a file from your computer to the current folder. Prefer to use Globus Data Transfers to transfer files to your computer, rather than uploading directly. Direct uploads are slower and less robust than data transfers. See [Globus Connect Personal](./globus_organization_tutorial.md#how-do-i-install-globus-connect-personal) for more information on enabling transfers with your computer.
+- **(9) Get Link**: Click to get two types of links (URLs). The links provide a convenient way to direct people to specific data resources. Links do not give special privileges nor give access. People you share the link with must already have access to the Collection you create the link from.
+
+    To view the links, click the "view URL" foldout buttons highlighted in the image below. You can also use the "clipboard" icons to copy the link to the clipboard on your computer to paste elsewhere.
+
+    An image of the controls is provided below, with a description following the image.
+
+    ![Get Link controls](./images/gi-modify-files-folders/003-get-link-controls.png)
+
+    1. Link to the current folder.
+    1. Link to the currently selected file. Only enabled on endpoints that support HTTPS access. The link works the same way as using the (7) Open button.
+- **(10) Manage Access Consent**: Only enabled on endpoints that support HTTPS access. Change what actions the current Collection is consented to perform on your behalf.
+
+    An example of the "Manage Access Consent" page is shown below.
+
+    ![Manage access consent page](./images/gi-modify-files-folders/004-manage-consents.png)
+
+The File Manager page will be your most frequently-visited page when using Globus for data transfers. It is central to usage of the Globus Web Application. Please take some time to familiarize yourself with its look and feel. As you progress in the tutorials, please take time to experiment with transferring data to better understand how the interface works. Feel free to return to this section for guidance.
+
+- [Return to the Top](#globus-tutorials-for-individual-researchers)
 
 ## How Do I Search For Collections By Name?
 
