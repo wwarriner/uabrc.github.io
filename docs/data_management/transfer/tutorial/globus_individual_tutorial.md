@@ -67,15 +67,21 @@ For these tutorials, you will need your BlazerID or [XIAS ID](../../../account_m
 
     ![UAB Single Sign-On form.](./images/gi-web-app/004-sso.png)
 
-1. You should be taken to the File Manager page of the Globus Web App. We will be revisiting this page frequently throughout the tutorials. We highly recommend taking some time to familiarize yourself with the page as you proceed. The next few steps outline the important features of the File Manager page and its purpose.
+1. You should be taken to the File Manager page of the Globus Web App. We will be revisiting this page frequently throughout the tutorials. We highly recommend taking some time to familiarize yourself with the page as you proceed. The next few steps outline the important features of the File Manager page and its purpose. Please read on to learn [How To Use the File Manager Page](#how-do-i-use-the-file-manager-page)
 
     ![Globus Web App file manager single-panel view.](./images/gi-web-app/005-file-manager-single-panel.png)
 
-1. Recall that Globus is a data transfer application. A data transfer means moving data between two computers: source and destination. As we learn more about Globus, data stored on the source and destination will be visible on the File Manager page in the panels in the screenshot above.
+- [How Do I Use the File Manager Page?](#how-do-i-use-the-file-manager-page)
+- [Return to the top](#globus-tutorials-for-individual-researchers).
+
+## How Do I Use the File Manager Page?
+
+1. [Get Onto the Globus Web App](#how-do-i-get-onto-the-globus-web-app).
+1. Recall that Globus is a data transfer application. Transferring data means moving data between two computers: source and destination. As we learn more about Globus, data stored on the source and destination will be visible on the File Manager page panels.
 
     By default, only one panel is visible. We recommend selecting two-panel view mode for improved ease of use. Select two-panel view mode by clicking the button located near the top right corner, as shown in the red box below. Of the three available view mode buttons, the two-panel view mode button is in the center.
 
-    From here on, tutorials will assume you are using two-panel view mode when we refer to the File Manager page.
+    From here on, all tutorials will assume you are using two-panel view mode when we refer to the File Manager page.
 
     ![Globus Web App file manager two-panel view.](./images/gi-web-app/006-view-buttons.png)
 
