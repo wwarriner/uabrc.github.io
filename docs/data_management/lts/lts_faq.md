@@ -4,6 +4,40 @@
 
 Bucket names must be comprised only of lowercase letters, numbers, and hyphens. No capital letters or underscores are allowed. Trying to create a bucket with the disallowed characters will return an error.
 
+Bucket names in LTS _must_...
+
+- be globally unique across all of LTS
+    - We recommend adding a universally unique identifier (UUID) after the desired name to ensure uniqueness.
+    - Example: change the generic `my-bucket` to the unique `my-bucket-1499e6d5-b719-4cc1-831d-fe1b25970b3b`.
+    - The site <https://uuidgenerator.net> can be used to generate UUIDs.
+    - Use "Version 4" UUIDs as they are fully randomized.
+- be between 3 and 63 characters long;
+- have only lowercase letters, numbers, dots `.`, and hyphens `-`
+- begin and end with a letter or number
+- have no consecutive dots (`..` is not allowed)
+- not be formatted like an IP address (e.g., not like `127.0.0.1`)
+
+The following rules are not required on LTS, but recommended for compatibility with Amazon AWS S3. Bucket names in LTS _should_...
+
+- not start with specific prefixes (these are reserved):
+    - `xn--`
+    - `sthree-`
+    - `amzn-s3-demo-`
+- not end with specific suffixes (these are reserved):
+    - `-s3alias`
+    - `--ol-s3`
+    - `.mrap`
+    - `--x-s3`
+- not contain dots `.` if used with Amazon AWS S3 Transfer Acceleration
+
+<!-- markdownlint-disable MD046 -->
+!!! example
+
+    - `my-bucket`: not good
+    - `my-bucket-1234`: acceptable
+    - `my-bucket-1499e6d5-b719-4cc1-831d-fe1b25970b3b`: excellent
+<!-- markdownlint-enable MD046 -->
+
 ## Can I Share My Account Access Keys With Other People?
 
 You should never share access keys with anyone. These should be treated similarly to your BlazerID and password. Sharing keys creates a point of vulnerability and if they fall into a nefarious actor's hands, all buckets that account owns and the data in them can be deleted.
