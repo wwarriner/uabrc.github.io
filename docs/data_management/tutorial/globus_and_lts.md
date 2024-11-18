@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Before using any of these tutorials, you will need to set up an [Individual LTS Allocation](../storage.md#how-do-i-request-individual-long-term-storage) and. If you represent a group such as a Lab or Research Core, you will also need to set up a [Shared LTS Allocation](../storage.md#how-do-i-request-shared-storage).
+Before using any of these tutorials, you will need to set up an [Individual LTS Allocation](../storage.md#how-do-i-request-an-individual-long-term-storage-allocation) and. If you represent a group such as a Lab or Research Core, you will also need to set up a [Shared LTS Allocation](../storage.md#how-do-i-request-shared-storage).
 
 ## How Do I Prepare to Use LTS in Globus?
 

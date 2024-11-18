@@ -12,9 +12,19 @@ There are multiple locations for data storage both on and off Cheaha each with a
 
 Every Cheaha user has personal directories found at `/home/$USER` (or `$HOME`) and `/data/user/$USER` (or `$USER_DATA`), which are created automatically during account registration. In addition, individual allocations on Long-Term Storage (LTS) are also available upon request. Please read more about [Long-Term Storage](./lts/index.md) and [User Data and Home Directories](#user-data-and-home-directories).
 
-### How Do I Request Individual Long-Term Storage?
+### How Do I Request Individual Cheaha GPFS Storage?
 
-To request individual Long-Term Storage, please first read and understand how [Long-Term Storage](./lts/index.md) differs from traditional file systems, like GPFS on Cheaha. Decide if it is suitable for your needs. Then please feel free to contact [Support](../help/support.md).
+There is no need to make this request. Creating your [Cheaha account](../account_management/cheaha_account.md#creating-a-new-account) automatically grants you an individual GPFS directory located at `/data/user/$USER` on Cheaha.
+
+### How Do I Request an Individual Long-Term Storage Allocation?
+
+To request individual Long-Term Storage, please first read and understand how [Long-Term Storage](./lts/index.md) differs from traditional file systems, like GPFS on Cheaha. Decide if it is suitable for your needs. Then please feel free to contact [Support](../help/support.md) to make your request.
+
+<!-- markdownlint-disable MD046 -->
+!!! important
+
+    LTS allocations come with [Access and Secret Keys](./lts/lts_faq.md#what-are-access-and-secret-keys) which should be treated as username and password for your allocation.
+<!-- markdownlint-enable MD046 -->
 
 ## What Shared Storage Solutions are Available?
 
