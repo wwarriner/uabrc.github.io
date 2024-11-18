@@ -198,11 +198,11 @@ We recommend the following software:
 
 If you are unsure of how to make the most of LTS, please [Contact Support](../../help/support.md)
 
-## How do Folders Work in LTS and S3?
+## How Do Folders Work in LTS and S3?
 
-LTS is an S3-compatible storage. S3 does not have a concept of folders, only buckets and objects, with a flat hierarchy. All buckets are siblings, and objects go in buckets. All objects in a given bucket are siblings. Buckets never go in buckets.
+LTS is an S3-compatible storage. S3 does not have a concept of folders, only buckets and objects, with a flat structure. All buckets are siblings, and objects go in buckets. All objects in a given bucket are siblings. Buckets never go in buckets. The flat structure gives S3 stable performance and low cost at very large scales of data.
 
-However, almost all software solutions that interact with S3 have a way to simulate hierarchical folder structures. Zero-byte objects with a trailing slash `/` character are treated as though they were folders, e.g., `folder/`. Any objects prefixed with `folder/` will be treated as though contained within a folder called `folder`. In the simulation, buckets are also treated as folders.
+Almost all software solutions that interact with S3 have a way to simulate hierarchical folder structures. Zero-byte objects with a trailing slash `/` character are treated as though they were folders, e.g., `folder/`. Any objects prefixed with `folder/` will be treated as though contained within a folder called `folder`. In the simulation, buckets are also treated as folders.
 
 ### Example
 
