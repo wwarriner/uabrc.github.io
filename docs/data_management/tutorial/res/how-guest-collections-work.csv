@@ -1,0 +1,6 @@
+Person,Credential Holder,Person with Permission,Everyone Else
+Can access Guest Collection?,Yes ✔️,Yes ✔️,No ❌
+Can access data in the Guest Collection?,Yes ✔️,Yes ✔️,No ❌
+Whose credentials are used?,Mine,Credential Holder's,—
+Can see credentials?,Yes ✔️,No ❌,—
+Needs to input credentials to access Guest Collection?,No ❌,No ❌,—
