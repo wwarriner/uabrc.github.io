@@ -37,8 +37,27 @@ The following rules are not required on LTS, but recommended for compatibility w
     - `my-bucket-1234`: acceptable, but may not work
     - `specific-research-core-name`: better, likely to work, Core names are probably unique
     - `specific-research-core-name-1499e6d5-b719-4cc1-831d-fe1b25970b3b`: excellent, guaranteed to work
-
 <!-- markdownlint-enable MD046 -->
+
+## What Information Do I Need to Keep Track of For Managing LTS allocations?
+
+Please store the following information carefully for your LTS allocation(s).
+
+- Access Key (looks like `AKIAIOSFODNN7EXAMPLE`) grants you access to your allocation.
+- Secret Key (looks like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`) grants you access to your allocation.
+- IAM Name allows others to grant you access to their allocations via [Bucket Policy](./policies.md).
+    - For individual allocations the IAM Name will be your UAB Campus email address (e.g., `blazerid@uab.edu`).
+    - For shared allocations the IAM Name may vary, but should be related to your lab or Core name. When creating your allocation, you may be asked to provide this name as part of the creation process.
+
+<!-- markdownlint-disable MD046 -->
+!!! note
+
+    Early adopters of LTS will have an IAM Name like `blazerid` instead of `blazerid@uab.edu` due to an error on our part.
+<!-- markdownlint-enable MD046 -->
+
+These should come to you in an email when your allocation is created. The Access and Secret Keys will be contained in a text file in UAB Box. A link will be provided in the email. The text file will be deleted within 7 days.
+
+If you lose track of any of this information, please [Contact Support](../../help/support.md).
 
 ## Can I Share My Account Access Keys With Other People?
 
