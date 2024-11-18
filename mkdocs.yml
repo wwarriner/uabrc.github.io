@@ -102,6 +102,9 @@ nav:
           - "For Guests - Account Creation": account_management/xias/guest_instructions.md
       - Gitlab Account: account_management/gitlab_account.md
   - Data Management:
+      - Tutorial:
+          - data_management/tutorial/index.md
+          - Using Globus to Manage LTS: data_management/tutorial/globus_and_lts.md
       - Cheaha Storage: data_management/storage.md
       - Storage Alternatives: data_management/alternate_storage.md
       - Long Term Storage:
