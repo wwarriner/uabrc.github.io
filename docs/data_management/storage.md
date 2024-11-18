@@ -36,17 +36,15 @@ Shared Storage is available via two services. We have [Project Storage](#project
 - Exploratory data
 - Temporary data needed longer than 30 days
 
-In contrast, [Long-Term Storage](./lts/index.md) is best-suited for unchanging or static data. Specifically:
+In contrast, [Long-Term Storage](./lts/index.md) is best-suited for data that changes infrequently or never. Specifically:
 
 - Instrument-acquired data
 - Completed analyses
-- Hosting data for others to copy
-- Hosting data for the public internet
+- Hosting static data for others to copy
+- Hosting static data for the public internet
 - "Pick-up" and "drop-off" locations for data as part of a workflow
 
-Shared Storage is available for labs headed by a PI _and_ for Core facilities headed by a director.
-
-Shared Storage is allocated on a per-organization basis, not on a per-person basis. If an individual researcher manages both a lab and a Core, they may request independent storage allocations for each organization. Each organization may request both Project Storage and Long-Term Storage.
+Shared storage is for lab groups, Research Cores, and other Core-like organizations serving UAB research interests. Shared Storage is allocated on a per-organization basis, not on a per-person basis or per-project basis. If an individual researcher manages both a Lab and a Core, they may request independent storage allocations for each organization. Every organization may request both Project Storage and Long-Term Storage.
 
 ### How Do I Request Shared Storage?
 
@@ -75,7 +73,7 @@ Please provide the following information. Missing information can delay allocati
 
     - For Labs, we recommend using the format `<PI_BlazerID>_lab`, where `<PI_BlazerID>` is the BlazerID or name of the Principal Investigator (PI). For example: `PI_BlazerID_lab`, `PI_name_lab`.
     - For Cores, we recommend using a shortened version of the Core name. For example: `core_facility_space`
-    - For Project Storage, the name you choose will be used in the path `/data/project/<PI_BlazerID>_lab` on Cheaha. Also, this name,`<PI_BlazerID>_lab`, will be given to your shared LTS account.
+    - For Project Storage, the name you choose will be used in the path `/data/project/<PI_BlazerID>_lab` on Cheaha. Also, this name,`<PI_BlazerID>_lab`, will be given to your shared LTS allocation.
 
     <!-- markdownlint-disable MD046 -->
     !!! Tip
@@ -85,7 +83,13 @@ Please provide the following information. Missing information can delay allocati
         - To serve future projects, consider names that are generic.
     <!-- markdownlint-disable MD046 -->
 
-If some members have not created their accounts at the time of the request, we will proceed with allocating the Shared Storage. Additional members may be added at a later time in a new service request.
+If some members have not created their Cheaha accounts at the time of the request, we will proceed with allocating the Shared Storage. Additional members may be added at a later time in a new service request.
+
+<!-- markdownlint-disable MD046 -->
+!!! important
+
+    LTS allocations come with [Access and Secret Keys](./lts/lts_faq.md#what-are-access-and-secret-keys) which should be treated as username and password for your allocation.
+<!-- markdownlint-enable MD046 -->
 
 ### How Do I Make Changes to Shared Storage Membership?
 
