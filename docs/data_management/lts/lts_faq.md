@@ -59,6 +59,10 @@ These should come to you in an email when your allocation is created. The Access
 
 If you lose track of any of this information, please [Contact Support](../../help/support.md).
 
+## What are Access and Secret Keys?
+
+Access keys are like a username, and secret keys are like a password, please treat them accordingly. You will get separate sets of keys for each allocation you manage or are responsible for.
+
 ## Can I Share My Account Access Keys With Other People?
 
 You should never share access keys with anyone. These should be treated similarly to your BlazerID and password. Sharing keys creates a point of vulnerability and if they fall into a nefarious actor's hands, all buckets that account owns and the data in them can be deleted.
