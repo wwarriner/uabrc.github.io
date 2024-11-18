@@ -63,13 +63,13 @@ If you lose track of any of this information, please [Contact Support](../../hel
 
 Access keys are like a username, and secret keys are like a password, please treat them accordingly. You will get separate sets of keys for each allocation you manage or are responsible for.
 
-## Can I Share My Account Access Keys With Other People?
+## Can I Share My Allocation Access Keys With Other People?
 
-You should never share access keys with anyone. These should be treated similarly to your BlazerID and password. Sharing keys creates a point of vulnerability and if they fall into a nefarious actor's hands, all buckets that account owns and the data in them can be deleted.
+You should never share access keys with anyone. These should be treated similarly to your BlazerID and password. Sharing keys creates a point of vulnerability and if they fall into a nefarious actor's hands, all buckets that allocation owns and the data in them can be deleted.
 
-In some cases, you may not be actively managing data in a bucket even though you own the account which owns a shared bucket. Instead of sharing keys with a data steward, instead that steward should be given admin-esque permissions on the required bucket via a policy file.
+In some cases, you may not be actively managing data in a bucket even though you own the allocation which owns a shared bucket. Instead of sharing keys with a data steward, instead that steward should be given admin-esque permissions on the required bucket via a policy file.
 
-## How Should I Organize My LTS Shared Account?
+## How Should I Organize My LTS Shared Allocation?
 
 This is ultimately up to the bucket owner, but there are a couple of single-bucket solutions depending on your specific use-case for LTS:
 
@@ -86,7 +86,9 @@ This is ultimately up to the bucket owner, but there are a couple of single-buck
     - **Drawbacks:** The policy file is more difficult to craft and manage when researchers needed to be added or removed from the bucket. Allowing users to delete their uploaded data at their discretion may conflict with the owner's view of those data.
     - [Example Policy File](res/example-active-external-storage-policy.json){: download="example-active-external-storage-policy.json" }
 
-While these are two simple solutions, a combination of both can be implemented with some clever crafting of the policy file. As well, you could take advantage of both solutions with multiple buckets. Keep in mind that data in all buckets contribute towards the total storage allocation equally. Once an account's storage quota is reached, no files can be added to any bucket owned by that account until files are removed.
+While these are two simple solutions, a combination of both can be implemented with some clever crafting of the policy file. As well, you could take advantage of both solutions with multiple buckets. Keep in mind that data in all buckets contribute towards the total storage allocation equally. Once an allocation's storage quota is reached, no files can be added to any bucket owned by that allocation until files are removed.
+
+<!-- TODO cross-link to new content-->
 
 ## Are Automatic Backups to LTS Available?
 
@@ -103,7 +105,7 @@ While S3's object storage system does not have POSIX permissions seen in a Linux
     "Principal": {
         "AWS": [
             "arn:aws:iam:::user/example_core",
-            "arn:aws:iam:::user/account_owner@uab.edu"
+            "arn:aws:iam:::user/allocation_owner@uab.edu"
         ]
     },
     "Action": [
@@ -150,7 +152,7 @@ The following policy file will give read permission to all LTS users for all obj
             "Effect": "Allow",
             "Principal": {
                 "AWS": [
-                    "arn:aws:iam:::user/account_owner@uab.edu"
+                    "arn:aws:iam:::user/allocation_owner@uab.edu"
                 ]
             },
             "Action": [
@@ -185,6 +187,8 @@ The following policy file will give read permission to all LTS users for all obj
 ## Can I Change Permissions On A Bucket Via Globus?
 
 As of now, there is no way to change permissions on a bucket via [Globus](../transfer/globus.md). The only way to change permissions is via the command line.
+
+<!-- TODO cross-link to new content-->
 
 ## Is LTS compatible with Amazon S3?
 
