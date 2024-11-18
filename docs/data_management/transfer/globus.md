@@ -331,3 +331,11 @@ It is NOT RECOMMENDED to make Globus Connect Personal collections public as this
 1. Click "X Delete Collection" and a confirmation dialog will open at the top of the page. Respond to the dialog to delete the collection, or to cancel.
 
     ![!Delete Collection confirmation dialog banner.](./images/globus_107_shared_delete.png)
+
+## How Do Guest Collections Work?
+
+A Guest Collection can be thought of as a gateway to your data. The gateway is prepared in advance with your credentials. You choose who can access your data through the Guest Collection. When another user accesses the Guest Collection, the data is shared with them on your behalf, using your credentials, which were prepared in advance. Everything happens seamlessly, as though the other user had credentials of their own to access the data. However, the other user does not ever see your credentials.
+
+The table below gives a summary of some of the details of who has access to what data, and how, when accessing a Guest Collection.
+
+{{ read_csv('data_management/tutorial/res/how-guest-collections-work.csv', keep_default_na=False) }}
