@@ -33,9 +33,11 @@ The following rules are not required on LTS, but recommended for compatibility w
 <!-- markdownlint-disable MD046 -->
 !!! example
 
-    - `my-bucket`: not good
-    - `my-bucket-1234`: acceptable
-    - `my-bucket-1499e6d5-b719-4cc1-831d-fe1b25970b3b`: excellent
+    - `my-bucket`: not good, probably won't work
+    - `my-bucket-1234`: acceptable, but may not work
+    - `specific-research-core-name`: better, likely to work, Core names are probably unique
+    - `specific-research-core-name-1499e6d5-b719-4cc1-831d-fe1b25970b3b`: excellent, guaranteed to work
+
 <!-- markdownlint-enable MD046 -->
 
 ## Can I Share My Account Access Keys With Other People?
