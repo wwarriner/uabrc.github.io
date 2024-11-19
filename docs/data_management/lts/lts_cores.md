@@ -30,7 +30,7 @@ A simplified diagram illustrating this organization can be seen below.
 
 ![!Suggested organization of LTS buckets and data](images/simplified-lts-core-diagram.png)
 
-Due to data sensitivity, we advise against storing data from different groups in the same bucket. Managing permissions for a bucket where many groups can only access specific portions of a bucket is cumbersome and prone to error. Instead, separate [policy files](policies.md) should be kept for each bucket specifying which researchers from each lab or group should be able to access the stored data. These policy files can be kept in a single location owned by the core for future modification. This also facilitates future transfer of bucket ownership from the core to the lab or group to whom the data belongs after data collection or analysis is complete.
+Due to data sensitivity, we advise against storing data from different groups in the same bucket. Managing permissions for a bucket where many groups can only access specific portions of a bucket is cumbersome and prone to error. Instead, separate [policy files](policies.md) should be kept for each bucket specifying which researchers from each lab or group should be able to access the stored data. These policy files can be kept in a single location owned by the core for future modification. This also facilitates future transfer of bucket ownership from the core to the lab or group to whom the data belongs after data acquisition or analysis is complete.
 
 ## Transferring From Local Machines to LTS
 
