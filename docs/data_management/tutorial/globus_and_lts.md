@@ -68,7 +68,7 @@ A Collection can be thought of as a gateway. The gateway is prepared in advance 
 <!-- markdownlint-disable MD046 -->
 !!! info
 
-    Buckets in Globus have no policy applied and the most restrictive access controls possible. If you want to allow others to access the bucket outside of Globus, you will still need to use [policies](../lts/policies.md)
+    Buckets in Globus have no policy applied and the most restrictive access controls possible. If you want to allow others to access the bucket outside of Globus, you will still need to use [policies](../lts/iam_and_policies.md#sharing-buckets)
 <!-- markdownlint-enable MD046 -->
 
 For Cores and other organizations with customers, sharing LTS through Collections means your customers, and most of your staff, do not have to work with LTS directly.

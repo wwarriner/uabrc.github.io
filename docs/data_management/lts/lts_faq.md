@@ -45,7 +45,7 @@ Please store the following information carefully for your LTS allocation(s).
 
 - Access Key (looks like `AKIAIOSFODNN7EXAMPLE`) grants you access to your allocation.
 - Secret Key (looks like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`) grants you access to your allocation.
-- IAM Name allows others to grant you access to their allocations via [Bucket Policy](./policies.md).
+- IAM Name allows others to grant you access to their allocations via [Bucket Policy](./iam_and_policies.md#sharing-buckets).
     - For individual allocations the IAM Name will be your UAB Campus email address (e.g., `blazerid@uab.edu`).
     - For shared allocations the IAM Name may vary, but should be related to your lab or Core name. When creating your allocation, you may be asked to provide this name as part of the creation process.
 
