@@ -148,7 +148,7 @@ To use the UAB [LTS](../lts/index.md) Connector, [search for a collection/endpoi
 
 #### Adding LTS Allocation Credentials
 
-Before you can manage an LTS allocation using Globus, you'll need to add the [LTS S3 Access and Secret Keys](../lts/index.md#requesting-an-account) to the LTS endpoint. To do so, please follow the instructions given below.
+Before you can manage an LTS allocation using Globus, you'll need to add the [LTS S3 Access and Secret Keys](../lts/index.md#requesting-an-individual-allocation) to the LTS endpoint. To do so, please follow the instructions given below.
 
 1. In your browser, navigate to <https://app.globus.org> and login using UAB SSO.
 1. Click "Collections" in the left-hand navigation pane.
@@ -227,7 +227,7 @@ Uploading a top-level folder that does not follow the bucket naming rules will c
 
 ![!large error message in small space](images/globus_lts_upload_error_001.png)
 
-Globus can create buckets. By default, buckets are created without a policy, meaning only you can access them until a policy is added. However, Globus cannot be used to modify or add policies. In addition, files transferred to a bucket will become objects with the same name, as long as the name is valid and not duplicated. Globus does not recognize or handle metadata, so you cannot use it to view or modify metadata. For guidance on defining policies for your bucket, please refer to our documentation on [policy structure](../lts/policies.md#policy-structure) and [applying a policy](../lts/policies.md#applying-a-policy).
+Globus can create buckets. By default, buckets are created without a policy, meaning only you can access them until a policy is added. However, Globus cannot be used to modify or add policies. In addition, files transferred to a bucket will become objects with the same name, as long as the name is valid and not duplicated. Globus does not recognize or handle metadata, so you cannot use it to view or modify metadata. For guidance on defining policies for your bucket, please refer to our documentation on [policy structure](../lts/iam_and_policies.md#policy-structure) and [applying a policy](../lts/iam_and_policies.md#applying-a-policy).
 
 ## Using Bookmarks
 
@@ -331,3 +331,11 @@ It is NOT RECOMMENDED to make Globus Connect Personal collections public as this
 1. Click "X Delete Collection" and a confirmation dialog will open at the top of the page. Respond to the dialog to delete the collection, or to cancel.
 
     ![!Delete Collection confirmation dialog banner.](./images/globus_107_shared_delete.png)
+
+## How Do Guest Collections Work?
+
+A Guest Collection can be thought of as a gateway to your data. The gateway is prepared in advance with your credentials. You choose who can access your data through the Guest Collection. When another user accesses the Guest Collection, the data is shared with them on your behalf, using your credentials, which were prepared in advance. Everything happens seamlessly, as though the other user had credentials of their own to access the data. However, the other user does not ever see your credentials.
+
+The table below gives a summary of some of the details of who has access to what data, and how, when accessing a Guest Collection.
+
+{{ read_csv('data_management/transfer/tutorial/res/how-guest-collections-work.csv', keep_default_na=False) }}

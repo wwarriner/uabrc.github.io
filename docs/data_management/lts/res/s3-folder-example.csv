@@ -1,0 +1,5 @@
+Filesystem Eqiuvalent,Object Name,Display Name,Behaves Like,Is Actually
+`bucket`,,`bucket`,folder,bucket
+`├── top-level-object`,`top-level-object`,`top-level-object`,file,object
+`└── folder/`,`folder/`,`folder`,folder,object
+<code>&nbsp;&nbsp;&nbsp;&nbsp;└── nested-object</code>,`folder/nested-object`,`nested-object`,file,object

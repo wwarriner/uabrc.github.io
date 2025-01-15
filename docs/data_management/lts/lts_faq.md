@@ -4,13 +4,72 @@
 
 Bucket names must be comprised only of lowercase letters, numbers, and hyphens. No capital letters or underscores are allowed. Trying to create a bucket with the disallowed characters will return an error.
 
-## Can I Share My Account Access Keys With Other People?
+Bucket names in LTS _must_...
 
-You should never share access keys with anyone. These should be treated similarly to your BlazerID and password. Sharing keys creates a point of vulnerability and if they fall into a nefarious actor's hands, all buckets that account owns and the data in them can be deleted.
+- be globally unique across all of LTS
+    - We recommend adding a universally unique identifier (UUID) after the desired name to ensure uniqueness.
+    - Example: change the generic `my-bucket` to the unique `my-bucket-1499e6d5-b719-4cc1-831d-fe1b25970b3b`.
+    - The site <https://uuidgenerator.net> can be used to generate UUIDs.
+    - Use "Version 4" UUIDs as they are fully randomized.
+- be between 3 and 63 characters long;
+- have only lowercase letters, numbers, dots `.`, and hyphens `-`
+- begin and end with a letter or number
+- have no consecutive dots (`..` is not allowed)
+- not be formatted like an IP address (e.g., not like `127.0.0.1`)
 
-In some cases, you may not be actively managing data in a bucket even though you own the account which owns a shared bucket. Instead of sharing keys with a data steward, instead that steward should be given admin-esque permissions on the required bucket via a policy file.
+The following rules are not required on LTS, but recommended for compatibility with Amazon AWS S3. Bucket names in LTS _should_...
 
-## How Should I Organize My LTS Shared Account?
+- not start with specific prefixes (these are reserved):
+    - `xn--`
+    - `sthree-`
+    - `amzn-s3-demo-`
+- not end with specific suffixes (these are reserved):
+    - `-s3alias`
+    - `--ol-s3`
+    - `.mrap`
+    - `--x-s3`
+- not contain dots `.` if used with Amazon AWS S3 Transfer Acceleration
+
+<!-- markdownlint-disable MD046 -->
+!!! example
+
+    - `my-bucket`: not good, probably won't work
+    - `my-bucket-1234`: acceptable, but may not work
+    - `specific-research-core-name`: better, likely to work, Core names are probably unique
+    - `specific-research-core-name-1499e6d5-b719-4cc1-831d-fe1b25970b3b`: excellent, guaranteed to work
+<!-- markdownlint-enable MD046 -->
+
+## What Information Do I Need to Keep Track of For Managing LTS allocations?
+
+Please store the following information carefully for your LTS allocation(s).
+
+- Access Key (looks like `AKIAIOSFODNN7EXAMPLE`) grants you access to your allocation. This is equivalent to a username in other systems.
+- Secret Key (looks like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`) grants you access to your allocation. This is equivalent to a password in other systems and must be kept secret. Do not share this information with anyone.
+- IAM Name allows others to grant you access to their allocations via [Bucket Policy](./iam_and_policies.md#sharing-buckets).
+    - For individual allocations the IAM Name will be your UAB Campus email address (e.g., `blazerid@uab.edu`).
+    - For shared allocations the IAM Name may vary, but should be related to your lab or Core name. When creating your allocation, you may be asked to provide this name as part of the creation process.
+
+<!-- markdownlint-disable MD046 -->
+!!! note
+
+    Early adopters of LTS will have an IAM Name like `blazerid` instead of `blazerid@uab.edu` due to an error on our part.
+<!-- markdownlint-enable MD046 -->
+
+These should come to you in an email when your allocation is created. The Access and Secret Keys will be contained in a text file in UAB Box. A link will be provided in the email. The text file will be deleted within 7 days.
+
+If you lose track of any of this information, please [Contact Support](../../help/support.md).
+
+## What are Access and Secret Keys?
+
+Access keys are like a username, and secret keys are like a password, please treat them accordingly. You will get separate sets of keys for each allocation you manage or are responsible for.
+
+## Can I Share My Allocation Access Keys With Other People?
+
+You should never share access keys with anyone. These should be treated similarly to your BlazerID and password. Sharing keys creates a point of vulnerability and if they fall into a nefarious actor's hands, all buckets that allocation owns and the data in them can be deleted.
+
+In some cases, you may not be actively managing data in a bucket even though you own the allocation which owns a shared bucket. Instead of sharing keys with a data steward, instead that steward should be given admin-esque permissions on the required bucket via a policy file.
+
+## How Should I Organize My LTS Shared Allocation?
 
 This is ultimately up to the bucket owner, but there are a couple of single-bucket solutions depending on your specific use-case for LTS:
 
@@ -27,7 +86,9 @@ This is ultimately up to the bucket owner, but there are a couple of single-buck
     - **Drawbacks:** The policy file is more difficult to craft and manage when researchers needed to be added or removed from the bucket. Allowing users to delete their uploaded data at their discretion may conflict with the owner's view of those data.
     - [Example Policy File](res/example-active-external-storage-policy.json){: download="example-active-external-storage-policy.json" }
 
-While these are two simple solutions, a combination of both can be implemented with some clever crafting of the policy file. As well, you could take advantage of both solutions with multiple buckets. Keep in mind that data in all buckets contribute towards the total storage allocation equally. Once an account's storage quota is reached, no files can be added to any bucket owned by that account until files are removed.
+While these are two simple solutions, a combination of both can be implemented with some clever crafting of the policy file. As well, you could take advantage of both solutions with multiple buckets. Keep in mind that data in all buckets contribute towards the total storage allocation equally. Once an allocation's storage quota is reached, no files can be added to any bucket owned by that allocation until files are removed.
+
+<!-- TODO cross-link to new content-->
 
 ## Are Automatic Backups to LTS Available?
 
@@ -44,7 +105,7 @@ While S3's object storage system does not have POSIX permissions seen in a Linux
     "Principal": {
         "AWS": [
             "arn:aws:iam:::user/example_core",
-            "arn:aws:iam:::user/account_owner@uab.edu"
+            "arn:aws:iam:::user/allocation_owner@uab.edu"
         ]
     },
     "Action": [
@@ -91,7 +152,7 @@ The following policy file will give read permission to all LTS users for all obj
             "Effect": "Allow",
             "Principal": {
                 "AWS": [
-                    "arn:aws:iam:::user/account_owner@uab.edu"
+                    "arn:aws:iam:::user/allocation_owner@uab.edu"
                 ]
             },
             "Action": [
@@ -126,3 +187,35 @@ The following policy file will give read permission to all LTS users for all obj
 ## Can I Change Permissions On A Bucket Via Globus?
 
 As of now, there is no way to change permissions on a bucket via [Globus](../transfer/globus.md). The only way to change permissions is via the command line.
+
+<!-- TODO cross-link to new content-->
+
+## Is LTS compatible with Amazon S3?
+
+Yes! LTS is compatible with Amazon S3 (Simple Storage Service). Most software solutions that work with Amazon AWS S3 will also work with LTS. Generally, you will need to instruct the software where the interface is located by supplying an Endpoint URL. Our Endpoint URL is `https://s3.lts.rc.uab.edu/`.
+
+We recommend the following software:
+
+- [Globus](../transfer/globus.md) for general-use data transfers. See our [Tutorials](../transfer/tutorial/index.md).
+- [s5cmd](../lts/interfaces.md#s5cmd) for high-throughput data transfers.
+- [s3cmd](../lts/interfaces.md#s3cmd) for managing bucket policies. Note that for some use cases, you may not need a bucket policy, and Globus will be enough to share data.
+
+If you are unsure of how to make the most of LTS, please [Contact Support](../../help/support.md)
+
+## How Do Folders Work in LTS and S3?
+
+LTS is an S3-compatible storage. S3 does not have a concept of folders, only buckets and objects, with a flat structure. All buckets are siblings, and objects go in buckets. All objects in a given bucket are siblings. Buckets never go in buckets. The flat structure gives S3 stable performance and low cost at very large scales of data.
+
+Almost all software solutions that interact with S3 have a way to simulate hierarchical folder structures. Zero-byte objects with a trailing slash `/` character are treated as though they were folders, e.g., `folder/`. Any objects prefixed with `folder/` will be treated as though contained within a folder called `folder`. In the simulation, buckets are also treated as folders.
+
+### Example
+
+The following table gives an example of how software, like [Globus](../transfer/globus.md), simulates folders when looking at S3-compatible storage. The first row shows the bucket called `bucket`, which contains all of the objects in the example. The remaining rows in the table each describes one of the example objects.
+
+{{ read_csv('data_management/lts/res/s3-folder-example.csv', keep_default_na=False) }}
+
+- **Filesystem Equivalent**: The equivalent tree structure if these objects were in a hierarchical file system, like on your personal computer or Cheaha. This also shows the relative locations of objects when using, e.g., Globus.
+- **Internal S3 Name**: The name of the object as known to S3. Note the `folder/` prefix on the last object.
+- **Display Name**: The name displayed in software like Globus.
+- **Behaves Like**: What this object or bucket behaves like in the simulated tree structure.
+- **Is Actually**: Whether the entity in this row represents a bucket or object.
