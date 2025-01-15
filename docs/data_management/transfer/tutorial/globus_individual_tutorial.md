@@ -46,13 +46,19 @@ Globus is a data transfer ecosystem that simplifies the process of transferring,
 - Transfers are encrypted end-to-end. Globus never sees your data.
 - Suitable for transferring PHI and HIPAA data. Note: a UAB Enterprise IT risk assessment is required.
 
+[Return to the Top](#globus-tutorials-for-individual-researchers)
+
 ## How Does Globus Work?
 
 Globus is an ecosystem of software intended to make research data transfer simpler. The Globus Web Application (Web App) at <https://app.globus.org> allows you to initiate transfers between any two Collections you have authorization to access. The Globus Connect Personal (GCP) software lets you turn any computer into a Globus Collection. At no point do Globus servers touch your research data. Instead, when you initiate a transfer between two Collections, the Globus application tells the two Collections that they need to talk to each other and data is sent directly between them. The Collections update the application with information you may need to know, such as how much data has transferred so far, how fast the transfer is proceeding, and any errors that occur. If the connection between Collections is interrupted for any reason, the Globus application will attempt to restart the transfer from where it left off.
 
+[Return to the Top](#globus-tutorials-for-individual-researchers)
+
 ## Tutorial Prerequisites
 
 For these tutorials, you will need your BlazerID or [XIAS ID](../../../account_management/xias/index.md) and password to authenticate using UAB Single Sign-On (SSO).
+
+[Return to the Top](#globus-tutorials-for-individual-researchers)
 
 ## How Do I Get Onto the Globus Web App?
 
@@ -85,6 +91,8 @@ For these tutorials, you will need your BlazerID or [XIAS ID](../../../account_m
 - [How Do I Use the File Manager Page?](#how-do-i-use-the-file-manager-page)
 - [Return to the top](#globus-tutorials-for-individual-researchers).
 
+[Return to the Top](#globus-tutorials-for-individual-researchers)
+
 ## How Do I Use the File Manager Page?
 
 1. [Get Onto the Globus Web App](#how-do-i-get-onto-the-globus-web-app).
@@ -116,6 +124,8 @@ For these tutorials, you will need your BlazerID or [XIAS ID](../../../account_m
     - **(5) Folder Selection checkbox**: If checked, then the folder is currently selected for transfer. This folder is not selected.
 
     ![Globus Web App file manager two-panel view with Collection selected showing a file and folder.](./images/gi-web-app/008-file-manager-two-panel-example.png)
+
+[Return to the Top](#globus-tutorials-for-individual-researchers)
 
 ## How Do I Modify Files and Folders?
 
@@ -166,7 +176,7 @@ Globus provides controls for working directly with files and folders in Collecti
 
 The File Manager page will be your most frequently-visited page when using Globus for data transfers. It is central to usage of the Globus Web Application. Please take some time to familiarize yourself with its look and feel. As you progress in the tutorials, please take time to experiment with transferring data to better understand how the interface works. Feel free to return to this section for guidance.
 
-- [Return to the Top](#globus-tutorials-for-individual-researchers)
+[Return to the Top](#globus-tutorials-for-individual-researchers)
 
 ## What are Collections?
 
@@ -181,6 +191,8 @@ Mapped Collections allow many people to access a single storage system in a secu
 Guest Collections allow a single person to share access to their data. A Guest Collection can be created as a subset of a Mapped Collection. For example, if you want to share access to a particular directory on Cheaha, you can create a Guest Collection inside the Cheaha Mapped Collection. Then, you can grant others access to the Guest Collection.
 
 More details on the differences between Mapped and Guest Collections are given below.
+
+[Return to the Top](#globus-tutorials-for-individual-researchers)
 
 ## What is the Difference Between Mapped Collections and Guest Collections?
 
@@ -198,6 +210,8 @@ Guest Collections:
 - Are created as a subset of data in a Mapped Collection.
 - Allow people to [directly share their data with anyone via your credentials](#how-do-guest-collections-work).
 - Data may be shared as read-only, or read-write, facilitating collaboration.
+
+[Return to the Top](#globus-tutorials-for-individual-researchers)
 
 ## How Do Guest Collections Work?
 
@@ -511,11 +525,15 @@ Most of the options have a circled lower-case letter "i" icon `(i)` to the right
 
     ![Repeat option controls](./images/gi-transfer-options/003-repeat-controls.png)
 
+[Return to the Top](#globus-tutorials-for-individual-researchers)
+
 ## How Do I Make the Destination Match the Source for a Transfer?
 
 1. Get to the [Transfer Options](#how-do-i-configure-transfer-options).
 1. Check the "delete...", and "preserve..." checkboxes.
 1. Initiate the transfer as usual.
+
+[Return to the Top](#globus-tutorials-for-individual-researchers)
 
 ## How Do I Schedule a Periodic Transfer or Backup?
 
@@ -531,3 +549,5 @@ Most of the options have a circled lower-case letter "i" icon `(i)` to the right
 
     Cheaha, LTS and UAB Box are not intended as backup services. Cheaha storage is intended for data being used in active research. LTS is intended for the long-term storage of research data that is not being actively used in research.
 <!-- markdownlint-enable MD046 -->
+
+[Return to the Top](#globus-tutorials-for-individual-researchers)

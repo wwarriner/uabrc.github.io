@@ -38,6 +38,8 @@ Below is a list of topics covered in this article.
 
     ![Groups page of the Globus Web App.](./images/common/groups.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I Find a Group?
 
 1. [Get to the Groups page of the Globus Web App](#where-can-i-find-the-groups-page-in-the-globus-web-app).
@@ -56,6 +58,8 @@ Below is a list of topics covered in this article.
 1. To view the newly-created Group's details page click its name in the results. If you are a Lab PI or Core Manager, please familiarize yourself with finding this details page. The details page is central to managing Groups.
 
     ![Group page.](./images/gg-find-group/005-group-details-page.png)
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Request to Join a Group?
 
@@ -80,6 +84,8 @@ Below is a list of topics covered in this article.
 
     ![Pending membership notification.](./images/gg-join-group/003-pending.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I Find and Accept an Invitation From a Group?
 
 1. [Get to the Groups page of the Globus Web App](#where-can-i-find-the-groups-page-in-the-globus-web-app).
@@ -95,6 +101,8 @@ Below is a list of topics covered in this article.
 
     ![Accept invitation form.](./images/gg-accept-group/003-form.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I Leave a Group?
 
 1. [Get to the Groups page of the Globus Web App](#where-can-i-find-the-groups-page-in-the-globus-web-app).
@@ -105,6 +113,8 @@ Below is a list of topics covered in this article.
 1. Click the "Leave Group" button. Note that this action cannot be undone, but you may [Rejoin the Group](#how-do-i-request-to-join-a-group) or be [Invited to Rejoin](#how-do-i-find-and-accept-an-invitation-from-a-group).
 
     ![Leave group button on the groups page.](./images/gg-leave-group/001-leave-button.png)
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Create a Group?
 
@@ -132,6 +142,8 @@ Below is a list of topics covered in this article.
 
     ![Group details page on the Overview tab showing additional properties.](./images/gg-create-group/003-group-details-page.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I Create a Subgroup?
 
 Subgroups are also full-fledged groups that happen to have a parent-child relationship with another group. Specifically, subgroups have a parent, and the subgroup is a child of the parent group. As a consequence, all members of the child subgroup are also members of the parent group. Subgroups may also have subgroups of their own. Otherwise, subgroups behave like any other group.
@@ -151,6 +163,8 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
 1. You should be taken to the Group Creation form. Proceed from here as though you are [Creating a Group](#how-do-i-create-a-group).
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I See Subgroups of a Group?
 
 1. [Get to the Groups page of the Globus Web App](#where-can-i-find-the-groups-page-in-the-globus-web-app).
@@ -158,6 +172,8 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 1. On the Group's details page, click the "Subroups" tab. Subgroups will be listed here. In this case, the only subgroup is "uab-rc-facilitation".
 
     ![Subgroup tab of group details page.](./images/gg-view-subgroups/001-subgroup-tab-page.png)
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Modify a Group or Subgroup?
 
@@ -167,12 +183,16 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
     ![Settings tab of Group details page](./images/gg-modify-group/001-settings-tab.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I Make a Group Invite Only?
 
 1. [Prepare to modify the Group](#how-do-i-modify-a-group-or-subgroup).
 1. Under "Policies" find the "Membership Visibility" controls and select "Administrators and Managers Only" to hide Group members from each other. This can be useful for groups with many members to make it easier to find managers and administrators.
 
     ![Group settings page with group visibility controls highlighted.](./images/gg-modify-group-invite-only/001-request-to-join-checkbox.png)
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Keep Group Members from Seeing Each Other?
 
@@ -181,12 +201,16 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
     ![Group settings page with group visibility controls highlighted.](./images/gg-modify-group-hide-members/001-hide-members-radio-button.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I Hide a Group from Others?
 
 1. [Prepare to modify the Group](#how-do-i-modify-a-group-or-subgroup).
 1. Under "Policies" find the "Group Visibility" controls and select "Members of the Group" to hide your group from non-members. This can be useful for groups with restricted or controlled access.
 
     ![Group settings page with group visibility controls highlighted.](./images/gg-modify-group-hide-group/001-hide-group-radio-button.png)
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Delete a Group or Subgroup?
 
@@ -203,6 +227,8 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
     <!-- markdownlint-enable MD046 -->
 
     ![Delete group button.](./images/gg-delete-group/001-delete-button.png)
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Invite Others to a Group?
 
@@ -224,6 +250,8 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
     ![Invitation confirmation page.](./images/gg-invite-to-group/004-confirmation.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I See Group Members?
 
 1. [Get to the Groups page of the Globus Web App](#where-can-i-find-the-groups-page-in-the-globus-web-app).
@@ -231,6 +259,8 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 1. On the Group's details page, click the "Members" tab. Members will be listed here.
 
     ![Members tab of group details page.](./images/gg-view-members/001-members-tab-page.png)
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Modify Group Members?
 
@@ -244,6 +274,8 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
     ![Member's membership page.](./images/gg-modify-members/002-membership-page.png)
 
+[Return to the Top](#globus-group-management)
+
 ## How Do I Change a Group Member's Role Level?
 
 1. [Prepare to modify Group memberships](#how-do-i-modify-group-members).
@@ -255,11 +287,15 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
     ![Controls to modify member role.](./images/gg-modify-members-role/004-role-controls.png)
 
+[Return to the Top](#globus-group-management)
+
 ## What Does Each Role Mean?
 
 Different roles have different purposes. The Administrator role is intended to be for managing both the group itself and its members. The Manager role is for managing members of the group. The Member role is purely for granting access to collections associated with the group. The table below contains more details.
 
 {{ read_csv('data_management/transfer/tutorial/res/globus-group-roles.csv', keep_default_na=False, colalign=("left","center","center","center")) }}
+
+[Return to the Top](#globus-group-management)
 
 ## How Do I Remove a Group Member?
 
@@ -271,3 +307,5 @@ Different roles have different purposes. The Administrator role is intended to b
 1. The page should update to reflect the change immediately. Instead of the "Remove Membership" button, you should see "Add Membership" and "Send Invitation" buttons.
 
     ![Membership page with highlighted remove member button.](./images/gg-modify-members-remove/003-membership-page-after.png)
+
+[Return to the Top](#globus-group-management)

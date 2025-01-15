@@ -34,13 +34,19 @@ Globus is a data transfer ecosystem that simplifies the process of transferring,
 - Transfers are encrypted end-to-end. Globus never sees your data.
 - Suitable for transferring PHI and HIPAA data. Note: a UAB Enterprise IT risk assessment is required.
 
+[Return to the Top](#globus-tutorials-for-uab-research-organizations)
+
 ## How Does Globus Work?
 
 Globus is an ecosystem of software intended to make research data transfer simpler. The Globus Web Application (Web App) at <https://app.globus.org> allows you to initiate transfers between any two Collections you have authorization to access. The Globus Connect Personal (GCP) and Globus Connect Server (GCS) software let you turn any computer into a Globus Collection. At no point do Globus servers touch your research data. Instead, when you initiate a transfer between two Collections, the Globus application tells the two Collections that they need to talk to each other and data is sent directly between them. The Collections update the application with information you may need to know, such as how much data has transferred so far, how fast the transfer is proceeding, and any errors that occur. If the connection between Collections is interrupted for any reason, the Globus application will attempt to restart the transfer from where it left off.
 
+[Return to the Top](#globus-tutorials-for-uab-research-organizations)
+
 ## Tutorial Prerequisites
 
 For these tutorials, you will need your BlazerID or [XIAS ID](../../../account_management/xias/index.md) and password to authenticate using UAB Single Sign-On (SSO).
+
+[Return to the Top](#globus-tutorials-for-uab-research-organizations)
 
 ## How Do I Get onto the Globus Web App?
 
