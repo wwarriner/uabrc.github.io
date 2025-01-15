@@ -19,8 +19,8 @@ Topics covered:
     - [How Do I Use the File Manager Page?](#how-do-i-use-the-file-manager-page)
     - [How Do I Modify Files and Folders?](#how-do-i-modify-files-and-folders)
 - Collections
-    - [What are Collections?](#what-are-collections)
-    - [What is the Difference Between Mapped Collections and Guest Collections?](#what-is-the-difference-between-mapped-collections-and-guest-collections)
+    - [What Are Collections?](#what-are-collections)
+    - [What Is the Difference Between Mapped Collections and Guest Collections?](#what-is-the-difference-between-mapped-collections-and-guest-collections)
     - [How Do Guest Collections Work?](#how-do-guest-collections-work)
     - [How Do I Search for Collections by Name?](#how-do-i-search-for-collections-by-name)
     - [How Do I Find UAB Storage Mapped Collections?](#how-do-i-find-uab-storage-mapped-collections)
@@ -178,7 +178,7 @@ The File Manager page will be your most frequently-visited page when using Globu
 
 [Return to the Top](#globus-tutorials-for-individual-researchers)
 
-## What are Collections?
+## What Are Collections?
 
 A Globus Collection is the interface, or starting point, for accessing a set of folders and files via Globus. There are two types of Collections: Mapped and Guest.
 
@@ -194,7 +194,7 @@ More details on the differences between Mapped and Guest Collections are given b
 
 [Return to the Top](#globus-tutorials-for-individual-researchers)
 
-## What is the Difference Between Mapped Collections and Guest Collections?
+## What Is the Difference Between Mapped Collections and Guest Collections?
 
 Mapped Collections:
 
