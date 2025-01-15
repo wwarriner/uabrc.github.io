@@ -21,7 +21,7 @@ Before using any of these tutorials, you will need to set up an [Individual LTS 
 
     ![UAB LTS Collection details page](./images/gl-access-keys/001-details-page.png)
 
-1. Enter your [UAB LTS Access Key and Secret Key](../lts/lts_faq.md#what-are-access-and-secret-keys) here. If you are working to configure [Guest Collections](../transfer/tutorial/globus_organization_tutorial.md#how-do-i-create-a-collection) for a Shared LTS allocation, such as for a Lab or Research Core, then you will need to enter the shared allocation keys of your individual allocation keys.
+1. Enter your [UAB LTS Access Key and Secret Key](../lts/lts_faq.md#what-are-access-and-secret-keys) here. If you are working to configure [Guest Collections](../transfer/tutorial/globus_organization_tutorial.md#how-do-i-create-a-guest-collection) for a Shared LTS allocation, such as for a Lab or Research Core, then you will need to enter the shared allocation keys of your individual allocation keys.
 
     ![UAB LTS Collection details page credentials tab showing entry form](./images/gl-access-keys/002-credentials-tab.png)
 

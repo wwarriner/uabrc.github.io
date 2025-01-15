@@ -10,17 +10,19 @@ Topics covered:
 - [How Does Globus Work?](#how-does-globus-work)
 - [Tutorial Prerequisites](#tutorial-prerequisites)
 - [How Do I Get onto the Globus Web App?](#how-do-i-get-onto-the-globus-web-app)
-- [How Do I Install Globus Connect Personal?](#how-do-i-install-globus-connect-personal)
-    - [Windows](#installing-gcp-on-windows)
-    - [MacOS](#installing-gcp-on-macos)
-- [How Do I Choose Specific Folders to Share Using Globus Connect Personal?](#how-do-i-choose-specific-folders-to-share-using-globus-connect-personal)
-    - [Windows](#choose-specific-folders-on-windows)
-    - [MacOS](#choose-specific-folders-on-macos)
-- [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
-- [How Do I Enable Sharing for My Globus Account?](#how-do-i-enable-collection-sharing-for-my-globus-account)
-- [How Do I Create a Collection?](#how-do-i-create-a-collection)
-- [How Do I Share a Guest Collection with Others?](#how-do-i-share-a-guest-collection-with-others)
-- [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
+- Globus Connect Personal
+    - [How Do I Install Globus Connect Personal?](#how-do-i-install-globus-connect-personal)
+        - [Windows](#installing-gcp-on-windows)
+        - [MacOS](#installing-gcp-on-macos)
+    - [How Do I Choose Specific Folders to Share Using Globus Connect Personal?](#how-do-i-choose-specific-folders-to-share-using-globus-connect-personal)
+        - [Windows](#choose-specific-folders-on-windows)
+        - [MacOS](#choose-specific-folders-on-macos)
+- Collections
+    - [How Do I Enable Sharing for My Globus Account?](#how-do-i-enable-sharing-for-my-globus-account)
+    - [How Do I Create a Guest Collection?](#how-do-i-create-a-guest-collection)
+    - [How Do I Share a Guest Collection with Others?](#how-do-i-share-a-guest-collection-with-others)
+    - [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
+    - [How Do I Find Guest Collections I Created or Own?](#how-do-i-find-guest-collections-i-created-or-own)
 
 ## Why Globus?
 
@@ -230,7 +232,7 @@ We have instructions for the following Operating Systems.
 
     ![General tab of GCP options menu](./images/go-choose-folder/win/006-general-tab-changed.png)
 
-To verify the existence and accessibility of your Collection proceed to [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
+To verify the existence and accessibility of your Collection proceed to [How Do I Find Guest Collections I Created or Own?](#how-do-i-find-guest-collections-i-created-or-own)
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
@@ -263,41 +265,16 @@ To verify the existence and accessibility of your Collection proceed to [How Do 
 
 1. Use the plus `+` and minus `-` buttons to add your research data folders and remove other folders, as needed. Click the "Shareable" checkbox next to each research data folder. Click "Save" when finished.
 
-To verify the existence and accessibility of your Collection proceed to [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
+To verify the existence and accessibility of your Collection proceed to [How Do I Find Collections I Created or Own?](#how-do-i-find-guest-collections-i-created-or-own)
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
-## How Do I Find Collections I Created or Own?
+## How Do I Enable Sharing For My Globus Account?
 
-To find a Collection you own, use the following steps.
+To share from your GCP Collection there are a couple of hurdles to overcome:
 
-1. Navigate to the [Globus Web App](#how-do-i-get-onto-the-globus-web-app) using your browser. You should be at the File Manager page.
-
-    ![File Manager page of the Globus Web App](./images/common/file-manager.png)
-
-1. Click either of the Collection Search bar at the top of the File Manager page. This will take you to the Collection Search page.
-
-    ![Collection Search page of the Globus Web App](./images/common/collection-search-page.png)
-
-1. Click the Your Collections tab to display a list of Collections you have created or own.
-
-    ![Your Collections tab showing a GCP Collection.](./images/go-my-collections/003-your-collections.png)
-
-1. From here there are two options:
-
-    1. Click the name of the Collection to select it for a file transfer and be taken back to the File Manager page.
-
-        ![File Manager page showing selected Collection on left-hand panel.](./images/go-my-collections/004-file-manager-selection-made.png)
-
-    1. Click the three dots icon at the right side of the entry to be taken to the Collection details page.
-
-        ![Collectionm details page with overview tab selected.](./images/go-my-collections/005-collection-details-page.png)
-
-[Return to the top](#globus-tutorials-for-uab-research-organizations).
-
-## How Do I Enable Collection Sharing For My Globus Account?
-
-Before you can share Collections from your Globus Connect Personal (GCP) Collection with others, you must do a one-time setup for your account. You will need to join the "University of Alabama at Birmingham (HA)" (UAB HA) subscription group. Sharing any Collection requires a paid subscription with Globus. UAB Research Computing has a subscription, but Globus does not know your BlazerID is part of our subscription until you join the subscription group. So, Globus also does not know the GCP Collection you created is part of our subscription. By joining our UAB HA group, you and your GCP Collection are confirmed to be part of our subscription, and you can share Collections from the GCP Collection.
+1. **You cannot share the GCP Collection itself.** Instead, you will [create](#how-do-i-create-a-guest-collection) and [share](#how-do-i-share-a-guest-collection-with-others) a Guest Collection referencing a folder in your GCP Collection. But, before we get to that...
+1. **You must enable sharing** by joining the "University of Alabama at Birmingham (HA)" (UAB HA) subscription group. Sharing data through any Collection requires a paid subscription with Globus. UAB Research Computing has a subscription, but Globus does not know you are part of our subscription until you join the UAB HA group. Once you've joined the group, any Guest Collections you create can be shared.
 
 To join the UAB HA group, we need to receive both a UAB support request, and a request to join the UAB HA group within the Globus Web App. We need both because we sometimes get spam applications through Globus. Having a Support Request helps us filter the spam. Please use the following steps to join.
 
@@ -332,22 +309,28 @@ To join the UAB HA group, we need to receive both a UAB support request, and a r
 
     ![Groups page with my groups checked showing UAB HA subscription group](./images/go-uab-ha-group-access/006-my-groups.png.png)
 
-When you have completed the steps in this section, proceed to [creating a Collection](#how-do-i-create-a-collection).
+When you have completed the steps in this section, proceed to [creating a Guest Collection](#how-do-i-create-a-guest-collection).
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
-## How Do I Create a Collection?
+## How Do I Create a Guest Collection?
 
-There are three ways to create a Collection.
+There are three ways to create a Guest Collection.
 
-- Start from [an existing Collection you created or own](#how-do-i-find-collections-i-created-or-own).
-- [Install Globus Connect Personal](#how-do-i-install-globus-connect-personal) and [share a folder](#how-do-i-choose-specific-folders-to-share-using-globus-connect-personal) to create a Collection.
-- Install and configure one or more Collections with Globus Connect Server. To do this, please [Contact Support](../../../help/support.md#how-do-i-create-a-support-ticket) to start a discussion.
+- Start from an existing [Mapped Collection](./globus_individual_tutorial.md#how-do-i-find-uab-storage-mapped-collections) such as Cheaha or LTS. This is most often what you will need. If you have a Mapped Collection from a Globus Connect Server Endpoint you own, you will want to use this choice.
+- [Install Globus Connect Personal](#how-do-i-install-globus-connect-personal) and [share a folder](#how-do-i-choose-specific-folders-to-share-using-globus-connect-personal) to create a Mapped Collection of your laptop, desktop, or workstation. This is uncommon, but can be useful in some situations.
+- Start from [an existing Guest Collection you created or own](#how-do-i-find-guest-collections-i-created-or-own). Starting from a Guest Collection will result in you creating a subset of a subset. This is rare, consider starting from a Mapped Collection instead.
 
-The instructions below assume you are starting from an existing Collection. The instructions will work to create a subset of your Globus Connect Personal Collection.
+<!-- markdownlint-disable MD046 -->
+!!! info
+
+    Install and configure one or more Mapped Collections with Globus Connect Server. To do this, please [Contact Support](../../../help/support.md#how-do-i-create-a-support-ticket) to start a discussion.
+<!-- markdownlint-enable MD046 -->
+
+The instructions below assume you are starting from an existing Mapped Collection. The instructions will work to create a subset of your Globus Connect Personal Collection.
 
 1. [Get onto the Globus Web App](#how-do-i-get-onto-the-globus-web-app).
-1. [Find the existing Collection](#how-do-i-find-collections-i-created-or-own) and access its details page.
+1. [Find the existing Collection](#how-do-i-find-guest-collections-i-created-or-own) and access its details page.
 1. Click the "Collection" tab.
 
     ![Overview tab of details page with Collection tab to the right.](./images/go-create-collection/001-collection-tab.png)
@@ -376,10 +359,10 @@ When you have created a Guest Collection, you are ready to [share the Guest Coll
 
 ## How Do I Share a Guest Collection with Others?
 
-Before sharing a Collection with others, you will need to first [create a Collection](#how-do-i-create-a-collection) you administer. If the Collection is a [Globus Connect Personal Collection](#how-do-i-install-globus-connect-personal), then you will also need to [enable Collection sharing for your Globus account](#how-do-i-enable-collection-sharing-for-my-globus-account). If these prerequisites have been met, then you are ready to setup a Collection to be shared with others. Please follow the instructions below.
+Before sharing a Collection with others, you will need to first [create a Guest Collection](#how-do-i-create-a-guest-collection) or identify an existing one. If you are creating the Guest Collection from a [Globus Connect Personal Mapped Collection](#how-do-i-install-globus-connect-personal), then you will also need to [enable sharing for your Globus account](#how-do-i-enable-sharing-for-my-globus-account) by connecting to our Globus subscription. If these prerequisites have been met, then you are ready to share your Guest Collection with others. Please follow the instructions below.
 
 1. [Get onto the Globus Web App](#how-do-i-get-onto-the-globus-web-app).
-1. [Find the Collection](#how-do-i-find-collections-i-created-or-own) you wish to share. In this case we are looking for the "customer-share" Collection.
+1. [Find the Guest Collection](#how-do-i-find-guest-collections-i-created-or-own) you wish to share. In this case we are looking for the "customer-share" Collection. Yours may have a different name.
 1. On the "customer-share" Collection details page, click the Permissions tab.
 
     ![Collection details page overview tab.](./images/go-share-collection/001-collection-details-overview.png)
@@ -413,5 +396,33 @@ Before sharing a Collection with others, you will need to first [create a Collec
 ## How Do I Share Data With a Research Core Customer?
 
 If you manage data for a Research Core, please [Contact Support](../../../help/support.md#how-to-request-support) to start a conversation. The answer to this question is currently being developed, so we will need to work together to find the ideal solution.
+
+[Return to the top](#globus-tutorials-for-uab-research-organizations).
+
+## How Do I Find Guest Collections I Created or Own?
+
+To find a Collection you own, use the following steps.
+
+1. Navigate to the [Globus Web App](#how-do-i-get-onto-the-globus-web-app) using your browser. You should be at the File Manager page.
+
+    ![File Manager page of the Globus Web App](./images/common/file-manager.png)
+
+1. Click either of the Collection Search bar at the top of the File Manager page. This will take you to the Collection Search page.
+
+    ![Collection Search page of the Globus Web App](./images/common/collection-search-page.png)
+
+1. Click the Your Collections tab to display a list of Collections you have created or own.
+
+    ![Your Collections tab showing a GCP Collection.](./images/go-my-collections/003-your-collections.png)
+
+1. From here there are two options:
+
+    1. Click the name of the Collection to select it for a file transfer and be taken back to the File Manager page.
+
+        ![File Manager page showing selected Collection on left-hand panel.](./images/go-my-collections/004-file-manager-selection-made.png)
+
+    1. Click the three dots icon at the right side of the entry to be taken to the Collection details page.
+
+        ![Collectionm details page with overview tab selected.](./images/go-my-collections/005-collection-details-page.png)
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
