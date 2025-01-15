@@ -11,12 +11,12 @@ Before using any of these tutorials, you will need to set up an [Individual LTS 
     - Individual allocation
     - Shared lab allocation
     - Shared core allocation
-1. [Find the LTS Collection in the File Manager](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-find-uab-storage-collections).
+1. [Find the LTS Collection in the File Manager](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-find-uab-storage-mapped-collections).
 
 ## How Do I Add or Change LTS Access Keys?
 
 1. [Get Onto the Globus Web App](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-get-onto-the-globus-web-app).
-1. [Find the UAB LTS Collection](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-find-uab-storage-collections).
+1. [Find the UAB LTS Collection](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-find-uab-storage-mapped-collections).
 1. Click the "Credentials" tab in the Collection details page, highlighted in the screenshot below.
 
     ![UAB LTS Collection details page](./images/gl-access-keys/001-details-page.png)

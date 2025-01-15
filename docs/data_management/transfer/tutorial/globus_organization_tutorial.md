@@ -19,7 +19,7 @@ Topics covered:
 - [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
 - [How Do I Enable Sharing for My Globus Account?](#how-do-i-enable-collection-sharing-for-my-globus-account)
 - [How Do I Create a Collection?](#how-do-i-create-a-collection)
-- [How Do I Share a Collection with Others?](#how-do-i-share-a-collection-with-others)
+- [How Do I Share a Guest Collection with Others?](#how-do-i-share-a-guest-collection-with-others)
 - [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
 
 ## Why Globus?
@@ -364,11 +364,11 @@ The instructions below assume you are starting from an existing Collection. The 
 
     ![Permissions tab of new Collection details page.](./images/go-create-collection/004-completion.png)
 
-When you have created a Collection, you are ready to [share the Collection with others](#how-do-i-share-a-collection-with-others).
+When you have created a Guest Collection, you are ready to [share the Guest Collection with others](#how-do-i-share-a-guest-collection-with-others).
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
-## How Do I Share a Collection with Others?
+## How Do I Share a Guest Collection with Others?
 
 Before sharing a Collection with others, you will need to first [create a Collection](#how-do-i-create-a-collection) you administer. If the Collection is a [Globus Connect Personal Collection](#how-do-i-install-globus-connect-personal), then you will also need to [enable Collection sharing for your Globus account](#how-do-i-enable-collection-sharing-for-my-globus-account). If these prerequisites have been met, then you are ready to setup a Collection to be shared with others. Please follow the instructions below.
 

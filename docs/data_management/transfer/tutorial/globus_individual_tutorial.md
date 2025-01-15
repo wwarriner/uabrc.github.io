@@ -7,7 +7,7 @@ If you are new to Globus, you are in the right place. If you represent a group l
 
 These tutorials are intended for individual researchers who need to move data from one location to another. If you manage a Research Core or lab and have never used Globus before, you'll want to start on this page. Then you will want to proceed to [Globus Tutorials for Research Groups](./globus_organization_tutorial.md).
 
-The tutorials below will teach you how to effectively use Globus for managing and transferring research data. We will explore what Globus is, why you might use it, how it works, and we'll walk you through the essential steps to get started. You will learn how to set up your Globus account, access the Globus application, find Collections shared with you, and search for Collections by name.
+The tutorials below will teach you how to effectively use Globus for managing and transferring research data. We will explore what Globus is, why you might use it, how it works, and we'll walk you through the essential steps to get started. You will learn how to set up your Globus account, access the Globus application, find Guest Collections shared with you, and search for Collections by name.
 
 Topics covered:
 
@@ -19,12 +19,15 @@ Topics covered:
     - [How Do I Use the File Manager Page?](#how-do-i-use-the-file-manager-page)
     - [How Do I Modify Files and Folders?](#how-do-i-modify-files-and-folders)
 - Collections
+    - [What are Collections?](#what-are-collections)
+    - [What is the Difference Between Mapped Collections and Guest Collections?](#what-is-the-difference-between-mapped-collections-and-guest-collections)
+    - [How Do Guest Collections Work?](#how-do-guest-collections-work)
     - [How Do I Search for Collections by Name?](#how-do-i-search-for-collections-by-name)
-    - [How Do I Find UAB Storage Collections?](#how-do-i-find-uab-storage-collections)
-    - [How Do I Find Collections Shared with Me?](#how-do-i-find-collections-shared-with-me)
+    - [How Do I Find UAB Storage Mapped Collections?](#how-do-i-find-uab-storage-mapped-collections)
+    - [How Do I Find Guest Collections Shared with Me?](#how-do-i-find-guest-collections-shared-with-me)
 - Transfers
-    - [How Do I Transfer between a Collection and Cheaha?](#how-do-i-transfer-between-a-collection-and-cheaha)
-    - [How Do I Transfer between a Collection and LTS?](#how-do-i-transfer-between-a-collection-and-lts)
+    - [How Do I Transfer between a Guest Collection and Cheaha?](#how-do-i-transfer-between-a-guest-collection-and-cheaha)
+    - [How Do I Transfer between a Guest Collection and LTS?](#how-do-i-transfer-between-a-guest-collection-and-lts)
     - [How Do I Transfer between LTS and Cheaha?](#how-do-i-transfer-between-lts-and-cheaha)
     - [How Do I Check Transfer Status?](#how-do-i-check-transfer-status)
     - [How Do I Configure Transfer Options?](#how-do-i-configure-transfer-options)
@@ -120,7 +123,7 @@ Globus provides controls for working directly with files and folders in Collecti
 
 ![File and folder controls between File Manager panels](./images/gi-modify-files-folders/001-file-folder-controls.png)
 
-- **(1) Share**: [Click to share the current folder as a Collection](./globus_organization_tutorial.md#how-do-i-share-a-collection-with-others).
+- **(1) Share**: [Click to share the current folder as a Guest Collection](./globus_organization_tutorial.md#how-do-i-share-a-guest-collection-with-others).
 - **(2) Transfer or Sync to**: Click to switch to the other panel.
 - **(3) New Folder**: Click to creates a new folder in the current folder. The collection must have writing enabled and you must have write permissions to do this. At the top level of [LTS](../../lts/index.md), [special rules apply to names](../../lts/lts_faq.md#what-are-valid-bucket-names-in-lts).
     1. After clicking, a set of controls will appear in the panel.
@@ -165,6 +168,47 @@ The File Manager page will be your most frequently-visited page when using Globu
 
 - [Return to the Top](#globus-tutorials-for-individual-researchers)
 
+## What are Collections?
+
+A Globus Collection is the interface, or starting point, for accessing a set of folders and files via Globus. There are two types of Collections: Mapped and Guest.
+
+Mapped Collections allow many people to access a single storage system in a secure way. They map your BlazerID to the data you own, ensuring that you can only interact with the data you are authorized to interact with. Some examples of storage systems provided as Mapped Collections:
+
+- Cheaha's filesystem, GPFS
+- Long-Term Storage (LTS)
+- UAB Box
+
+Guest Collections allow a single person to share access to their data. A Guest Collection can be created as a subset of a Mapped Collection. For example, if you want to share access to a particular directory on Cheaha, you can create a Guest Collection inside the Cheaha Mapped Collection. Then, you can grant others access to the Guest Collection.
+
+More details on the differences between Mapped and Guest Collections are given below.
+
+## What is the Difference Between Mapped Collections and Guest Collections?
+
+Mapped Collections:
+
+- Created and administered by UAB or other organizations via Globus Connect Server.
+- Created and administered by individual researchers via Globus Connect Personal installed on their personal or UAB-provided laptops, desktops, or workstations.
+- Provide an interface to data directly on storage systems.
+- Map your Globus identity to the storage system's access controls.
+- Allow multiple people to access only their data, securely, on a shared storage system.
+
+Guest Collections:
+
+- May be created by anyone connected to a Globus subscription.
+- Are created as a subset of data in a Mapped Collection.
+- Allow people to [directly share their data with anyone via your credentials](#how-do-guest-collections-work).
+- Data may be shared as read-only, or read-write, facilitating collaboration.
+
+## How Do Guest Collections Work?
+
+A Guest Collection can be thought of as a gateway to your data. The gateway is prepared in advance with your credentials. You choose who can access your data through the Guest Collection. When another user accesses the Guest Collection, the data is shared with them on your behalf, using your credentials, which were prepared in advance. Everything happens seamlessly, as though the other user had credentials of their own to access the data. However, the other user does not ever see your credentials.
+
+The table below gives a summary of some of the details of who has access to what data, and how, when accessing a Guest Collection.
+
+{{ read_csv('data_management/transfer/tutorial/res/how-guest-collections-work.csv', keep_default_na=False) }}
+
+[Return to the Top](#globus-tutorials-for-individual-researchers)
+
 ## How Do I Search For Collections By Name?
 
 Please follow these instructions to search for a specific Collection by name.
@@ -186,13 +230,13 @@ Please follow these instructions to search for a specific Collection by name.
 
     ![File Manager page of the Globus Web App. One of the Collection Search bars is filled in with the previously selected Collection.](./images/gi-find-shared-collections/004-selected.png)
 
-If you can't find a particular Collection this way, but know it was shared with you, try [finding Collections shared with me](#how-do-i-find-collections-shared-with-me). Proceed on to learn [how to find UAB storage Collections](#how-do-i-find-uab-storage-collections).
+If you can't find a particular Collection this way, but know it was shared with you, try [finding Guest Collections shared with me](#how-do-i-find-guest-collections-shared-with-me). Proceed on to learn [how to find UAB storage Mapped Collections](#how-do-i-find-uab-storage-mapped-collections).
 
 [Return to the top](#globus-tutorials-for-individual-researchers).
 
-## How Do I Find UAB Storage Collections?
+## How Do I Find UAB Storage Mapped Collections?
 
-UAB offers [multiple storage resources](../../storage.md). The following resources may be accessed through Globus Collections.
+UAB offers [multiple storage resources](../../storage.md) which are accessible as Globus Mapped Collections.
 
 - Cheaha file system (GPFS) including [individual directories](../../storage.md#what-individual-storage-solutions-are-available) and [project directories](../../storage.md#project-directory).
 - [Long-Term Storage (LTS)](../../lts/index.md).
@@ -211,7 +255,7 @@ To find these resources on Globus, use the following steps.
 
 1. In the search bar, type one of the following, depending on which resource you need, and select the appropriate entry.
 
-    - **Cheaha Filesystem (GPFS)**: Type "UAB Cheaha". There are two Collections, choose one based on where the other computer is located.
+    - **Cheaha Filesystem (GPFS)**: Type "UAB Cheaha". There are two Mapped Collections, choose one based on where the other computer is located.
         - **(1)** Transferring with a computer on the UAB Campus Network or UAB Wifi? Select "Cheaha cluster **on**-campus (UAB Science DMZ)".
         - **(2)** Transferring with a computer on other networks? select "Cheaha cluster **off**-campus (UAB Science DMZ)".
 
@@ -225,13 +269,13 @@ To find these resources on Globus, use the following steps.
 
         ![UAB Box search results.](./images/gi-uab-collections/003-box.png)
 
-Proceed on to learn [how to find Collections shared with you](#how-do-i-find-uab-storage-collections).
+Proceed on to learn [how to find Guest Collections shared with you](#how-do-i-find-guest-collections-shared-with-me).
 
 [Return to the top](#globus-tutorials-for-individual-researchers).
 
-## How Do I Find Collections Shared with Me?
+## How Do I Find Guest Collections Shared with Me?
 
-Globus allows users to share Collections with others. Other researchers, labs, and Research Cores on campus may invite you to their Collections to share data with you. The following instructions let you view Collections shared with you.
+Globus allows users to share Guest Collections with others. Other researchers, labs, and Research Cores on campus may invite you to their Guest Collections to share data with you. The following instructions let you view Guest Collections shared with you.
 
 1. [Log in to Globus using your credentials](#how-do-i-get-onto-the-globus-web-app)
 1. You should see the File Manager page. If not click File Manager in the left-hand navigation panel.
@@ -246,33 +290,33 @@ Globus allows users to share Collections with others. Other researchers, labs, a
 
     ![Collection Search page of Globus Web App. Shared With You tab is selected and the list of Collections has been filtered down.](./images/gi-find-shared-collections/003-list.png)
 
-1. Click the name of the Collection to be taken back to the file manager page with the Collection filled in.
+1. Click the name of the Guest Collection to be taken back to the file manager page with the Collection filled in.
 
     ![File Manager page of the Globus Web App. One of the Collection Search bars is filled in with the previously selected Collection.](./images/gi-find-shared-collections/004-selected.png)
 
 If you can't find a particular Collection this way, but know its name, try [searching for Collections](#how-do-i-search-for-collections-by-name).
 
-Proceed on to learn how to transfer between Collections.
+Proceed on to learn more about Collections.
 
-- [Between a Collection and Cheaha](#how-do-i-transfer-between-a-collection-and-cheaha)
-- [Between a Collection and LTS](#how-do-i-transfer-between-a-collection-and-lts)
+- [Between a Guest Collection and Cheaha](#how-do-i-transfer-between-a-guest-collection-and-cheaha)
+- [Between a Guest Collection and LTS](#how-do-i-transfer-between-a-guest-collection-and-lts)
 - [Between LTS and Cheaha](#how-do-i-transfer-between-lts-and-cheaha)
 
 [Return to the top](#globus-tutorials-for-individual-researchers).
 
-## How Do I Transfer between a Collection and Cheaha?
+## How Do I Transfer between a Guest Collection and Cheaha?
 
-Please use the following instructions to transfer data from a shared Collection to [Cheaha GPFS](../../storage.md#what-type-of-storage-do-i-need). These instructions may also be used for other buckets on LTS, provided you have access and know their file path.
+Please use the following instructions to transfer data from a Guest Collection to [Cheaha GPFS](../../storage.md#what-type-of-storage-do-i-need). These instructions may also be used for other buckets on LTS, provided you have access and know their file path.
 
-The direction of transfer may also be reversed to transfer data from Cheaha to the shared Collection. Note that some shared Collections may not allow you to transfer data back, such as some of those provided by Research Cores.
+The direction of transfer may also be reversed to transfer data from Cheaha to the Guest Collection. Note that some Guest Collections may not allow you to transfer data back, such as some of those provided by Research Cores.
 
 These instructions can be generalized to any two Collections you have access to on Globus.
 
 1. [Log in to Globus using your credentials](#how-do-i-get-onto-the-globus-web-app).
 
-1. Find a shared Collection [by filtering](#how-do-i-find-collections-shared-with-me) or [by searching](#how-do-i-search-for-collections-by-name) in the left side Collection Search bar.
+1. Find a Guest Collection [by filtering](#how-do-i-find-guest-collections-shared-with-me) or [by searching](#how-do-i-search-for-collections-by-name) in the left side Collection Search bar.
 
-1. Once you have selected the shared Collection you wish to transfer data from, repeat the process to [search](#how-do-i-search-for-collections-by-name) for a Cheaha Collection in the Collection Search bar on the right side of the file manager page. Search for "Cheaha cluster" to find them.
+1. Once you have selected the Guest Collection you wish to transfer data from, repeat the process to [search](#how-do-i-search-for-collections-by-name) for a Cheaha Collection in the Collection Search bar on the right side of the file manager page. Search for "Cheaha cluster" to find them.
 
     Pay close attention in choosing which of the two you need. Choosing incorrectly could lead to slow transfers. Answer the following questions to help you decide. Is the first Collection you selected...
 
@@ -289,13 +333,13 @@ These instructions can be generalized to any two Collections you have access to 
 
 1. At this point, your file manager page should look something like the following image. At this point, both Collection Search bars should have a Collection or Collection filled in. The left side should be the Collection you wish to transfer from. The right side should be a Cheaha Collection. You should see files and folders on both sides.
 
-    ![File Manager page showing a shared Collection and Cheaha Collection.](./images/gi-transfer-collection-to-cheaha/005-ready-to-select.png)
+    ![File Manager page showing a Guest Collection and Cheaha Collection.](./images/gi-transfer-collection-to-cheaha/005-ready-to-select.png)
 
-1. Locate the source path on the shared Collection side. Either type the path into the Path field manually, or use the graphical selection field to click on folder names to navigate the filesystem.
+1. Locate the source path on the Guest Collection side. Either type the path into the Path field manually, or use the graphical selection field to click on folder names to navigate the filesystem.
 
 1. Repeat the process on the Cheaha Collection side to locate the destination path on the Cheaha Collection side.
 
-1. Select the file and folders you wish to transfer on the shared Collection side. Do so by clicking the checkboxes next to the file and folder names.
+1. Select the file and folders you wish to transfer on the Guest Collection side. Do so by clicking the checkboxes next to the file and folder names.
 
     ![File Manager page with a file selected in the left selection area. The start button is boxed in red.](./images/gi-transfer-collection-to-cheaha/008-selection.png)
 
@@ -307,24 +351,24 @@ From here you can proceed to other related tutorials to initiate other transfers
 [return to the index](#globus-tutorials-for-individual-researchers).
 
 - [How Do I check transfer status?](#how-do-i-check-transfer-status)
-- [How Do I Transfer Between a Collection and LTS?](#how-do-i-transfer-between-a-collection-and-lts)
+- [How Do I Transfer Between a Guest Collection and LTS?](#how-do-i-transfer-between-a-guest-collection-and-lts)
 - [How Do I Transfer Between LTS and Cheaha?](#how-do-i-transfer-between-lts-and-cheaha)
 
 [Return to the top](#globus-tutorials-for-individual-researchers).
 
-## How Do I Transfer between a Collection and LTS?
+## How Do I Transfer between a Guest Collection and LTS?
 
-Please use the following instructions to transfer data from a shared Collection to a [bucket on LTS](../../lts/index.md). These instructions may also be used for other directories on Cheaha, provided you have access and know their file path.
+Please use the following instructions to transfer data from a Guest Collection to a [bucket on LTS](../../lts/index.md). These instructions may also be used for other directories on Cheaha, provided you have access and know their file path.
 
-The direction of transfer may also be reversed to transfer data from LTS to the shared Collection. Note that some shared Collections may not allow you to transfer data back, such as some of those provided by Research Cores.
+The direction of transfer may also be reversed to transfer data from LTS to the Guest Collection. Note that some Guest Collections may not allow you to transfer data back, such as some of those provided by Research Cores.
 
 These instructions can be generalized to any two Collections or Collections you have access to on Globus.
 
 1. [Log in to Globus using your credentials](#how-do-i-get-onto-the-globus-web-app).
 
-1. Find a shared Collection [by filtering](#how-do-i-find-collections-shared-with-me) or [by searching](#how-do-i-search-for-collections-by-name) in the left side Collection Search bar.
+1. Find a Guest Collection [by filtering](#how-do-i-find-guest-collections-shared-with-me) or [by searching](#how-do-i-search-for-collections-by-name) in the left side Collection Search bar.
 
-1. Once you have selected the shared Collection you wish to transfer data from, repeat the process to [search](#how-do-i-search-for-collections-by-name) for the LTS Collection in the Collection Search bar on the right side of the file manager page. Search for "UAB LTS" to find it.
+1. Once you have selected the Guest Collection you wish to transfer data from, repeat the process to [search](#how-do-i-search-for-collections-by-name) for the LTS Collection in the Collection Search bar on the right side of the file manager page. Search for "UAB LTS" to find it.
 
 1. When you select the LTS Collection, or any other High Assurance (HA) Collection or Collection, you will be prompted to re-authenticate. Click the "Continue" button to do so, then select your UAB email address.
 
@@ -334,13 +378,13 @@ These instructions can be generalized to any two Collections or Collections you 
 
 1. At this point, your file manager page should look something like the following image. Both Collection Search bars should have a Collection or Collection filled in. The left side should be the Collection you wish to transfer from. The right side should be the Cheaha Collection. You should see files and folders on both sides.
 
-    ![File Manager page showing a shared Collection and LTS Collection.](./images/gi-transfer-collection-to-lts/005-ready-to-select.png)
+    ![File Manager page showing a Guest Collection and LTS Collection.](./images/gi-transfer-collection-to-lts/005-ready-to-select.png)
 
-1. Locate the source path on the shared Collection side. Either type the path into the Path field manually, or use the graphical selection field to click on folder names to navigate the filesystem.
+1. Locate the source path on the Guest Collection side. Either type the path into the Path field manually, or use the graphical selection field to click on folder names to navigate the filesystem.
 
 1. Repeat the process on the LTS Collection side to locate the destination path on the LTS Collection side.
 
-1. Select the file and folders you wish to transfer on the shared Collection side. Do so by clicking the checkboxes next to the file and folder names.
+1. Select the file and folders you wish to transfer on the Guest Collection side. Do so by clicking the checkboxes next to the file and folder names.
 
     ![File Manager page with a file selected in the left selection area. The start button is boxed in red.](./images/gi-transfer-collection-to-lts/008-selection.png)
 
@@ -352,7 +396,7 @@ From here you can proceed to other related tutorials to initiate other transfers
 [return to the index](#globus-tutorials-for-individual-researchers).
 
 - [How do I check transfer status?](#how-do-i-check-transfer-status)
-- [How Do I Transfer Between a Collection and Cheaha?](#how-do-i-transfer-between-a-collection-and-cheaha)
+- [How Do I Transfer Between a Guest Collection and Cheaha?](#how-do-i-transfer-between-a-guest-collection-and-cheaha)
 - [How Do I Transfer Between LTS and Cheaha?](#how-do-i-transfer-between-lts-and-cheaha)
 
 [Return to the top](#globus-tutorials-for-individual-researchers).
@@ -386,13 +430,13 @@ These instructions can be generalized to any two Collections or Collections you 
 
 1. At this point, your file manager page should look something like the following image. Both Collection Search bars should have a Collection or Collection filled in. The left side should be the LTS Collection. The right side should be a Cheaha Collection. You should see files and folders on both sides.
 
-    ![File Manager page showing a shared Collection and LTS Collection.](./images/gi-transfer-lts-to-cheaha/005-ready-to-select.png)
+    ![File Manager page showing a Guest Collection and LTS Collection.](./images/gi-transfer-lts-to-cheaha/005-ready-to-select.png)
 
 1. Locate the source path on the LTS Collection side. Either type the path into the Path field manually, or use the graphical selection field to click on folder names to navigate the filesystem.
 
 1. Repeat the process on the Cheaha Collection side to locate the destination path on the Cheaha Collection side.
 
-1. Select the file and folders you wish to transfer on the shared Collection side. Do so by clicking the checkboxes next to the file and folder names.
+1. Select the file and folders you wish to transfer on the Guest Collection side. Do so by clicking the checkboxes next to the file and folder names.
 
     ![File Manager page with a file selected in the left selection area. The start button is boxed in red.](./images/gi-transfer-lts-to-cheaha/008-selection.png)
 
@@ -404,8 +448,8 @@ From here you can proceed to other related tutorials to initiate other transfers
 [return to the index](#globus-tutorials-for-individual-researchers).
 
 - [How do I check transfer status?](#how-do-i-check-transfer-status)
-- [How Do I Transfer Between a Collection and Cheaha?](#how-do-i-transfer-between-a-collection-and-cheaha)
-- [How Do I Transfer Between a Collection and LTS?](#how-do-i-transfer-between-a-collection-and-lts)
+- [How Do I Transfer Between a Guest Collection and Cheaha?](#how-do-i-transfer-between-a-guest-collection-and-cheaha)
+- [How Do I Transfer Between a Guest Collection and LTS?](#how-do-i-transfer-between-a-guest-collection-and-lts)
 
 [Return to the top](#globus-tutorials-for-individual-researchers).
 
