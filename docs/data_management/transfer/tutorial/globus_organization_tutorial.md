@@ -1,8 +1,8 @@
 # Globus Tutorials for UAB Research Organizations
 
-This tutorial is designed to guide UAB research managers, such as Lab PIs, Core Directors, and their management staff, to help them set up and use Globus Connect Personal (GCP) for secure data sharing on their local/personal computers. GCP allows you to share data with collaborators efficiently meeting security and compliance standards for file sharing.
+This tutorial is designed to guide UAB research managers, such as Lab PIs, Core Directors, and their management staff, in setting up and using Globus for secure data sharing and collaboration. Globus allows you to share data with collaborators efficiently while meeting security and compliance standards.
 
-If you are new to Globus, we recommend starting with our [Globus Tutorials for Individual Researchers](./globus_individual_tutorial.md) first to familiarize yourself with how Globus is used. When those are complete, we then recommend following the tutorials on this page in order from start to finish, as later tutorials assume the previous tutorials have been completed.
+If you are new to Globus, we recommend starting with our [Globus Tutorials for Individual Researchers](./globus_individual_tutorial.md) first to familiarize yourself with how Globus is used. The topics on this page assume you are familiar with that page. When those are complete, we then recommend following the tutorials on this page in order from start to finish, as later tutorials assume the previous tutorials have been completed.
 
 Topics covered:
 
