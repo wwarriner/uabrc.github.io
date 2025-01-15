@@ -291,7 +291,7 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
 ## What Does Each Role Mean?
 
-Different roles have different purposes. The Administrator role is intended to be for managing both the group itself and its members. The Manager role is for managing members of the group. The Member role is purely for granting access to collections associated with the group. The table below contains more details.
+Different roles have different purposes. The Administrator role is intended to be for managing both the group itself and its members. The Manager role is for managing members of the group. The Member role is purely for granting access to Guest Collections associated with the group. The table below contains more details.
 
 {{ read_csv('data_management/transfer/tutorial/res/globus-group-roles.csv', keep_default_na=False, colalign=("left","center","center","center")) }}
 

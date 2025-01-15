@@ -153,7 +153,7 @@ If you manage data for a Research Core, please [Contact Support](../../../help/s
 
 ## How Do I Find Guest Collections I Created or Own?
 
-To find a Collection you own, use the following steps.
+To find a Guest Collection you own, use the following steps.
 
 1. Navigate to the [Globus Web App](#how-do-i-get-onto-the-globus-web-app) using your browser. You should be at the File Manager page.
 
