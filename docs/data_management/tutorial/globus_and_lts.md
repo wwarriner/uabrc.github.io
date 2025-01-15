@@ -1,19 +1,54 @@
 # Using Globus to Manage LTS Allocations
 
+This tutorial is designed to guide UAB research managers, such as Lab PIs, Core Directors, and their management staff, in setting up and using Globus for secure data sharing and collaboration in conjunction with our [Long-Term Storage (LTS)](../lts/index.md) platform.
+
+LTS has several moving parts and a command line interface (CLI), which can make working with it cumbersome for customers and collaborators whose skills may lie elsewhere. Globus provides features and a graphical user interface (GUI) that simpifies interacting with most of the features of LTS. Globus can make it much easier to collaborate on data or perform customer hand-offs.
+
+If you are new to Globus or LTS, then there is no need to dive into those documentation pages right now. We have constructed these tutorials to distill only the knowledge you will need when using LTS with Globus.
+
+Topics covered:
+
+- [Why Use Globus to Manage LTS?](#why-use-globus-to-manage-lts)
+- [Prerequisites](#prerequisites)
+- [How Do I Prepare to Use LTS in Globus?](#how-do-i-prepare-to-use-lts-in-globus)
+- [How Do I Configure My LTS Keys in Globus?](#how-do-i-configure-my-lts-access-keys-in-globus)
+- [How Do I Create a Bucket?](#how-do-i-create-a-bucket)
+- [How Do I Create a Folder in a Bucket?](#how-do-i-create-a-folder-in-a-bucket)
+- [How Do I Share a Bucket or Folder as a Guest Collection?](#how-do-i-share-a-bucket-or-folder-as-a-guest-collection)
+- [How Do I Transfer Data to and from Cheaha?](#how-do-i-transfer-data-to-and-from-cheaha)
+- [How Do I Manage Bucket Policies?](#how-do-i-manage-bucket-policies)
+
+## Why Use Globus to Manage LTS?
+
+Read more about [How Globus Works](../transfer/tutorial/globus_organization_tutorial.md#how-does-globus-work).
+
 ## Prerequisites
 
-Before using any of these tutorials, you will need to set up an [Individual LTS Allocation](../storage.md#how-do-i-request-an-individual-long-term-storage-allocation) and. If you represent a group such as a Lab or Research Core, you will also need to set up a [Shared LTS Allocation](../storage.md#how-do-i-request-shared-storage).
+Before using any of these tutorials, you will need to set up an [Individual LTS Allocation](../storage.md#how-do-i-request-an-individual-long-term-storage-allocation). If you represent a group such as a Lab or Research Core, you will also need to set up a [Shared LTS Allocation](../storage.md#how-do-i-request-shared-storage).
+
+Be sure to keep track of your Access and Secret keys as you receive them. These should be treated like a username and password. See [What are Access and Secret Keys?](../lts/lts_faq.md#what-are-access-and-secret-keys).
 
 ## How Do I Prepare to Use LTS in Globus?
 
 1. [Get Onto the Globus Web App](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-get-onto-the-globus-web-app).
-1. [Configure your LTS Access Keys](#how-do-i-add-or-change-lts-access-keys), unless you have already done so. Be mindful that you may have multiple sets of keys, one for each role and storage allocation you have.
-    - Individual allocation
-    - Shared lab allocation
-    - Shared core allocation
+1. [Configure your LTS Access Keys](#how-do-i-configure-my-lts-access-keys-in-globus), unless you have already done so.
 1. [Find the LTS Collection in the File Manager](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-find-uab-storage-mapped-collections).
 
-## How Do I Add or Change LTS Access Keys?
+## How Do I Configure My LTS Access Keys in Globus?
+
+Be mindful that you may have multiple sets of keys, one for each role and storage allocation you have. These may include one or more of the following.
+
+- Individual allocation
+- Shared lab allocation
+- Shared Core allocation
+
+Please use the appropriate keys for the group you are managing. It is rare for an individual to need to share data from their individual allocation, so that is likely not the set of keys you need.
+
+<!-- markdownlint-disable MD046 -->
+!!! note
+
+    We are aware of the need to switch between keys when managing both a lab and a Core. In the future we plan to create three LTS Mapped Collections with appropriate names. You will be able to configure each set of keys in the appropriate Collection, which should create a smoother experience.
+<!-- markdownlint-enable MD046 -->
 
 1. [Get Onto the Globus Web App](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-get-onto-the-globus-web-app).
 1. [Find the UAB LTS Collection](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-find-uab-storage-mapped-collections).
@@ -40,30 +75,47 @@ Before using any of these tutorials, you will need to set up an [Individual LTS 
 
 ## How Do I Create a Bucket?
 
+The concept of [buckets](../lts/index.md#terminology) is specific to LTS and its S3 backend. Don't worry if you don't know those terms. You can treat buckets as a kind of special top-level folder or directory. WHen you create a folder in the root of your LTS allocation, a bucket will be created in LTS. There are some special naming rules, which are noted in the instructions below.
+
 1. [Prepare to Use LTS in Globus](#how-do-i-prepare-to-use-lts-in-globus).
 1. [Create a New Folder](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-modify-files-and-folders).
-    - Folders created at the root level of your LTS allocation become buckets, so you will need to be mindful of [LTS Bucket Name Rules](../lts/lts_faq.md#what-are-valid-bucket-names-in-lts) when choosing a name. Bucket folders behave like any other folders when transferred with Globus.
+    - Folders created at the root level of your LTS allocation become buckets, so you will need to be mindful of [LTS Bucket Name Rules](../lts/lts_faq.md#what-are-valid-bucket-names-in-lts) when choosing a name. This is link is _very_ helpful, please read it!
+    - Bucket folders behave like any other folders when transferred with Globus.
     - [Folders created inside buckets](#how-do-i-create-a-folder-in-a-bucket) behave like regular folders when using the Globus interface.
 
         <!-- markdownlint-disable MD046 -->
         !!! info
 
-            Folders in LTS are implemented differently from traditional filesystems. If you are interested in learning more, see [How Do Folders Work in LTS and S3?](../lts/lts_faq.md#how-do-folders-work-in-lts-and-s3).
+            Folders in LTS are implemented differently from traditional filesystems, but this should not impact how you use Globus. If you are interested in learning more, see [How Do Folders Work in LTS and S3?](../lts/lts_faq.md#how-do-folders-work-in-lts-and-s3).
         <!-- markdownlint-enable MD046 -->
 
 ## How Do I Create a Folder in a Bucket?
 
 1. [Prepare to Use LTS in Globus](#how-do-i-prepare-to-use-lts-in-globus).
-1. Open the bucket where you want to create a folder.
+1. [Open](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-use-the-file-manager-page) the bucket where you want to create a folder.
 1. Click the [Create New Folder button](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-modify-files-and-folders) to create a new folder.
 
-## How Do I Share a Bucket or Folder as a Collection?
+<!-- markdownlint-disable MD046 -->
+!!! info
+
+    Folders in LTS are implemented differently from traditional filesystemsm, but this should not impact how you use Globus. If you are interested in learning more, see [How Do Folders Work in LTS and S3?](../lts/lts_faq.md#how-do-folders-work-in-lts-and-s3).
+<!-- markdownlint-enable MD046 -->
+
+## How Do I Share a Bucket or Folder as a Guest Collection?
+
+1. [Prepare to Use LTS in Globus](#how-do-i-prepare-to-use-lts-in-globus).
+1. [Create a Guest Collection](../transfer/tutorial/globus_organization_tutorial.md#how-do-i-create-a-guest-collection) from the bucket or folder.
+1. [Share the Guest Collection](../transfer/tutorial/globus_organization_tutorial.md#how-do-i-share-a-guest-collection-with-others) with the individuals or groups you wish to share with.
+
+## How Do I Transfer Data to and from Cheaha?
+
+See [How Do I Transfer between LTS and Cheaha](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-transfer-between-lts-and-cheaha).
 
 ## How Do I Manage Bucket Policies?
 
-Globus has no concept or interface for managing bucket policies, instead sharing is done using [Collections](#how-do-i-share-a-bucket-or-folder-as-a-collection).
+Globus has no concept of, nor interface for, managing bucket policies. Iinstead, sharing is done using [Guest Collections](#how-do-i-share-a-bucket-or-folder-as-a-guest-collection).
 
-A Collection can be thought of as a gateway. The gateway is prepared in advance with your credentials. Then, you choose who you want to have access to your data through that gateway. Data is then shared on your behalf, using your credentials.
+A Collection can be thought of as a gateway. The gateway is prepared in advance with your credentials. Then, you choose who you want to have access to your data through that gateway. Data is then shared seamlessly on your behalf, as though the collaborator had authorization to access the data on that system. Note that means you are now responsible for granting the collaborator authorization, so be mindful of who you share data with.
 
 <!-- markdownlint-disable MD046 -->
 !!! info
