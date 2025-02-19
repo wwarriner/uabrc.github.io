@@ -1,0 +1,5 @@
+Role,Full Access,Send as,Send on Behalf of
+Read emails,Yes ✔️,,
+Delete emails,Yes ✔️,,
+Send emails as the mailbox,,Yes ✔️,
+Send emails on behalf of the mailbox,,,Yes ✔️
