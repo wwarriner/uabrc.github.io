@@ -7,7 +7,7 @@ Shared Mailboxes are a feature supplied by UAB Enterprise IT to give multiple pe
 <!-- markdownlint-disable MD046 -->
 !!! note
 
-    The form is not a fully automated process. When you click "Submit" a ticket will be created and then followed up on manually. This process can take time, so please plan accordingly.
+    The form is used to interact with a fully automated process. When you click "Submit" a ticket will be created and added to a queue for automatic fullfilment. This process can take time, so please plan accordingly.
 <!-- markdownlint-enable MD046 -->
 
 1. Determine your organization's Active Directory (AD) organizational unit (OU). Generally, this is an uppercase string of letters with at most four characters, like `ITRC`. If you do not have an OU, you will need to have one created by UAB Enterprise IT.
@@ -24,7 +24,7 @@ Shared Mailboxes are a feature supplied by UAB Enterprise IT to give multiple pe
 
 1. [Prepare to Work with Shared Mailboxes](#prepare-to-work-with-shared-mailboxes).
 1. In the "Request Type" drop-down field select "List/Delete resource object". New fields will appear.
-1. In the "OU Name" drop-down field select your OU. If you have no existing Shared Mailboxes, then you should see a "No records found" message. Otherwise, you will see a list of Shared Mailboxes.
+1. In the "OU Name" drop-down field select your OU. If you have no existing Shared Mailboxes, then you should see a "No records found" message. Otherwise, you will see a list of Shared Mailboxes. It may take several seconds or more to populate the list of Shared Mailboxes.
 
 ## Create a new Shared Mailbox
 
@@ -55,4 +55,5 @@ Shared Mailboxes are a feature supplied by UAB Enterprise IT to give multiple pe
 ## Delete a Shared Mailbox
 
 1. [List Existing Shared Mailboxes](#list-existing-shared-mailboxes).
-1.
+1. Select the Shared Mailbox you wish to delete.
+1. Press "Submit" to delete the selected Shared Mailbox. A service request will be created, it may take some time for the Shared Mailbox to be deleted.
