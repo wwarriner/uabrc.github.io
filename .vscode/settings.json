@@ -107,5 +107,8 @@
   "markdown.extension.tableFormatter.enabled": false,
   "markdown.extension.toc.updateOnSave": false,
   "markdown.validate.unusedLinkDefinitions.enabled": "warning",
+  "markdownlint.customRules": [
+    "./markdownlint-rules/lazy-continuation-lines/lazy-continuation-lines.cjs"
+  ],
   "redhat.telemetry.enabled": false
 }
