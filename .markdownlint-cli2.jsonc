@@ -1,6 +1,9 @@
 {
   "fix": false,
   "ignores": [
-    "theme/"
+    "theme/",
+    ".git/",
+    "node_modules/",
+    "markdownlint-rules/"
   ]
 }
