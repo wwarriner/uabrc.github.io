@@ -28,7 +28,7 @@ Denser and more complete documentation is available at <https://git-scm.com/doc>
     - Repositories are decentralized, so that two people can work independently on parts of the same project and then merge their changes later.
     - A **local repository** is a repository that is housed on the same machine you are working on.
     - A **remote repository** or **remote** is a repository that is housed on a machine other than the one you are working on.
-    - Remotes are often housed on internet repository services like <https://github.com> and <https://about.gitlab.com>. UAB Research Computing also maintains an on-premises Gitlab instance at <https://code.rc.uab.edu>.
+    - Remotes are often housed on internet repository services like <https://github.com> and <https://about.gitlab.com>. UAB Research Computing also maintains an on-premises GitLab server called Code.rc at <https://code.rc.uab.edu>.
 - The **working tree** is the structure used to model repository contents and history.
 - The **index** contains changes since the most recent commit.
 - The **staging area**, a subset of the index, contains changes ready to be committed.
@@ -71,7 +71,7 @@ git init
 
 #### Forking
 
-Forking a repository is not a git concept, but a concept of remote repository hosting services like GitHub and GitLab. Forking is cloning a repository from another users account to your own account on GitHub or GitLab.
+Forking a repository is not a git concept, but a concept of remote repository hosting services like Code.rc, GitLab, and GitHub. Forking is cloning a repository from another users account to your own account.
 
 [GitHub fork documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
 
@@ -88,7 +88,7 @@ git clone <remote-url>
 <!-- markdownlint-disable MD046 -->
 !!! note
 
-    Clones may be made from GitHub and GitLab using either `https` or `ssh`. To use `ssh` you will need to set up SSH Keys.
+    Clones may be made from Code.rc, GitLab, and GitHub using either `https` or `ssh`. To use `ssh` you will need to set up SSH Keys.
 <!-- markdownlint-enable MD046 -->
 
 <!-- markdownlint-disable MD046 -->
@@ -96,7 +96,7 @@ git clone <remote-url>
 
     Best practice for the remote URL is to ensure it ends with `.git`. While the URL for this documentation's repository is <https://github.com/uabrc/uabrc.github.io> you should instead use `https://github.com/uabrc/uabrc.github.io.git` when cloning.
 
-    Using the `.git` suffix is optional for GitHub, but required for GitLab.
+    Using the `.git` suffix is optional for GitHub, but required for Code.rc and GitLab.
 <!-- markdownlint-enable MD046 -->
 
 [Full documentation](https://git-scm.com/docs/git-clone).

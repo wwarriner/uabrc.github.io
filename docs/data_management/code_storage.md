@@ -2,11 +2,11 @@
 
 Unlike with traditional raw data storage, code evolves over time, often rapidly. Rapid changes are inevitable and commonplace in academia. Scientific research demands reproducibility and accountability, especially with methodology. Code you write is part of your methodology, so it should be carefully tracked and documented as it evolves, the same way you keep lab notebooks and document how you performed experiments. Git is the foundational tool on which to build code reproducibility and accountability. GitHub and GitLab provide central, internet-based locations in which to store your code.
 
-## UAB GitLab vs the Third-Party GitHub: Which Should I Choose?
+## Code.rc (RCS GitLab Self-Hosted Server) vs Third-Party GitHub: Which Should I Choose?
 
 If your work is private, or internal to UAB operations, it is probably best to store it in our [Code.rc](../account/code.rc/index.md) server, hosted on-premises as UAB. In contrast, if you must collaborate with external researchers, it might make more sense to store code in [GitHub](#github), instead. GitLab has more feature-rich project management tooling in support of code collaboration, but GitHub is more widely known, recognized and can more readily travel with you as you progress in your career.
 
-### GitLab
+### Code.rc — RCS Self-Hosted GitLab Server
 
 UAB Research Computing maintains an on-premises GitLab server called Code.rc. To gain access, please create a [Code.rc Account](../account/code.rc/create.md).
 

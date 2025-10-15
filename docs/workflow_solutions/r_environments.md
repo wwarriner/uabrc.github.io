@@ -56,7 +56,7 @@ Another useful part of Projects is Git integration. Normally, you would need to 
     To read more about how to get started with Git, please read our [git documentation](git_collaboration.md)
 <!-- markdownlint-enable MD046 -->
 
-1. To begin, you should create an empty repository either at [Github](https://github.com/) or the UAB Research Computing on-premises [Gitlab instance](https://code.rc.uab.edu/users/sign_in) where your project will be stored. this will open a new page with instructions on linking this remote repository with your local project. Keep these instructions open for later. A picture of the important piece can be seen below.
+1. To begin, you should create an empty repository either at [GitHub](https://github.com/) or [Code.rc (GitLab)](https://code.rc.uab.edu/users/sign_in) where your project will be stored. this will open a new page with instructions on linking this remote repository with your local project. Keep these instructions open for later. A picture of the important piece can be seen below.
 
     ![! Instructions on how to link an existing local repository with the created remote repository](images/r_push_existing_repo_instructions.png)
 
@@ -97,8 +97,8 @@ You can make a change to your package environment at any point using a variety o
 
 1. CRAN using `install.packages` or the RStudio package installation interface
 1. Bioconductor using `BiocManager::install()`
-1. Github using `devtools::install_github()` or `remotes::install_github()`
-1. Gitlab using `devtools::install_gitlab()` or `remotes::install_gitlab()`
+1. GitHub using `devtools::install_github()` or `remotes::install_github()`
+1. Code.rc (GitLab) using `devtools::install_gitlab()` or `remotes::install_gitlab()`
 1. Bitbucket
 
 ### Saving an Environment

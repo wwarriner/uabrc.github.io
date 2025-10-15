@@ -346,7 +346,7 @@ You can specify a channel in your search, and it will show you a list of the pac
 
 If we find the package at one of these sources, we check the Platform version to ensure it is either noarch (if available) or linux for it to work on Cheaha ("noarch" is usually preferred for the sake of portability). Noting the version, we can click the "source" or "repo" link (if available) or "homepage". Then we try to find the latest version. For a package found on GitHub, click "Releases" on the right-hand side. Verify that the latest Release is the same as, or very close to, the version on Anaconda or PyPI. If so, the package is being maintained on Anaconda/PyPI and suitable for use. Note the exact software name, version, and channel (if not on PyPI).
 
-![!Github page for numpy, an Anaconda package](images/github_conda_releases.png)
+![!GitHub page for numpy, an Anaconda package](images/github_conda_releases.png)
 
 If we don't find a package using Google, or the Anaconda/PyPI pages are out of date, then it may become very hard to use the software in an Anaconda environment. It is possible to try installing a git repository using pip, but care must be taken to choose the right commit or tag. You can find more [info here](https://pip.pypa.io/en/stable/cli/pip_install/#examples). To search for a git repository try:
 
@@ -361,7 +361,7 @@ Remember to replace name with name of Anaconda package.
 There are issues with out-of-date software. It may have bugs that have since been fixed and so makes for less reproducible science. Documentation may be harder to find if it isn't also matched to the software version. Examining the README.md file for instructions may provide some good information on installing the package. You can also reach out to us for [support](../help/support.md) in installing a package.
 <!-- markdownlint-enable MD046 -->
 
-When we have a complete list of Anaconda packages and Channels, then we can create an environment from scratch with all the dependencies included. For Anaconda packages, add one line to dependencies for each software. For PyPI packages add - pip: under dependencies. Then under - pip:add `==` to pin the version, see below. The advantage to using an environment file is that it can be stored with your project in GitHub or GitLab, giving it all the benefits of [version control](./git_collaboration.md).
+When we have a complete list of Anaconda packages and Channels, then we can create an environment from scratch with all the dependencies included. For Anaconda packages, add one line to dependencies for each software. For PyPI packages add - pip: under dependencies. Then under - pip:add `==` to pin the version, see below. The advantage to using an environment file is that it can be stored with your project in Code.rc, GitLab, or GitHub, giving it all the benefits of [version control](./git_collaboration.md).
 
 ```yaml
 name: test-env
@@ -385,7 +385,7 @@ The above configuration is only for illustration purposes, to show how channels 
 
 1. Regularly consider updating your environment file to manage dependencies and maintain compatible software environments. Also newer software tends to resolve older bugs, consequently improving the state of science.
 
-1. Verify Package Version and Maintenance: Ensure you are getting the latest version of the package that is compatible with your environment. Verify that the package is actively maintained by checking the source repository (e.g., GitHub, GitLab). Look for recent commits, releases, and issue resolutions. The concepts of version pinning and semantic versioning, explain this in detail.
+1. Verify Package Version and Maintenance: Ensure you are getting the latest version of the package that is compatible with your environment. Verify that the package is actively maintained by checking the source repository (e.g., Code.rc, GitLab, and GitHub). Look for recent commits, releases, and issue resolutions. The concepts of version pinning and semantic versioning, explain this in detail.
 
 ##### Version Pinning
 

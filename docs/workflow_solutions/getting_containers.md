@@ -10,7 +10,7 @@ Docker containers are available in <https://hub.docker.com/>. This docker hub re
 
 ![!Containers docker hub website.](./images/containers_docker_hub_website.png)
 
-It is often a good idea to search the Github repo for an application or pipeline to see if a container has already been provided by the authors.
+It is often a good idea to search the GitHub repo for an application or pipeline to see if a container has already been provided by the authors.
 
 ## Containers on Cheaha
 
@@ -143,7 +143,7 @@ The existing image looks like,
 
 ## Create Your Own Docker Container
 
-You can create your own Docker container, build it, and upload/share them in the Docker hub or UAB GitLab container registry.
+You can create your own Docker container, build it, and upload/share them in the Docker hub or Code.rc container registry.
 
 Let us take a synthetic python code and formulate the packages/dependencies required to build your software container. Below is a python script that requires packages, namely, numpy, scipy, and matplotlib. Next, the steps to create a `Dockerfile` is illustrated. Let us name this script `python_test.py`.
 
@@ -313,7 +313,7 @@ We provide community containers that cover a broad range of software to support 
 
 ### Where Can I Find UAB Research Computing Community Containers
 
-Our community containers are housed in our on-premises GitLab repository. You can access them at <https://code.rc.uab.edu/rc-data-science/community-containers>
+Our community containers are housed in our on-premises Code.rc repository. You can access them at <https://code.rc.uab.edu/rc-data-science/community-containers>
 
 Each container is organized into a folder within the registry repository, making it easy to locate specific software or environments. Every container also includes a README file that provides documentation on its purpose, which software is included, and instructions for setting it up. If you have a container you would like to add to the container registry, please contact us at <support@listserv.uab.edu>, and we will gladly facilitate its inclusion.
 
@@ -321,11 +321,11 @@ Each container is organized into a folder within the registry repository, making
 
 To use a container from the registry, navigate to the preferred container. On the left navigation pane, you will see an option "Deploy", select this and a list of options will show up.
 
-![Accessing a container in a GitLab container registry](./images/gitlab-deploy-container.png)
+![Accessing a container in a Code.rc container registry](./images/gitlab-deploy-container.png)
 
 Click on "Container Registry" and then click the container, usually in the format "`containername/containername`", this will open a new page displaying the tag(s) (usually the `Commit SHA`). Use the copy icon next to the tag to copy the container's image path.
 
-![Steps for copying an image path in the GitLab Container Registry](./images/gitlab-container-tag.png)
+![Steps for copying an image path in the Code.rc Container Registry](./images/gitlab-container-tag.png)
 
 The next set of instructions will guide you through how to complete the install process for the container on Cheaha or on other platforms.
 
@@ -337,7 +337,7 @@ On Cheaha, you can pull a container using Singularity by running the `singularit
 singularity pull <preferredName.sif> docker://code.rc.uab.edu:4567/rc-data-science/community-containers/<name of container/name of container:tag>
 ```
 
-In the above command, `<preferredName.sif>` is a file name placeholder you should replace with your preferred container image filename. For example you can rename the file as "`alphafold3.sif`". The **`4567`** is the specific port for our GitLab container registry. For the `<name of container/name of container:tag>` placeholder, you will need to replace this placeholder with the specific path with the image name and tag of the container you want to pull.
+In the above command, `<preferredName.sif>` is a file name placeholder you should replace with your preferred container image filename. For example you can rename the file as "`alphafold3.sif`". The **`4567`** is the specific port for our Code.rc container registry. For the `<name of container/name of container:tag>` placeholder, you will need to replace this placeholder with the specific path with the image name and tag of the container you want to pull.
 
 A sample code is shown below
 
@@ -359,36 +359,36 @@ docker pull docker://code.rc.uab.edu:0000/rc-data-science/community-containers/<
 
 This will pull the image and setup the container for use. As with all containers, `docker run` along with the right flags/option will run the container. Please refer to the `README` file provided in the container repository, or look for documentation specific to the container. Please see our documentation for [using Singularity on a cloud instance](#using-containers-on-uab-rc-cloud-cloudrcuabedu).
 
-## Sharing Containers Using UAB GitLab Container Registry
+## Sharing Containers Using Code.rc Container Registry
 
-If you prefer to share your container with a particular team/group, then the UAB GitLab container registry is the best and most secure option.
+If you prefer to share your container with a particular team/group, then the Code.rc container registry is the best and most secure option.
 
-The following steps help you to create a container registry in UAB GitLab:
+The following steps help you to create a container registry in Code.rc:
 
 1. Create a Code.rc account following the guidelines from the [Code.rc page](../account/code.rc/create.md).
-1. Create a `new_project` on UAB GitLab and click `Package and Registries`, and then go to `Container Registry`. Initially, the container registry looks empty because there are no container images in the registry.
+1. Create a `new_project` on Code.rc and click `Package and Registries`, and then go to `Container Registry`. Initially, the container registry looks empty because there are no container images in the registry.
 
     ![!Containers registry.](./images/containers_registry.png)
 
     !!! note
-        Copy these CLI commands for future reference. It contains commands (1) to login to your project UAB GitLab container registry (2) Add an image to the registry using the push/build command. We will use the `push` command as we already have the existing container in our system.
+        Copy these CLI commands for future reference. It contains commands (1) to login to your project Code.rc container registry (2) Add an image to the registry using the push/build command. We will use the `push` command as we already have the existing container in our system.
 
-1. Login to UAB GitLab Registry using your `registry_name:ID`.
+1. Login to Code.rc Registry using your `registry_name:ID`.
 
     ```bash
     sudo docker login code.rc.uab.edu:4567
     ```
 
     !!! note
-        The registry_name and ID shown in this examples are for understanding and not meant for testing. Please use your GitLab registry name and ID for testing.
+        The registry_name and ID shown in this examples are for understanding and not meant for testing. Please use your Code.rc registry name and ID for testing.
 
-    Note: For securing concerns, use an access token to log in. Create an access token in UAB GitLab to push/pull the docker container in the container registry (Secure token and guidelines to follow are shown next).
+    Note: For securing concerns, use an access token to log in. Create an access token in Code.rc to push/pull the docker container in the container registry (Secure token and guidelines to follow are shown next).
 
     ```bash
     sudo docker login code.rc.uab.edu:4567 -u username –p access_token
     ```
 
-1. Creating an Access Token: From the UAB GitLab page, you can create an access token instead of using a password to log in to the UAB GitLab registry. Goto Edit profile -> Click `Access Tokens`. Then enter:
+1. Creating an Access Token: From the Code.rc page, you can create an access token instead of using a password to log in to the Code.rc registry. Goto Edit profile -> Click `Access Tokens`. Then enter:
 
       - **Token name.**:Suggestion: "container"_"repository-name"
 
@@ -405,9 +405,9 @@ Once you create the token, copy the new personal access token since it’s a one
 ![!Containers gitlab login success.](./images/containers_gitlab_login_success.png)
 
 !!! warning
-    Running `docker login` leads to a warning message that your password is stored unencrypted in `/root/.docker/config.json` (or) `$HOME/.docker/config.json`. To ignore this warning, follow the instructions in this [Github page](https://leimao.github.io/blog/Docker-Login-Encrypted-Credentials/) or the [Docker credentials store page](https://docs.docker.com/reference/cli/docker/login/#credentials-store).
+    Running `docker login` leads to a warning message that your password is stored unencrypted in `/root/.docker/config.json` (or) `$HOME/.docker/config.json`. To ignore this warning, follow the instructions in this [GitHub page](https://leimao.github.io/blog/Docker-Login-Encrypted-Credentials/) or the [Docker credentials store page](https://docs.docker.com/reference/cli/docker/login/#credentials-store).
 
-### Push Alpine Container From Your System to UAB GitLab Container Registry
+### Push Alpine Container From Your System to Code.rc Container Registry
 
 - List the docker images on your local computer using the `docker images` command. An `alpine` image exists already on this computer. Your container will likely have a different name.
 
@@ -417,7 +417,7 @@ sudo docker images
 
 ![!Containers docker image.](./images/containers_docker_image.png)
 
-- Tag `alpine` to push into UAB GitLab registry. We need to have the UAB GitLab registry name to push. It will show the default command on the container registry page. Copy these commands for future reference. The tag is `test` here.
+- Tag `alpine` to push into Code.rc registry. We need to have the Code.rc registry name to push. It will show the default command on the container registry page. Copy these commands for future reference. The tag is `test` here.
 
 ```bash
 sudo docker tag alpine:latest code.rc.uab.edu:4567/rc-data-science/build-and-push-container/alpinegitlab:test
@@ -431,10 +431,10 @@ sudo docker images
 
 ![!Containers docker test image.](./images/containers_docker_test_image.png)
 
-The below first command is the syntax to push the Docker image to the UAB GitLab container registry from your computer. The second command is an example of pushing a Docker image to the UAB GitLab container registry from your computer.
+The below first command is the syntax to push the Docker image to the Code.rc container registry from your computer. The second command is an example of pushing a Docker image to the Code.rc container registry from your computer.
 
 !!!note
-    The registry_name,ID, and gitlab_group_name shown in this examples are for understanding and not meant for testing. Please use your GitLab registry name and ID for testing.
+    The registry_name,ID, and gitlab_group_name shown in this examples are for understanding and not meant for testing. Please use your Code.rc registry name and ID for testing.
 
 ```bash
 sudo docker push gitlab_registry_name:ID/gitlab_group_name/project_name:tag
@@ -444,11 +444,11 @@ sudo docker push code.rc.uab.edu:4567/rc-data-science/build-and-push-container/a
 
 ![!Containers docker push gitlab.](./images/containers_docker_push_gitlab.png)
 
-In your GitLab's page container registry, refresh to view the `alpine` container is pushed to the registry.
+In your Code.rc container registry, refresh to view the `alpine` container is pushed to the registry.
 
 ![!Containers alpine gitlab.](./images/containers_alpine_gitlab.png)
 
-Now lets pull the `alpine` container from GitLab's page container registry to your system. Before that, remove the previous image from the system, which already has a `test` tag, to avoid discrepancies.
+Now lets pull the `alpine` container from Code.rc container registry to your system. Before that, remove the previous image from the system, which already has a `test` tag, to avoid discrepancies.
 
 ```bash
 sudo docker rmi -f image_id
@@ -458,7 +458,7 @@ sudo docker rmi -f image_id
 
 ![!Containers test gitlab registry.](./images/containers_test_gitlab_registry.png)
 
- In your GitLab's page container registry, copy the pull command from the `test` container registry, and use it to pull the docker container to your system. You can see the image is reflected in the image list.
+ In your Code.rc container registry, copy the pull command from the `test` container registry, and use it to pull the docker container to your system. You can see the image is reflected in the image list.
 
 ```bash
 sudo docker pull code.rc.uab.edu:4567/rc-data-science/build-and-push-container/alpinegitlab:test

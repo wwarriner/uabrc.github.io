@@ -10,7 +10,7 @@ If you are here because you need a place to collaborate with others on a softwar
 
 On most pages in this documentation, we use "local" to refer to your laptop or desktop computer, and "remote" to refer to [Cheaha](../cheaha/getting_started.md) or a [Cloud.rc](../uab_cloud/index.md) virtual machine.
 
-When dealing with Git and repository hosting services like GitHub and GitLab we use remote to refer to repositories that are on a repository hosting site like GitHub or GitLab, and local to refer to repositories that are not on a repository hosting site.
+When dealing with Git, and repository hosting services like Code.rc, GitLab, and GitHub, we use remote to refer to repositories that are on a repository hosting site, and local to refer to repositories that are on a computer you can directly interact with.
 
 To summarize:
 
@@ -37,7 +37,7 @@ You may also use the "Code" button on the page to see instructions for cloning t
 
 More in-depth instructions, including for SSH cloning, are provided at the [official documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-### Cloning From GitLab
+### Cloning From Code.rc (GitLab)
 
 To do anything with Code.rc, you will first need to create an account. Please see our [Code.rc Account Creation page](../account/code.rc/create.md).
 
@@ -53,16 +53,16 @@ More in-depth instructions, including for SSH cloning, are provided at the [offi
 
 ## For Collaborating
 
-GitHub and GitLab can both be used for software project management, and have helpful tools to facilitate group collaboration within projects and across multiple projects.
+Code.rc, GitLab, and GitHub can be used for software project management, and have helpful tools to facilitate group collaboration within projects and across multiple projects.
 
 Both services use organizations to manage projects across a team of people: [GitHub docs page](https://docs.github.com/en/organizations), [GitLab docs page](https://docs.gitlab.com/topics/set_up_organization/). Within a GitHub organization, people and repositories can be arranged into [teams](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams). GitLab allows arrangement of people and repositories with [projects](https://docs.gitlab.com/user/project/).
 
 An important feature, used extensively for this documentation's GitHub repository, is the issue tracker. Both [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) and [GitLab](https://docs.gitlab.com/user/project/issues/) have per-repository issue trackers. Collaborators can create and manage issues, label them, and resolve them.
 
-### How Do I Choose Between GitHub and GitLab?
+### How Do I Choose Between GitHub and Code.rc (GitLab)?
 
 - Want to collaborate publicly and outside UAB? Consider using GitHub.
-- Want your project private or internal to UAB? Consider using our GitLab instance.
+- Want your project private or internal to UAB? Consider using Code.rc.
 
 It is possible to collaborate publicly using GitLab, but there may be additional challenges. While external collaborators can see a public GitLab repository on our instance, they can't make any changes or create issues without a [XIAS Account](../account/code.rc/index.md).
 
