@@ -22,15 +22,12 @@ The following steps will guide you to set up Sandbox for your Cheaha account.
 Create a dev folder in your `$USER/ondemand` folder by following these steps:
 
 1. Create an HPC Desktop Interactive Job on Cheaha. There is a detailed guide in the section [Creating an Interactive Job](../cheaha/open_ondemand/ood_layout.md#creating-an-interactive-job).
-
 1. Access the terminal within your HPC Desktop Job. You can find instructions in the section [Accessing the Terminal](../cheaha/tutorial/pytorch_tensorflow.md#installing-anaconda-environments-using-the-terminal) to guide you.
 
     ![Terminal button from Interactive sessions page on Cheaha](images/cheaha_sandbox_shell_button.png)
 
 1. Create the folder within the terminal using the command `mkdir -p $USER_DATA/ondemand/dev`.
-
 1. Go to the [Cheaha](https://rc.uab.edu) Open OnDemand homepage.
-
 1. When logged in, click on the "Help" button, you should see the button in the top-right corner of the landing page of Cheaha, click on "Restart Web Server".
 
     ![Help button menu options](images/cheaha_help_button.png)
@@ -66,7 +63,7 @@ This example using the FSL (FMRIB Software Library) App, shows how to create a s
 
     We will add the following values in the form:
     - **Directory Name:** FSL
-    - **Git Remote:** `https://gitlab.rc.uab.edu/rc/bc_uab_igv.git`
+    - **Git Remote:** `https://code.rc.uab.edu/rc/bc_uab_igv.git`
     After completing the above steps, then click "**Submit**"
 
 1. When this is done successfully, you should see the below screen also showing your new FSL Sandbox App.
