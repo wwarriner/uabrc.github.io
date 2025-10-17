@@ -194,7 +194,7 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
 [Return to the Top](#globus-group-management)
 
-## How Do I Keep Group Members from Seeing Each Other?
+## How Do I Keep Group Members From Seeing Each Other?
 
 1. [Prepare to modify the Group](#how-do-i-modify-a-group-or-subgroup).
 1. Under "Policies" find the "Membership Visibility" controls and select "Administrators and Managers Only" to hide Group members from each other. This can be useful for groups with many members to make it easier to find managers and administrators.
@@ -203,7 +203,7 @@ Subgroups are also full-fledged groups that happen to have a parent-child relati
 
 [Return to the Top](#globus-group-management)
 
-## How Do I Hide a Group from Others?
+## How Do I Hide a Group From Others?
 
 1. [Prepare to modify the Group](#how-do-i-modify-a-group-or-subgroup).
 1. Under "Policies" find the "Group Visibility" controls and select "Members of the Group" to hide your group from non-members. This can be useful for groups with restricted or controlled access.

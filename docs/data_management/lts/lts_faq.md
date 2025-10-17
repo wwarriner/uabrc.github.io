@@ -1,6 +1,6 @@
 # LTS FAQ
 
-## What Are Valid Bucket Names In LTS?
+## What Are Valid Bucket Names in LTS?
 
 Bucket names must be comprised only of lowercase letters, numbers, and hyphens. No capital letters or underscores are allowed. Trying to create a bucket with the disallowed characters will return an error.
 
@@ -39,13 +39,13 @@ The following rules are not required on LTS, but recommended for compatibility w
     - `specific-research-core-name-1499e6d5-b719-4cc1-831d-fe1b25970b3b`: excellent, guaranteed to work
 <!-- markdownlint-enable MD046 -->
 
-## What Information Do I Need to Keep Track of For Managing LTS allocations?
+## What Information Do I Need to Keep Track of for Managing LTS Allocations?
 
 Please store the following information carefully for your LTS allocation(s).
 
 - Access Key (looks like `AKIAIOSFODNN7EXAMPLE`) grants you access to your allocation. This is equivalent to a username in other systems.
 - Secret Key (looks like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`) grants you access to your allocation. This is equivalent to a password in other systems and must be kept secret. Do not share this information with anyone.
-- IAM Name allows others to grant you access to their allocations via [Bucket Policy](./iam_and_policies.md#sharing-buckets).
+- IAM Name allows others to grant you access to their allocations via [Bucket Policy](./iam_and_policies.md#bucket-policies).
     - For individual allocations the IAM Name will be your UAB Campus email address (e.g., `blazerid@uab.edu`).
     - For shared allocations the IAM Name may vary, but should be related to your lab or Core name. When creating your allocation, you may be asked to provide this name as part of the creation process.
 
@@ -59,7 +59,7 @@ These should come to you in an email when your allocation is created. The Access
 
 If you lose track of any of this information, please [Contact Support](../../help/support.md).
 
-## What are Access and Secret Keys?
+## What Are Access and Secret Keys?
 
 Access keys are like a username, and secret keys are like a password, please treat them accordingly. You will get separate sets of keys for each allocation you manage or are responsible for.
 
@@ -73,7 +73,7 @@ In some cases, you may not be actively managing data in a bucket even though you
 
 This is ultimately up to the bucket owner, but there are a couple of single-bucket solutions depending on your specific use-case for LTS:
 
-1. Semi-synced copy of everything in the project space.
+1. Semi-synced copy of everything in the project allocation.
     - **General permissions:** Data stewards and the bucket owner would have permission to delete any files. All other users would be able to upload and download files only. All users would be able to see all files uploaded by all other users to that bucket./
     - **Purpose:** This fulfills more of a pure backup role compared to option 2. While all users can upload files
     - **Benefits:** The policy file for these permissions is much simpler to create and manage. Limits the number of people who can remove files that might be needed down the line.
@@ -81,7 +81,7 @@ This is ultimately up to the bucket owner, but there are a couple of single-buck
     - [Example Policy File](res/example-synced-project-policy.json){: download="example-synced-project-policy.json" }
 1. Active and collaborative external storage. All users would have a specific prefix/folder they have complete control where they can add or remove data at will.
     - **General permissions:** Data stewards and the bucket owner would have permission to delete any files. Regular users would only be able to upload to and delete files from their owned prefix/folder. All users would be able to see and download any files from any other user.
-    - **Purpose:** This satisfies the need for expanded storage accessible from Cheaha (via the terminal or Globus). All users have their own space they can use as they see fit within the bucket for extra storage while still being able to access, but not alter, files from other users in cases they need to be shared. Part of the bucket, or a separate bucket entirely, can also be used as a backup for old or current datasets where users only have read permissions.
+    - **Purpose:** This satisfies the need for expanded storage accessible from Cheaha (via the terminal or Globus). All users have their own allocation they can use as they see fit within the bucket for extra storage while still being able to access, but not alter, files from other users in cases they need to be shared. Part of the bucket, or a separate bucket entirely, can also be used as a backup for old or current datasets where users only have read permissions.
     - **Benefits:** How the bucket can be used is much more malleable and up to the individual users. Empowers them to add and remove data from their own prefix/folder without oversight from stewards or the bucket owner.
     - **Drawbacks:** The policy file is more difficult to craft and manage when researchers needed to be added or removed from the bucket. Allowing users to delete their uploaded data at their discretion may conflict with the owner's view of those data.
     - [Example Policy File](res/example-active-external-storage-policy.json){: download="example-active-external-storage-policy.json" }
@@ -94,9 +94,9 @@ While these are two simple solutions, a combination of both can be implemented w
 
 Automatic backups are not available by default. If you would like to periodically sync your bucket to a directory on your local machine or Cheaha, you will need to set up a cron task to submit a Slurm job that will run a sync. IF you would like to implement this for your own bucket, please [contact us](../../index.md#how-to-contact-us).
 
-## Why Can I Not Interact With A File In My Bucket?
+## Why Can I Not Interact With a File in My Bucket?
 
-While S3's object storage system does not have POSIX permissions seen in a Linux system entirely, we have found that users who upload files to a shared space have ownership permissions on those objects, and the bucket owner and stewards cannot interact with those objects by default. Instead, owners and stewards need to be given explicit permissions to move or delete all objects in a bucket. This can be dealt with by adding the following sections to the policy file:
+While S3's object storage system does not have POSIX permissions seen in a Linux system entirely, we have found that users who upload files to a shared allocation have ownership permissions on those objects, and the bucket owner and stewards cannot interact with those objects by default. Instead, owners and stewards need to be given explicit permissions to move or delete all objects in a bucket. This can be dealt with by adding the following sections to the policy file:
 
 ``` json
 {
@@ -117,11 +117,11 @@ While S3's object storage system does not have POSIX permissions seen in a Linux
     ]
 },
 {
-    "Sid": "data-steward",
+    "Sid": "data-manager",
     "Effect": "Allow",
     "Principal": {
         "AWS": [
-            "arn:aws:iam:::user/steward_1@uab.edu"
+            "arn:aws:iam:::user/blazerid@uab.edu"
         ]
     },
     "Action": [
@@ -139,7 +139,7 @@ While S3's object storage system does not have POSIX permissions seen in a Linux
 }
 ```
 
-## How Can I Share A Bucket With All LTS Users?
+## How Can I Share a Bucket With All LTS Users?
 
 The following policy file will give read permission to all LTS users for all objects in a bucket:
 
@@ -184,13 +184,13 @@ The following policy file will give read permission to all LTS users for all obj
 }
 ```
 
-## Can I Change Permissions On A Bucket Via Globus?
+## Can I Change Permissions on a Bucket via Globus?
 
 As of now, there is no way to change permissions on a bucket via [Globus](../transfer/globus.md). The only way to change permissions is via the command line.
 
 <!-- TODO cross-link to new content-->
 
-## Is LTS compatible with Amazon S3?
+## Is LTS Compatible With Amazon S3?
 
 Yes! LTS is compatible with Amazon S3 (Simple Storage Service). Most software solutions that work with Amazon AWS S3 will also work with LTS. Generally, you will need to instruct the software where the interface is located by supplying an Endpoint URL. Our Endpoint URL is `https://s3.lts.rc.uab.edu/`.
 

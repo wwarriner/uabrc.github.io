@@ -13,8 +13,8 @@ Topics covered:
 - Collections
     - [What are Collections and How Do I Use Them?](#what-are-collections-and-how-do-i-use-them)
     - [How Do I Create a Guest Collection?](#how-do-i-create-a-guest-collection)
-    - [How Do I Share a Guest Collection with Others?](#how-do-i-share-a-guest-collection-with-others)
-    - [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
+    - [How Do I Share a Guest Collection With Others?](#how-do-i-share-a-guest-collection-with-others)
+    - [How Do I Share Data With a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
     - [How Do I Find Guest Collections I Created or Own?](#how-do-i-find-guest-collections-i-created-or-own)
 - Globus Connect Personal
     - [How Do I Install Globus Connect Personal?](#how-do-i-install-globus-connect-personal)
@@ -53,7 +53,15 @@ Please also read, follow, and understand the [Globus Tutorials for Individual Re
 
 [Return to the Top](#globus-tutorials-for-uab-research-organizations)
 
-## How Do I Get onto the Globus Web App?
+Please also read, follow, and understand the [Globus Tutorials for Individual Researchers](./globus_individual_tutorial.md) page. This page assumes knowledge of what is on that page.
+
+[Return to the Top](#globus-tutorials-for-uab-research-organizations)
+
+Please also read, follow, and understand the [Globus Tutorials for Individual Researchers](./globus_individual_tutorial.md) page. This page assumes knowledge of what is on that page.
+
+[Return to the Top](#globus-tutorials-for-uab-research-organizations)
+
+## How Do I Get Onto the Globus Web App?
 
 To learn how to get onto the Globus Web App [Globus Tutorials for Individual Researchers Page](./globus_individual_tutorial.md#how-do-i-get-onto-the-globus-web-app). Please visit that link and then return here when you have finished.
 
@@ -109,7 +117,7 @@ When you have created a Guest Collection, you are ready to [share the Guest Coll
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
-## How Do I Share a Guest Collection with Others?
+## How Do I Share a Guest Collection With Others?
 
 Before sharing a Collection with others, you will need to first [create a Guest Collection](#how-do-i-create-a-guest-collection) or identify an existing one. If you are creating the Guest Collection from a [Globus Connect Personal Mapped Collection](#how-do-i-install-globus-connect-personal), then you will also need to [enable sharing for your Globus account](#how-do-i-enable-sharing-for-my-globus-account) by connecting to our Globus subscription. If these prerequisites have been met, then you are ready to share your Guest Collection with others. Please follow the instructions below.
 
@@ -194,7 +202,7 @@ GCP installation instructions for:
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
-### Installing GCP On Windows
+### Installing GCP on Windows
 
 The following steps will guide you to install Globus Connect Personal (GCP) on your computer running Windows.
 
@@ -251,7 +259,7 @@ By default your Documents folder (typically `C:/Users/%username%/Documents`) is 
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
-### Installing GCP On MacOS
+### Installing GCP on MacOS
 
 The following steps will guide you to install Globus Connect Personal (GCP) on your computer running MacOS.
 
@@ -392,7 +400,7 @@ To verify the existence and accessibility of your Collection proceed to [How Do 
 
 [Return to the top](#globus-tutorials-for-uab-research-organizations).
 
-## How Do I Enable Sharing For My Globus Account?
+## How Do I Enable Sharing for My Globus Account?
 
 To share from your GCP Collection there are a couple of hurdles to overcome:
 

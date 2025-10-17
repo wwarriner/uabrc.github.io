@@ -15,7 +15,7 @@ Topics covered:
 - [How Do I Create a Bucket?](#how-do-i-create-a-bucket)
 - [How Do I Create a Folder in a Bucket?](#how-do-i-create-a-folder-in-a-bucket)
 - [How Do I Share a Bucket or Folder as a Guest Collection?](#how-do-i-share-a-bucket-or-folder-as-a-guest-collection)
-- [How Do I Transfer Data to and from Cheaha?](#how-do-i-transfer-data-to-and-from-cheaha)
+- [How Do I Transfer Data to and From Cheaha?](#how-do-i-transfer-data-to-and-from-cheaha)
 - [How Do I Manage Bucket Policies?](#how-do-i-manage-bucket-policies)
 
 ## Why Use Globus to Manage LTS?
@@ -24,7 +24,7 @@ Read more about [How Globus Works](../transfer/tutorial/globus_organization_tuto
 
 ## Prerequisites
 
-Before using any of these tutorials, you will need to set up an [Individual LTS Allocation](../storage.md#how-do-i-request-an-individual-long-term-storage-allocation). If you represent a group such as a Lab or Research Core, you will also need to set up a [Shared LTS Allocation](../storage.md#how-do-i-request-shared-storage).
+Before using any of these tutorials, you will need to set up an [Individual LTS Allocation](../index.md#how-do-i-request-individual-long-term-storage). If you represent a group such as a Lab or Research Core, you will also need to set up a [Shared LTS Allocation](../index.md#how-do-i-request-shared-storage).
 
 Be sure to keep track of your Access and Secret keys as you receive them. These should be treated like a username and password. See [What are Access and Secret Keys?](../lts/lts_faq.md#what-are-access-and-secret-keys).
 
@@ -107,9 +107,9 @@ The concept of [buckets](../lts/index.md#terminology) is specific to LTS and its
 1. [Create a Guest Collection](../transfer/tutorial/globus_organization_tutorial.md#how-do-i-create-a-guest-collection) from the bucket or folder.
 1. [Share the Guest Collection](../transfer/tutorial/globus_organization_tutorial.md#how-do-i-share-a-guest-collection-with-others) with the individuals or groups you wish to share with.
 
-## How Do I Transfer Data to and from Cheaha?
+## How Do I Transfer Data to and From Cheaha?
 
-See [How Do I Transfer between LTS and Cheaha](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-transfer-between-lts-and-cheaha).
+See [How Do I Transfer Between LTS and Cheaha](../transfer/tutorial/globus_individual_tutorial.md#how-do-i-transfer-between-lts-and-cheaha).
 
 ## How Do I Manage Bucket Policies?
 
@@ -120,7 +120,7 @@ A Collection can be thought of as a gateway. The gateway is prepared in advance 
 <!-- markdownlint-disable MD046 -->
 !!! info
 
-    Buckets in Globus have no policy applied and the most restrictive access controls possible. If you want to allow others to access the bucket outside of Globus, you will still need to use [policies](../lts/iam_and_policies.md#sharing-buckets)
+    Buckets in Globus have no policy applied and the most restrictive access controls possible. If you want to allow others to access the bucket outside of Globus, you will still need to use [policies](../lts/iam_and_policies.md#bucket-policies)
 <!-- markdownlint-enable MD046 -->
 
 For Cores and other organizations with customers, sharing LTS through Collections means your customers, and most of your staff, do not have to work with LTS directly.
