@@ -1,10 +1,22 @@
 # Case Studies
 
-## Parabricks for Performing GPU-accelerated Genome Sequencing Analysis
+## NVIDIA Clara Parabricks for Performing GPU-accelerated Genome Sequencing Analysis
 
-A GPU-accelerated genome sequencing analysis with high speedup and more accurate results can be achieved with NVIDIA Clara Parabricks. Pararbricks is a software suite for genomic analysis. Parabricks delivers accelerated analysis of next generation sequencing (NGS) data for researchers, RNA-seq, population studies, and many more usecases. More insights on its performance can be found [here](https://resources.nvidia.com/en-us-genomics-ep/genomics-appliance-for-research?lx=OhKlSJ).
+A GPU-accelerated genome sequencing analysis with high speedup and more accurate results can be achieved with NVIDIA Clara Parabricks, which we will refer to as Parabricks, for short. Pararbricks is a software suite for genomic analysis. Parabricks delivers accelerated analysis of next generation sequencing (NGS) data for researchers, RNA-seq, population studies, and many more usecases. More insights on its performance can be found at <https://www.nvidia.com/en-us/clara/genomics/#faq>, see the FAQ under "Does Parabricks match the results of open-source tools?"
 
-For more information on Cheaha GPUs, please see our [GPU Page](../cheaha/slurm/gpu.md)
+For more information on Cheaha GPUs, please see our [GPU Page](../cheaha/slurm/gpu.md).
+
+<!-- markdownlint-disable MD046 -->
+!!! note
+
+    CUDA modules are used in this case study. Please note that the latest CUDA and cuDNN are now available from [Conda](../cheaha/slurm/gpu.md#cuda-and-cudnn-modules).
+<!-- markdownlint-enable MD046 -->
+
+<!-- markdownlint-disable MD046 -->
+!!! note
+
+    Be mindful that there are special considerations when submitting GPU jobs to maximize performance. See [Making the Most of GPUs](../cheaha/slurm/gpu.md#making-the-most-of-gpus) for more information. This case study predates our knowledge and understanding of these considerations and does not make use of them.
+<!-- markdownlint-enable MD046 -->
 
 ### Licensing Policy
 
@@ -14,7 +26,7 @@ A license is no longer required to use Clara Parabricks 4.x and later versions, 
 1. Research by non-profit institutions.
 1. For development, test and evaluation purposes without use in production.
 
-### Minimum Hardware requirements to run Parabricks on Cheaha GPUs
+### Minimum Hardware Requirements to Run Parabricks on Cheaha GPUs
 
 1. Access to the internet.
 1. Any GPU that supports CUDA Compute Capability 7.0, 7.5, 8.0, 8.6, 8.9 or 9.0.
@@ -38,17 +50,17 @@ Parabricks software can be installed and used in the Cheaha platform on `amperen
 
 ### Parabricks 4.x Installation on Cheaha
 
-Parbaricks 4.x are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities). It has generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/latest/toolreference.html). It also has containers for specific tool category. The recent Parabricks 4.x documentation is available [here](https://docs.nvidia.com/clara/parabricks/latest/index.html).
+Parbaricks 4.x are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities). The page has a generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/latest/toolreference.html). It also has containers for specific tool categories. For more information about Parabricks, please see the [official documentation](https://docs.nvidia.com/clara/parabricks/latest/index.html).
 
-Parabricks 4.x container image can be installed on Cheaha using a Singularity container. More details on usage of Singularity container on Cheaha can be found in the [Containers Page](../workflow_solutions/getting_containers.md).
+Parabricks 4.x container images can be installed on Cheaha using a Singularity container. More details on usage of Singularity container on Cheaha can be found in the [Containers Page](../workflow_solutions/getting_containers.md).
 
-To install Parabricks using Singulairty, load the `Singularity 3.x` module from Cheaha as,
+To install Parabricks using Singulairty, load the `Singularity 3.x` module from Cheaha as follows.
 
 ```bash
 module load Singularity/3.5.2-GCC-5.4.0-2.26
 ```
 
-Go to the NGC catalog page and copy the image path to pull the desired containers of Parabricks using Singularity. Here, the generic container is pulled using Singularity.  The image path is in “nvcr.io/nvidia/clara/clara-parabricks" and the tag is 4.2.0-1. The container image name `parabricks-4.2.0-1.sif` is an user-derived name.
+Go to the NGC catalog page and copy the image path to pull the desired containers of Parabricks using Singularity. Here, the generic container is pulled using Singularity. The image path is in “nvcr.io/nvidia/clara/clara-parabricks" and the tag is 4.2.0-1. The container image name `parabricks-4.2.0-1.sif` is an user-derived name.
 
 ![!Parabricks container.](./images/parabricks_container.png)
 
@@ -75,7 +87,7 @@ If the above commands are successfully executed, then the Parabricks software is
 
 ### Downloading Parabricks Sample Use Case
 
-Sample test case for Parabricks can be found [here](https://docs.nvidia.com/clara/parabricks/latest/tutorials/gettingthesampledata.html). Download the sample data using `wget`,
+A sample test case for Parabricks can be found at the NVidia docs: <https://docs.nvidia.com/clara/parabricks/latest/tutorials/gettingthesampledata.html>. Download the sample data using `wget`,
 
 ```bash
 wget -O parabricks_sample.tar.gz https://s3.amazonaws.com/parabricks.sample/parabricks_sample.tar.gz
@@ -97,7 +109,7 @@ You will have to load the compatible `CUDA` module to access GPUs as below.
 module load CUDA/11.6.0
 ```
 
-In the below script, the `--nv` option enables the use of NVIDIA GPUs within the container. The singualrity container `parabricks-4.2.0-1.sif` is executed using the command `singualrity run` over the executable `pbrun`.
+In the below script, the `--nv` option enables the use of NVIDIA GPUs within the container. For more details, please refer to section: [Running Singularity Containers With GPU Support](../workflow_solutions/getting_containers.md#running-singularity-containers-with-gpu-support). The singualrity container `parabricks-4.2.0-1.sif` is executed using the command `singualrity run` over the executable `pbrun`.
 
 ```bash
 singularity run --nv parabricks-4.2.0-1.sif pbrun fq2bam \
@@ -137,7 +149,7 @@ You can also request the required resources using `srun` using the below command
 srun --ntasks=24 --mem=100G --time=1:00:00 --partition=amperenodes --job-name=parabricks-ampere --gres=gpu:2 --pty /bin/bash
 ```
 
-#### Illustration on `fq2bam` tool analyses
+#### Illustration on `fq2bam` Tool Analyses
 
 The above execution script performs `fq2bam` pipeline analyses. The `fq2bam` tool aligns, sorts (by coordinate), and marks duplicates in pair-ended FASTQ file data. The data files used in this example are taken from the sample data downloaded in the previous section.
 
@@ -266,4 +278,4 @@ Parabricks is tested and works with CUDA version >= 11.6.0 on Cheaha. Empirical 
 
 {{ read_csv('education/res/parabricks_exec_time.csv', keep_default_na=False) }}
 
-Applications show 2x performance with Parabricks greater than 4.0 version. You can refer [here](https://docs.nvidia.com/clara/parabricks/latest/bestperformance.html#best-performance-for-germline-pipeline) to performance tuning ideas to achieve best performance with Parabricks.
+Applications show 2x performance with Parabricks greater than 4.0 version. For performance tuning ideas, please refer to: <https://docs.nvidia.com/clara/parabricks/latest/gettingstarted/bestperformance.html>.

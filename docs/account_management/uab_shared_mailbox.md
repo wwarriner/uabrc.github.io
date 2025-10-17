@@ -2,7 +2,7 @@
 
 Shared Mailboxes are a feature supplied by UAB Enterprise IT to give multiple people access to the same shared collection of emails and to provide a single point of contact for organizations at UAB. In Research Computing, Shared Mailboxes may be used as service accounts for third-party services, including to create Globus Collections that are independent of individual researchers.
 
-## Prepare to Work with Shared Mailboxes
+## Prepare to Work With Shared Mailboxes
 
 <!-- markdownlint-disable MD046 -->
 !!! note
@@ -26,7 +26,7 @@ Shared Mailboxes are a feature supplied by UAB Enterprise IT to give multiple pe
 1. In the "Request Type" drop-down field select "List/Delete resource object". New fields will appear.
 1. In the "OU Name" drop-down field select your OU. If you have no existing Shared Mailboxes, then you should see a "No records found" message. Otherwise, you will see a list of Shared Mailboxes. It may take several seconds or more to populate the list of Shared Mailboxes.
 
-## Create a new Shared Mailbox
+## Create a New Shared Mailbox
 
 1. [Prepare to Work with Shared Mailboxes](#prepare-to-work-with-shared-mailboxes).
 1. Under "Request Type" drop-down field select "Create a new resource object with mailbox in uabOther OU".
