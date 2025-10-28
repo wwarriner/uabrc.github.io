@@ -1,26 +1,42 @@
 """Grid Card macro definitions."""
 
-import os
+from __future__ import annotations
+
 from pathlib import Path, PurePath
-from typing import Callable
+from typing import TYPE_CHECKING, Callable
 
 import yaml
-from mkdocs_macros.plugin import MacrosPlugin
+
+from macros.util import normalize_page_link
 
 from .card import CardNamespace
 from .render import CardRenderer
+
+if TYPE_CHECKING:
+    from mkdocs.structure.pages import Page
+    from mkdocs_macros.plugin import MacrosPlugin
 
 
 def define_env(env: MacrosPlugin) -> None:
     """Define grid card macros for use in docs."""
 
-    def page_url_getter(env: MacrosPlugin) -> Callable[[], str]:
-        def fn() -> str:
-            return env.page.url
+    def render_j2() -> Callable[[str], str]:
+        def fn(raw_md: str) -> str:
+            template = env.env.from_string(raw_md)
+            return template.render(env.variables)
 
         return fn
 
-    renderer = CardRenderer(page_url_getter(env))  # replace with macros fix_url()
+    def get_page() -> Callable[[], Page]:
+        def fn() -> Page:
+            return env.page
+
+        return fn
+
+    renderer = CardRenderer(
+        render_j2(),
+        get_page(),
+    )
 
     cards_path = PurePath("res/grid_cards.yml")
     with Path(cards_path).open("r", encoding="utf-8") as f:
@@ -29,39 +45,11 @@ def define_env(env: MacrosPlugin) -> None:
 
     env.variables["cards"] = cards
     env.variables["renderer"] = renderer
-    env.macro(list, "__dummy")
-
-    @env.macro
-    def include(rel_url: str, *, indent: int = 0) -> str:
-        mkdocs_url = to_docs_abs_url(rel_url)
-        with Path(mkdocs_url).open("r") as f:
-            lines = f.readlines()
-
-        if not lines:
-            return ""
-
-        first = lines[0]
-        lines = [" " * indent + line for line in lines[1:]]
-        lines.insert(0, first)
-        return "".join(lines)
-
-    def to_docs_abs_url(rel_url: str) -> PurePath:
-        page = env.page
-
-        link_url = PurePath(rel_url)
-        page_url = PurePath(page.url)
-        if not page.is_index:
-            page_url = page_url.parent
-        docs_dir = PurePath(env.conf["docs_dir"])
-        return docs_dir / os.path.normpath(page_url / link_url)
 
     @env.filter
-    def to_page_rel_url(docs_dir_url: str) -> str:
-        page = env.page
-        docs_dir = PurePath(env.conf["docs_dir"])
-        target_url = docs_dir / docs_dir_url
-        page_url = docs_dir / page.url
-        if not page.is_index:
-            page_url = page_url.parent
-        out = PurePath(os.path.relpath(target_url, page_url))
-        return out.as_posix()
+    def normalize_link(link_target: str) -> str:
+        return normalize_page_link(
+            page_url=PurePath(env.page.url),
+            link_target=link_target,
+            page_is_index=env.page.is_index,
+        )

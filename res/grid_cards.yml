@@ -13,14 +13,13 @@ account:
     content: |
       Planning to leave UAB?
       Want to learn happens to your data and system access?
-    link_url: "account/leaving.md"
+    link_url: "account/leaving/index.md"
   responsibilities:
     title_text: Responsibilities and Policies
     icon_name: ":material-clipboard-check-multiple:"
     content: |
-      Want to learn who is responsible for what?
-      Learn more about what to expect on our systems.
-      Become familiar with RCS responsibilities and policies.
+      Want to learn who is responsible for what, and what to expect on our systems?
+      Become familiar with RCS responsibilities, expectations, and policies.
     link_url: "account/responsibilities.md"
 
   code_rc_create:
@@ -95,11 +94,25 @@ news:
     See what's new with Research Computing System services!
   link_url: "news/index.md"
 
+education:
+  training:
+    title_text: Training Resources
+    icon_name: ":material-notebook-edit:"
+    content: |
+      See our collection of internet training resources!
+    link_url: "education/training_resources.md"
+  dsjc:
+    title_text: Data Science Journal Club Course
+    icon_name: ":octicons-mortar-board-24:"
+    content: |
+      We offer a 1 credit hour course: Data Science Journal Club.
+    link_url: "education/courses.md#data-science-journal-club-course"
+
 platforms:
   cheaha:
     ood:
       overview:
-        title_text: Open OnDemand Web App
+        title_text: Open OnDemand Web Interface
         icon_name: ":octicons-browser-24:"
         content: |
           Check out our interactive science apps, right in your browser!
@@ -113,22 +126,90 @@ platforms:
           Scale up your work!
           Learn how to schedule batch jobs with Slurm.
         link_url: "cheaha/slurm/introduction.md"
+  cloud_rc:
+    overview:
+      title_text: Cloud.rc (OpenStack)
+      icon_name: ":material-cloud-braces:"
+      content: |
+        Create virtual infrastructure to serve pages, build containers, and more!
+      link_url: "uab_cloud/index.md"
+    web_server:
+      title_text: Web Servers on Cloud.rc
+      icon_name: ":material-web:"
+      content: |
+        Learn how to make your Cloud.rc application public on the internet!
+      link_url: "uab_cloud/remote_access.md#make-instances-publicly-accessible-from-the-internet"
 
 data:
-  storage_options:
-    title_text: Storage Options
+  individual_storage:
+    title_text: Individual Storage Allocations
     icon_name: ":material-server-network:"
     content: |
-      Did you know researchers can get RCS storage at no charge?
-      Check out our platforms and offerings.
+      Did you know researchers can get no-cost individual storage on RCS?
+
+      - {{ storage.no_cost.individual.gpfs }}
+      - {{ storage.no_cost.individual.lts }}
+    link_url: "data_management/index.md"
+  shared_storage:
+    title_text: Shared Storage Allocations
+    icon_name: ":material-server-network:"
+    content: |
+      Did you know research labs and Cores can get no-cost shared storage on RCS?
+
+      - {{ storage.no_cost.shared.gpfs }}
+      - {{ storage.no_cost.shared.lts }}
     link_url: "data_management/index.md"
   transfer_options:
-    title_text: Transfer Options
+    title_text: Data Transfer Options
     icon_name: ":material-transfer:"
     content: |
       RCS has multiple options for data transfers, within UAB and with other institutions.
       Globus, rclone, and more!
     link_url: "data_management/transfer/index.md"
+
+support:
+  email:
+    title_text: Have a Request?
+    icon_name: ":material-email-edit:"
+    content: |
+      Have a request? Facing an issue? Want to scale up?
+    link_text: Send us an email!
+    link_icon_name: ":material-email-fast:"
+    link_url: "{{ support.email }}"
+  office_hours:
+    title_text: Want Virtual Face-to-Face Support?
+    icon_name: ":simple-zoom:"
+    content: |
+      Visit our Zoom office hours!
+
+      {% for event in support.office_hours.events %}
+      - {{ event.day }}: {{ event.starttime }} to {{ event.endtime }} {{support.office_hours.timezone }} | [Zoom]({{ support.office_hours.url }})
+      {% endfor %}
+    link_text: null
+    link_icon_name: null
+    link_url: null
+  servicenow:
+    title_text: Check Your Support Requests
+    icon_name: ":material-progress-question:"
+    content: |
+      Create, review, and respond to service requests with the UAB ServiceNow Portal.
+    link_url: "{{ support.servicenow_url }}"
+  statuscast:
+    title_text: RCS Status Monitor
+    icon_name: ":material-bell:"
+    content: |
+      Check our StatusCast page for the latest on upcoming maintenance windows.
+
+      Subscribe by clicking the bell at the StatusCast page.
+    link_text: "Go To Statuscast"
+    link_icon_name: null
+    link_url: "{{ support.statuscast_url }}"
+  page:
+    title_text: Need Support Details?
+    icon_name: ":material-help-network:"
+    content: |
+      Want to learn more about how to get Research Computing support?
+    link_url: "help/support.md"
 # personas:
 #   administrative_staff:
 #     title_text: Administrative Staff
