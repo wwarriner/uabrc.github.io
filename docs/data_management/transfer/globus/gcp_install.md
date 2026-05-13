@@ -10,7 +10,7 @@ We do not cover Linux installation here; please refer to the official documentat
 
 - [How to Install Globus Connect Personal (GCP)](#how-to-install-globus-connect-personal-gcp)
     - [Installing GCP on Windows](#installing-gcp-on-windows)
-        - [Installing GCP on MacOS](#installing-gcp-on-macos)
+    - [Installing GCP on MacOS](#installing-gcp-on-macos)
 
 ## Installing GCP on Windows
 
