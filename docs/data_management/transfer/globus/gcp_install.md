@@ -8,9 +8,8 @@
 
 We do not cover Linux installation here; please refer to the official documentation if you need to install GCP on a Linux system. Below are the GCP installation instructions for Windows and MacOS:
 
-- [How to Install Globus Connect Personal (GCP)](#how-to-install-globus-connect-personal-gcp)
-    - [Installing GCP on Windows](#installing-gcp-on-windows)
-    - [Installing GCP on MacOS](#installing-gcp-on-macos)
+- [Installing GCP on Windows](#installing-gcp-on-windows)
+- [Installing GCP on MacOS](#installing-gcp-on-macos)
 
 ## Installing GCP on Windows
 
