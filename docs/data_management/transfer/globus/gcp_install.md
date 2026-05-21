@@ -54,7 +54,7 @@ The following steps will guide you to install Globus Connect Personal (GCP) on y
     - **Owner Identity:** is the person responsible for this Collection. This field should already be filled with UAB Campus or XIAS email address. If not, please select that email address here.
     - **Collection Name:** is the name for the Collection. This should be filled with the name of the Collection from the previous step.
     - **Description:** Feel free to enter descriptive information about the Collection here. This information will be displayed in the Globus Web App when the Collection is viewed by others.
-    - **High Assurance:** Check this box during creation time only if the Collection contains or will contain PHI, HIPAA‑regulated data, or other protected information. This setting cannot be changed later, changing it would require reinstalling GCP. If this is the case, please ensure that you have already completed a risk assessment with UAB Enterprise IT.
+    - **High Assurance:** Check this box during creation time only if it contains or is expected to contain PHI, HIPAA‑regulated data, or other protected information. This setting cannot be changed later, changing it would require reinstalling GCP. If this is the case, please ensure that you have already completed a risk assessment with UAB Enterprise IT by contacting <AskIT@uab.edu>.
         - Screenshot of GCP default setup (High Assurance not selected):
         ![ Screenshot of default GCP Collection configuration](../images/go-gcp-install/common/collection-details.png)
 
@@ -110,7 +110,7 @@ The following steps will guide you to install Globus Connect Personal (GCP) on y
     - **Owner Identity:** is the person responsible for this Collection. This field should already be filled with UAB Campus or XIAS email address. If not, please select that email address here.
     - **Collection Name:** is the name for the Collection. This should be filled with the name of the Collection from the previous step.
     - **Description:** Feel free to enter descriptive information about the Collection here. This information will be displayed in the Globus Web App when the Collection is viewed by others.
-    - **High Assurance:** Check this box during creation time only if the Collection contains or will contain PHI, HIPAA‑regulated data, or other protected information. This setting cannot be changed later, changing it would require reinstalling GCP. If this is the case, please ensure that you have already completed a risk assessment with UAB Enterprise IT.
+    - **High Assurance:** Check this box during creation time only if it contains or is expected to contain PHI, HIPAA‑regulated data, or other protected information. This setting cannot be changed later, changing it would require reinstalling GCP. If this is the case, please ensure that you have already completed a risk assessment with UAB Enterprise IT by contacting <AskIT@uab.edu>.
         - Screenshot of GCP default setup (High Assurance not selected):
         ![ Screenshot of default GCP Collection configuration](../images/go-gcp-install/common/collection-details.png)
 
