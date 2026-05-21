@@ -185,7 +185,7 @@ From here you can proceed to other related tutorials to initiate other transfers
 
 ### How Do I Transfer Between GCP Collections?
 
-GCP collections are local or personal collections created on your own computer (e.g laptops, desktops, workstations, or other self-managed systems), including cloud environments such as [Cloud.rc](../../../code.rc/index.md), using Globus Connect Personal (GCP).
+GCP collections are local or personal collections created on your own computer (e.g laptops, desktops, workstations, or other self-managed systems), including cloud environments such as [Cloud.rc](../../../uab_cloud/index.md), using Globus Connect Personal (GCP).
 
 To transfer data between GCP collections, you must be a member of a Globus Subscription group. UAB Research Computing provides the "University of Alabama at Birmingham (HA)" subscription group. Joining this group enables transfers between GCP collections.
 
