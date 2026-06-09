@@ -6,15 +6,16 @@ If you are new to Globus, we recommend starting with our [Getting Started](./log
 
 Topics covered:
 
-1. [Why Globus?](#why-globus)
-1. [How Does Globus Work?](#how-does-globus-work)
-1. [Prerequisites](#prerequisites)
-1. [How Do I Get onto the Globus Web App?](#how-do-i-get-onto-the-globus-web-app)
-1. [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
-1. [How Do I Enable Sharing for My Globus Account?](#how-do-i-enable-collection-sharing-for-my-globus-account)
-1. [How Do I Create a Collection?](#how-do-i-create-a-collection)
-1. [How Do I Share a Collection with Others?](#how-do-i-share-a-collection-with-others)
-1. [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
+- [Why Globus?](#why-globus)
+- [How Does Globus Work?](#how-does-globus-work)
+- [Prerequisites](#prerequisites)
+- [How Do I Get onto the Globus Web App?](#how-do-i-get-onto-the-globus-web-app)
+- [How Do I Find Collections I Created or Own?](#how-do-i-find-collections-i-created-or-own)
+- [How Do I Enable Sharing for My Globus Account?](#how-do-i-enable-collection-sharing-for-my-globus-account)
+- [How Do I Create a Collection?](#how-do-i-create-a-collection)
+- [How Do I Share a Collection with Others?](#how-do-i-share-a-collection-with-others)
+- [How Do I Share Data with a Research Core Customer?](#how-do-i-share-data-with-a-research-core-customer)
+- [Managing Guest Collections From a Globus Endpoint](#managing-guest-collections-from-a-globus-endpoint)
 
 ## Why Globus?
 
