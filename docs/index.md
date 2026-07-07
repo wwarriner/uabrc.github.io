@@ -29,10 +29,10 @@ The Research Computing System (RCS) provides a framework for sharing research da
         </div>
     </div>
 {% else %}
-    {{ no_announcements }}
+    {{- no_announcements }}
 {% endfor %}
 {% else %}
-    {{ no_announcements }}
+    {{- no_announcements }}
 {% endif %}
 <!-- markdownlint-enable no-inline-html -->
 <!-- markdownlint-enable MD046 -->
