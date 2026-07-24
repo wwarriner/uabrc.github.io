@@ -183,6 +183,7 @@ nav:
               - Project Directories: data_management/storage/cheaha_storage_gpfs/project_directories.md
               - Network Scratch: data_management/storage/cheaha_storage_gpfs/network_scratch.md
               - Local Scratch: data_management/storage/cheaha_storage_gpfs/local_scratch.md
+              - GPFS Snapshots: data_management/storage/cheaha_storage_gpfs/gpfs_snapshots.md
               - Temporary Files (/tmp/ Directory): data_management/storage/cheaha_storage_gpfs/temporary_files.md
           - Long Term Storage:
               - data_management/storage/lts/index.md
